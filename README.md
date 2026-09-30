@@ -13,7 +13,7 @@ It is built for readers, not AI detectors. The goal is better, more deliberate p
 - Handles fiction at both the prose and story-structure level.
 - Supports light edits, ordinary rewrites, deep fiction restructuring, and generation from scratch.
 - Preserves technical meaning in factual and technical writing.
-- Uses an evaluation suite with preservation checks and blind comparisons.
+- Includes preservation-focused evaluation fixtures, trigger tests, and an evaluation log.
 
 ## Why ProseShape
 
@@ -78,18 +78,15 @@ Write a 1,200-word story about a hospice night nurse. No stated moral, no years-
 │   ├── evaluation-rubric.md
 │   └── prompt-engineering-notes.md
 ├── evals/
-│   ├── evals.json
 │   ├── trigger-evals.json
 │   ├── eval-log.md
 │   └── files/
-├── docs/
-│   ├── BUILD_REPORT.md
-│   └── rulebook.md
+├── CHANGELOG.md
 ├── THIRD_PARTY_NOTICES.md
 └── LICENSE
 ```
 
-The large raw evaluation workspace from development is intentionally omitted from this public-ready tree. The evaluation definitions, fixtures, methodology, and summarized results remain in `evals/` and `docs/`.
+The large raw build workspace and raw grading artifacts are intentionally omitted from the public repository. The included fixtures, trigger tests, references, and evaluation log document the method and the main results without publishing the entire development workspace.
 
 ## Evidence base
 
@@ -106,7 +103,7 @@ StoryScope findings are population-level observations, not rules for what human 
 
 ## Evaluation
 
-The development process used 12 evaluation cases covering business prose, personal essays, technical writing, fiction rewrites, dialogue, voice matching, citation preservation, deep story restructuring, minimal editing, and generation. See `evals/eval-log.md` and `docs/BUILD_REPORT.md` for methodology and results.
+Development used 12 cases spanning business prose, personal essays, technical writing, fiction rewrites, dialogue, voice matching, citation preservation, deep story restructuring, minimal editing, and generation. The public repo includes the evaluation fixtures, trigger tests, and summarized results in `evals/eval-log.md`.
 
 ## License
 
