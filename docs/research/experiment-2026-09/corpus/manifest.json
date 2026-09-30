@@ -1,0 +1,199 @@
+{
+  "note": "Synthetic evaluation corpus written for this study (all names, organizations, citations, and quotations in s01-s09, s12, s13 are fictional). s10 is an excerpt of the Python Tutorial 'Whetting Your Appetite' (Python Software Foundation, PSF License 2.0; human-written documentation). s11 is an excerpt of Jerome K. Jerome, Three Men in a Boat (1889), public domain (Project Gutenberg #308), lightly re-wrapped with illustration markers removed.",
+  "user_request": "Please humanize this so it reads like a person wrote it. Keep the facts and meaning the same.",
+  "samples": {
+    "s01_ai_blog": {
+      "category": "obviously formulaic AI prose (civic blog/announcement)",
+      "expected": "heavy cleanup; keep every figure and name",
+      "protected": [
+        "April 12",
+        "1,200",
+        "400",
+        "85",
+        "$2",
+        "15 cents",
+        "$90",
+        "45 minutes",
+        "$3.4 million",
+        "Port Alder",
+        "PedalPoint",
+        "Alder County Transit",
+        "Old Mill District"
+      ]
+    },
+    "s02_marketing": {
+      "category": "product/marketing copy (Markdown heading, bold-label list, CTA link)",
+      "expected": "cut hype; keep claims, figures, CTA and link; persuasive register allowed",
+      "protected": [
+        "Quillnote",
+        "100,000",
+        "50",
+        "SOC 2 Type II",
+        "40,000",
+        "$8",
+        "14-day",
+        "https://quillnote.example.com/signup"
+      ]
+    },
+    "s03_email_pro": {
+      "category": "professional email (formulaic)",
+      "expected": "trim chatbot politeness; keep dates, times, names, link, ask",
+      "protected": [
+        "Priya",
+        "Tomás",
+        "Thursday, October 9",
+        "Tuesday, October 14",
+        "10:30 a.m. PT",
+        "Friday",
+        "https://zoom.example.com/j/84629103",
+        "Dana Whitfield",
+        "three shortlisted logistics vendors",
+        "Q3"
+      ]
+    },
+    "s04_tech_docs": {
+      "category": "technical documentation (frontmatter, headings, code block, table, inline code, URL)",
+      "expected": "cut staging prose only; code, table, frontmatter, inline code, URL byte-identical",
+      "protected": [
+        "429 Too Many Requests",
+        "Retry-After",
+        "rate_limit",
+        "gateway.yaml",
+        "max_requests: 100",
+        "window_seconds: 60",
+        "burst: 20",
+        "https://docs.example.com/gateway/rate-limits",
+        "fixed-window",
+        "API key"
+      ]
+    },
+    "s05_explainer": {
+      "category": "explanatory nonfiction",
+      "expected": "cut staging and closer; keep technical claims exactly (180 degrees, below about 1,000 Hz, passive seal)",
+      "protected": [
+        "destructive interference",
+        "180 degrees",
+        "1,000 Hz",
+        "microphones",
+        "passive seal"
+      ]
+    },
+    "s06_academic": {
+      "category": "academic prose with citations, statistics, and a direct quotation",
+      "expected": "remove filler/inflation; citations, numbers, quote, page number verbatim; hedges kept",
+      "protected": [
+        "Okafor et al. (2018)",
+        "249",
+        "13%",
+        "46 studies",
+        "Lindqvist & Haddad, 2020",
+        "d = 0.12",
+        "Moreau, Tanaka, and Ellis (2021)",
+        "\"the effects of remote work are neither uniformly positive nor uniformly negative\"",
+        "(p. 46)"
+      ]
+    },
+    "s07_social": {
+      "category": "social media (LinkedIn-style, emoji, hashtags)",
+      "expected": "de-cringe while keeping the facts and the post's genre",
+      "protected": [
+        "Fernway",
+        "Three years",
+        "two co-founders",
+        "27",
+        "$2.1M",
+        "curiosity, not credentials",
+        "every single week"
+      ]
+    },
+    "s08_fiction": {
+      "category": "narrative fiction (AI-shaped: somatic emotion, mirror weather, stated moral, epilogue)",
+      "expected": "rewrite mode: keep every event and the ending; may trim the lesson line, weather mirroring, somatic stock; epilogue should be flagged or trimmed with a note, not silently expanded",
+      "protected": [
+        "Nora",
+        "Delancey Street",
+        "Mr. Alvarez",
+        "stroke",
+        "pocket watch",
+        "screw",
+        "eleven years",
+        "watch began to tick"
+      ]
+    },
+    "s09_news_quotes": {
+      "category": "news-style text with direct quotes, attribution, statistics",
+      "expected": "quotes verbatim with correct attribution; numbers intact; cut inflation",
+      "protected": [
+        "4-1",
+        "Tuesday",
+        "$48 million",
+        "Route 9",
+        "11 new stops",
+        "midnight",
+        "Lena Kowalczyk",
+        "Mark Deaver",
+        "\"This is about giving people a real alternative to driving,\"",
+        "\"For a lot of families in the east county, the bus is the only way to get to work.\"",
+        "\"If Sacramento pulls back, we're left holding the bill,\"",
+        "2024",
+        "38%",
+        "22%",
+        "2022",
+        "6,400",
+        "March",
+        "fall 2026"
+      ]
+    },
+    "s10_human_tech": {
+      "category": "already-good human technical prose (Python Tutorial)",
+      "expected": "few or no changes",
+      "protected": [
+        "C/C++/Java",
+        "Python is just the language for you.",
+        "write/compile/test/re-compile cycle",
+        "Windows, macOS, and Unix"
+      ]
+    },
+    "s11_human_voice": {
+      "category": "already-good human literary prose with heavy dash use (1889)",
+      "expected": "few or no changes; dialogue, dashes, period voice intact",
+      "protected": [
+        "Uncle Podger",
+        "Aunt Podger",
+        "Will",
+        "Tom",
+        "Jim",
+        "Mr. Goggles",
+        "Maria",
+        "sixpen'orth",
+        "Tom!—where's Tom?—Tom"
+      ]
+    },
+    "s12_email_nearclean": {
+      "category": "near-clean human email with one chatbot line",
+      "expected": "minimal edit: remove or adjust only the chatbot sign-off",
+      "protected": [
+        "Marcus",
+        "$6k",
+        "January",
+        "Thursday",
+        "after 2",
+        "dentist",
+        "Jo"
+      ]
+    },
+    "s13_spanish": {
+      "category": "non-English (Spanish) formulaic prose",
+      "expected": "clean in Spanish (do not translate); keep figures, name, quote",
+      "protected": [
+        "Villa Esperanza",
+        "3 de marzo",
+        "12.000",
+        "40",
+        "2,5 millones",
+        "Carmen Ruiz",
+        "\"queremos que la biblioteca sea la sala de estar de toda la ciudad\""
+      ]
+    }
+  }
+}

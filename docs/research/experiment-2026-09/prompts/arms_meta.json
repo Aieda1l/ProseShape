@@ -1,0 +1,75 @@
+{
+ "PS": {
+  "files": [
+   "ProseShape@57d58e4:SKILL.md",
+   "ProseShape@57d58e4:references/humanizer-rules.md",
+   "ProseShape@57d58e4:references/storyscope-rules.md",
+   "ProseShape@57d58e4:references/mode-guidance.md",
+   "ProseShape@57d58e4:references/examples.md",
+   "ProseShape@57d58e4:references/evaluation-rubric.md"
+  ],
+  "bytes": 84096,
+  "sha256": "68f2520c6a1b4312"
+ },
+ "HZ": {
+  "files": [
+   "comp/blader_humanizer/SKILL.md"
+  ],
+  "bytes": 32787,
+  "sha256": "fc37bfa821c92a4c"
+ },
+ "HS": {
+  "files": [
+   "comp/Anson-Saju-George_HumanScope/SKILL.md"
+  ],
+  "bytes": 13173,
+  "sha256": "8a836f7f6eb4ff07"
+ },
+ "AAW": {
+  "files": [
+   "comp/conorbronsdon_avoid-ai-writing/SKILL.md",
+   "comp/conorbronsdon_avoid-ai-writing/references/patterns.md"
+  ],
+  "bytes": 139380,
+  "sha256": "87a24bdb6681a512"
+ },
+ "SD": {
+  "files": [
+   "comp/shir-danishyar_humanize/SKILL.md",
+   "comp/shir-danishyar_humanize/references/patterns.md",
+   "comp/shir-danishyar_humanize/references/vocabulary.md"
+  ],
+  "bytes": 42861,
+  "sha256": "1452d3a4c6ce5587"
+ },
+ "KZ": {
+  "files": [
+   "comp/keez97_humanizer/SKILL.md"
+  ],
+  "bytes": 56180,
+  "sha256": "1660e2a9c9e9ba1f"
+ },
+ "B": {
+  "files": [],
+  "bytes": 51,
+  "sha256": "9a438891c867304c"
+ },
+ "O": {
+  "files": [],
+  "bytes": 274,
+  "sha256": "0bfb79ff6d4cc5b7"
+ },
+ "PSc": {
+  "files": [
+   "ProseShape@57d58e4:SKILL.md"
+  ],
+  "bytes": 19151,
+  "sha256": "426df8696068c4f9"
+ },
+ "_executor_models": {
+  "default": "claude-sonnet-5-5",
+  "PSo": "claude-opus-5-5 with PS prompt",
+  "Oo": "claude-opus-5-5 with O prompt",
+  "PSc": "claude-sonnet-5-5 with PSc prompt"
+ }
+}
