@@ -1,0 +1,82 @@
+[
+  {
+    "query": "ugh my manager keeps saying my weekly status emails read like chatgpt wrote them. here's this week's, can you fix it so it sounds like an actual person?\n\nHi all, I'm excited to share this week's key updates! We've made significant progress on the Q4 roadmap, and the team continues to deliver exceptional results. Notably, the billing migration is 80% complete...",
+    "should_trigger": true
+  },
+  {
+    "query": "I wrote a ~3k word short story with Claude's help for my Thursday workshop (Hartwell Community College, fiction II). Sentences are fine but the plot feels machine-made: every clue leads neatly to the next, the ending has the narrator explaining the lesson, and there's a 'years later' epilogue. Can you restructure it? Pasting below.",
+    "should_trigger": true
+  },
+  {
+    "query": "Here are two posts I actually wrote for my baking blog (pasted below) and a draft ChatGPT made for next week's post on rye starters. Rewrite the draft so it sounds like me, same info.",
+    "should_trigger": true
+  },
+  {
+    "query": "de-AI this cover letter paragraph pls, applying to a museum registrar job: 'I am thrilled to apply for this role. For me, collections management isn't just a job, it's a calling. My meticulous attention to detail and passion for preservation make me uniquely positioned to...'",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a 1,500-word literary short story about a night bus driver in Glasgow. I've read a lot of AI fiction lately and it all has the same shape, so please no tidy moral, no epiphany ending, no 'years later' coda.",
+    "should_trigger": true
+  },
+  {
+    "query": "chapter 3 of my novel has a kitchen argument between two sisters and everyone talks in complete thesis statements about grief. can you make them sound like real people? keep what happens, the older one still leaves at the end",
+    "should_trigger": true
+  },
+  {
+    "query": "make this linkedin post less cringe/robotic but keep the numbers exactly: 'Thrilled to announce that after 4 incredible years, our team grew ARR 40% and cut churn to 3.1%. Humbled and grateful for this journey. Here's what I learned 🧵'",
+    "should_trigger": true
+  },
+  {
+    "query": "My advisor says the intro to my dissertation chapter 'smells like an LLM.' Can you revise it so it reads like a person wrote it? Citations and the two block quotes have to stay exactly as they are.",
+    "should_trigger": true
+  },
+  {
+    "query": "lightly polish my maid of honor toast? i wrote most of it myself but used AI for the last paragraph and you can tell. don't want it to lose my voice, it's for saturday",
+    "should_trigger": true
+  },
+  {
+    "query": "Draft a personal essay for my Substack about quitting my job as a line cook after 9 years. Facts: started at 22 at a diner in Dayton, ended as sous chef at Marrow, left in March, burned my forearm twice. Make it sound like a human wrote it, not a content mill.",
+    "should_trigger": true
+  },
+  {
+    "query": "My student turned in this essay and I'm pretty sure it was written by AI. Can you tell me whether it was, and what the giveaways are? I need to decide whether to report it.",
+    "should_trigger": false
+  },
+  {
+    "query": "Proofread this for typos and punctuation only. Don't change wording or style at all, it's going to the printer tonight: 'The committe will meet on tuesday in rm 204, bring you're badges.'",
+    "should_trigger": false
+  },
+  {
+    "query": "Translate this short story from Spanish to English and keep the author's style as close as you can. It's for a translation class, about 2,000 words.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize the StoryScope paper (the one about idiosyncrasies in AI fiction) in 5 bullet points for my reading group. What did they find about Claude specifically?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a python script that scans a folder of .md files and counts em dashes, 'delve', and 'tapestry' per file, output a csv",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert this blog post about our new API rate limits into a changelog entry with version number, date, and bullet points.",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me notes on the pacing of my novel's first chapter. Don't rewrite anything, I just want to know where it drags and why.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make this paragraph more formal for a court filing, replace contractions and the casual phrasing: 'We didn't get the docs till Friday so we couldn't really respond in time.'",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a 50-word product description for our espresso grinder, include the keywords 'burr grinder', 'espresso', 'stainless steel'.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you explain what 'show, don't tell' means in fiction writing, with a couple of examples? I'm teaching a middle school creative writing unit.",
+    "should_trigger": false
+  }
+]
