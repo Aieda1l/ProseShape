@@ -1,0 +1,7 @@
+Let's dive into one of the most debated topics in version control: rebase versus merge! At its core, both commands serve the same fundamental purpose — integrating changes from one branch into another. However, they achieve this in fundamentally different ways.
+
+When you run `git merge main` on your feature branch, Git creates a new merge commit that ties together the histories of both branches. This preserves the complete, accurate history of your project, showcasing exactly when and how branches diverged.
+
+On the other hand, `git rebase main` moves your feature branch's commits so they sit on top of the latest commit on main. This creates a clean, linear history — but it rewrites commit hashes, which means you should never rebase commits that have already been pushed to a shared branch.
+
+Ultimately, the choice between rebase and merge isn't just a technical decision; it's a reflection of your team's values and workflow. By understanding these crucial differences, you'll be empowered to make informed decisions that enhance your team's productivity.
