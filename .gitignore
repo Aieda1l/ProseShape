@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+
+# Local/private build workspaces and generated review artifacts
+storyscope-humanizer-workspace/
+workspace/
+*-workspace/
+
+# Editor files
+.vscode/
+.idea/
