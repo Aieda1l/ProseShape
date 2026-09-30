@@ -1,0 +1,54 @@
+# Design notes (for maintainers)
+
+How the skill's design follows from its sources, and a log format for future iterations. The runtime skill does not need this file.
+
+## Contents
+
+1. Prompt-engineering principles applied
+2. Where the three sources disagree, and what won
+3. Iteration log
+
+---
+
+## 1. Prompt-engineering principles applied
+
+From Lee Boonstra, *Prompt Engineering* (Google, February 2025), cross-checked against Anthropic's Agent Skills authoring guidance (SKILL.md under 500 lines, references one level deep, a contents list in long reference files, concrete examples over abstract description).
+
+| Principle (page) | How the skill uses it |
+|---|---|
+| System, contextual, and role prompts serve different purposes (pp.18–24) | SKILL.md holds persistent behavior. Per-task context lives in named variables (`{mode}`, `{genre}`, `{reader}`, `{sample}`, `{permissions}`, `{must_keep}`) in `mode-guidance.md`. No role-play persona is needed; the purpose statement does that work. |
+| Design with simplicity; use action verbs (p.55) | Imperative, one idea per line; reasons given briefly instead of stacked MUSTs. |
+| Be specific about the output (p.56) | A return format per mode. |
+| Prefer instructions to constraints (pp.56–57) | Level 2 is written as questions and moves, not bans. Hard constraints are kept only where the paper says constraints belong: safety and strict requirements (here, preservation and integrity). Word lists are marked weak evidence. |
+| Provide examples; 3–5 or more; diverse; include edge cases (pp.15–17, 54) | Eleven examples across genres, including four where the right action is restraint. |
+| Mix up the classes in few-shot examples (p.59) | Examples alternate heavy rewrite, structural rewrite, and minimal edit so the model does not learn "always rewrite heavily". |
+| Step-back prompting (pp.25–28) | Generation begins by naming the default version, then choosing with or against it. |
+| Tree of thoughts / self-consistency (pp.32–37) | Two or three alternative shapes are sketched before a fiction draft. |
+| Chain of thought; answer after reasoning (pp.29–31, 64) | Planning and diagnosis stay private; the reply is the text plus a short note. |
+| Use variables (p.58) | See the variables table in `mode-guidance.md`. |
+| Document attempts; iterate; adapt to model updates (pp.60, 64–65) | The log below. StoryScope's fingerprints are dated to the tested model versions and should be re-checked when models change. |
+
+The whitepaper's sampling advice (temperature, top-K, top-P) does not apply: a skill cannot set sampling parameters.
+
+## 2. Where the sources disagree, and what won
+
+| Conflict | Resolution | Reason |
+|---|---|---|
+| Humanizer bans all dashes without a sample; fiction uses dashes for interrupted speech | Keep interruption dashes in fiction; ban connective dashes in nonfiction without a sample | Genre convention ranks above generic pattern rules |
+| Humanizer: "Fiction is exempt [from the no-invention rule] because invented detail is the task" | Invention allowed in generate and deep-rewrite; small flagged details allowed in rewrite; plot facts preserved | A rewrite belongs to the user's story |
+| Humanizer: "Vary sentence length; real writing alternates short and long" | Length follows content; alternation by rule is a tell | Rhythm by rule is Humanizer's own category |
+| Craft advice ("show, don't tell"; "the protagonist drives the climax") vs StoryScope (both AI-elevated) | Treat workshop rules as possible model priors; choose per beat | StoryScope Table 16 |
+| StoryScope human-side features vs other models' fingerprints | Never add a device to look human | StoryScope Table 17 |
+| Detection vs quality | Optimize for readers | StoryScope measures separability only; Humanizer states detector evasion is a non-goal |
+
+## 3. Iteration log
+
+Use one row per tested version (Boonstra's Table 21 template, adapted).
+
+| Version | Date | Goal | Model | Change | Eval result | Notes |
+|---|---|---|---|---|---|---|
+| 1.0.0 | 2026-09-29 | First draft from the rulebook | claude-opus-5-5 | Initial SKILL.md and six references | Blind 3-way, 12 evals: ranked first 8/12, mean rank 1.42, assertions 71/72 | Losses: thin, under-voiced essay; flat LinkedIn post; meta note after a generated story; a deep rewrite whose new plant-and-payoff "clicks shut". Mode label leaked in 9/12 replies. |
+| 1.1.0 | 2026-09-29 | Fix iteration-1 failures | claude-opus-5-5 | Stop announcing the mode; no notes around generated fiction; new "Cut, then give it a person" section (voice is not invention; keep anchors); emotion guidance warns against coldness; new closure question and G9 bookend pattern; shorter change notes; example 2 rewritten to add attitude | Blind 4-way, 12 evals: first 6/12, mean rank 1.67 of 4, quality 8.25 (v1.0: 7.83); above v1.0 in 7/12; assertions 72/72 | Fixed essay, generated story, LinkedIn post, mode leak. New over-correction: added events and a staged gag in rewrites; deep rewrite still too close to original order. |
+| 1.2.0 | 2026-09-29 | Balance the voice fix | claude-opus-5-5 | "Voice, not more material" (no new events in rewrites, however small); keep real points under hype; humor-by-formula check (B13); plain feeling means plain; deep rewrite reconsiders disclosure order first; no caricatured invented characters | Targeted blind 3-way on 6 evals vs v1.1 and baseline: first 2/6 (v1.1 4/6); mean 7.83 vs v1.1 8.00 | Deep rewrite fixed (eval-09 first, 9/10). Restraint over-applied: flat bedtime story, weak humor, spare essay. The model copied the example sentence "She was close to crying" verbatim. |
+| 1.3.0 | 2026-09-29 | Keep v1.2's structure fix, restore v1.1's liveliness | claude-opus-5-5 | "Put the life in the telling, not in new material" replaces the restraint rule; removed the copyable example sentence; children's genre keeps signposts and read-aloud repetition | Blind 4-way on 6 evals (v1.3, v1.2, v1.1, baseline): v1.3 7.50, v1.2 7.50, v1.1 8.00, baseline 6.50; each skill version first 2/6 | Differences among skill versions are within grader and run noise (regrading identical v1.2 outputs moved their mean 0.33). Baseline last or near last on every eval. |
+| 1.3.1 | 2026-09-29 | Wording clarification | claude-opus-5-5 | "A few well-placed lines of voice beat a quip in every sentence" (addresses stacked quips seen in iterations 2 and 4) | Not separately evaluated | Shipped version. Description rewritten by hand after `run_loop` could not discriminate candidates (nested sessions consulted no skills for writing tasks); see `evals/eval-log.md`. |
