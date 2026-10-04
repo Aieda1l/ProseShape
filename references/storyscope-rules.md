@@ -1,6 +1,6 @@
 # StoryScope rules: narrative defaults in AI fiction
 
-Source: Jenna Russell, Rishanth Rajendhran, Chau Minh Pham, Mohit Iyyer, John Wieting. "StoryScope: Investigating idiosyncrasies in AI fiction." COLM 2026, arXiv 2604.03136v6. Page and table numbers below refer to that PDF.
+Source: Jenna Russell, Rishanth Rajendhran, Chau Minh Pham, Mohit Iyyer, John Wieting. "StoryScope: Investigating idiosyncrasies in AI fiction." arXiv:2604.03136v6 (preprint, revised 2026-08-10). Page and table numbers below refer to that PDF.
 
 ## Contents
 
@@ -92,7 +92,7 @@ Format: **Default** (what models do) · **Ask** · **Moves** · **Leave it when*
 ### 5.1 Stated meaning (Table 14 #1, #10; p.7)
 - **Default:** the narrator names the theme; a grieving character's arc ends with the lesson stated (the paper's own example, p.7).
 - **Ask:** where does the text tell the reader what the story means? Check the last paragraph and the beat after each key scene.
-- **Moves:** cut the statement; replace it with an action, image, or line of dialogue that implies it; or give the interpretation to a character who could be wrong.
+- **Moves:** cut the statement; replace it with an action, image, or line of dialogue that implies it; or give the interpretation to a character who could be wrong. In rewrite mode the realization is the author's beat: shorten it and give it to the character; cutting it is a deep-rewrite move.
 - **Leave it when:** fable, parable, children's story, satire, or a retrospective narrator whose reflecting is the form.
 - **Overdone:** a story with no discoverable point. Half of human stories still include some commentary.
 
@@ -113,7 +113,7 @@ Format: **Default** (what models do) · **Ask** · **Moves** · **Leave it when*
 ### 5.4 Emotion through the body (Table 14 #2; Table 15 #12; p.7)
 - **Default:** "show, don't tell" everywhere: throat tightens, chest aches, breath catches, stomach drops.
 - **Ask:** which beats carry the story? Which feelings are incidental?
-- **Moves:** name incidental feelings plainly ("She was afraid of him, a little."); give key beats to action or speech; let one feeling stay unclear to the character; keep a physical detail only when it is specific to this person.
+- **Moves:** name incidental feelings plainly ("She was afraid of him, a little."); give key beats to action or speech; let one feeling stay unclear to the character; keep a physical detail only when it is specific to this person. In rewrite mode every emotional beat stays; change how it is rendered, not whether it is there.
 - **Leave it when:** genres that run on physical response (thriller, romance) or stories about bodies. Vary it anyway.
 - **Overdone:** labels everywhere; or, the opposite failure, feeling cut so hard the character seems absent. Humans use explicit labels far more than models (29% vs 8%), and Claude's default is already restraint (§6). In testing this skill, over-applying implication produced a muted story that readers found cool.
 

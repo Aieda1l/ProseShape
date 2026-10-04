@@ -26,14 +26,14 @@ Eleven cases chosen to show judgment, not rule compliance. They alternate betwee
 > I'm thrilled to share that, starting March 3, our Denver warehouse will transition to a new inventory system — and it's not just an upgrade, it's a complete transformation of how we work. This pivotal change will streamline operations, enhance accuracy, and empower our team to deliver exceptional results. The rollout will happen in two phases over six weeks. Rest assured, comprehensive training will be provided. Together, we're building a brighter future!
 
 **Output**
-> Starting March 3, the Denver warehouse is moving to a new inventory system. The rollout happens in two phases over six weeks, and there will be training.
+> Starting March 3, the Denver warehouse is moving to a new inventory system. It should make day-to-day operations simpler and our inventory counts more accurate. The rollout happens in two phases over six weeks, and there will be full training.
 >
 > What changed
-> - Cut the "not just an upgrade" contrast, the benefit triad, and the send-off.
-> - Kept the date, the site, the two phases, the six weeks, and the training.
+> - Cut the "not just an upgrade" contrast, "pivotal," "empower our team to deliver exceptional results," and the send-off.
+> - Kept the two benefits the draft actually claims (simpler operations, better accuracy) in plain words, along with the date, the site, the phases, and the training.
 > - The draft never says what the new system does differently or when training happens. One sentence on each would make this worth reading; I didn't guess.
 
-**Why:** Nearly all of the input is staging. The tempting fix is to write a fuller memo ("training starts the week before your phase"), which would invent facts. A short true memo beats a longer invented one.
+**Why:** Most of the input is staging, but not all of it: "streamline operations, enhance accuracy" is a real claim about what the change is for, and dropping it would change what the memo says. The opposite temptation is a fuller memo ("training starts the week before your phase"), which would invent facts. Keep what the draft claims, in plain words, and invent nothing.
 
 ---
 
@@ -45,14 +45,14 @@ Eleven cases chosen to show judgment, not rule compliance. They alternate betwee
 > The year I moved to Pittsburgh, I started baking bread. As I kneaded the dough each Sunday, I felt the tension in my shoulders melt away, and the warm, yeasty scent filled my tiny apartment with a sense of home. My first loaves were dense and lopsided. But slowly, week by week, they got better. In that moment, I realized that bread, like life, requires patience. It wasn't just about baking — it was about learning to trust the process.
 
 **Output**
-> The year I moved to Pittsburgh, I started baking bread on Sundays. I'd like to say it was a plan. Kneading turned out to be the one hour of the week my shoulders came down, and the smell made the tiny apartment feel like mine. My first loaves were dense and lopsided, which I'd have called rustic if anyone had asked. They got better slowly, a week at a time, which is about the only speed I've ever gotten better at anything.
+> The year I moved to Pittsburgh, I started baking bread. Every Sunday I kneaded dough, and it was the one time my shoulders came down; the warm, yeasty smell made my tiny apartment feel like home. My first loaves were dense and lopsided. They got better slowly, week by week. Somewhere in those weeks I figured out that bread needs patience, and so does life, and baking was where I learned to trust the process.
 >
 > What changed
-> - Cut the bread-like-life lesson and the "not just about baking" line; the paragraph already shows the patience.
-> - Added a little of your attitude ("I'd like to say it was a plan," "rustic," the last clause). Those are reactions, not new events; cut them if they aren't you.
-> - If you want the ending to land harder, it should be something that actually happened (the first loaf you gave away, say). I didn't add one.
+> - Kept every event and your realization, in plainer words; cut "In that moment" and the "not just about baking" contrast.
+> - Kept the kneading and the smell, without the sensory list.
+> - If you'd rather end on the loaves getting better, the last sentence can go. That's your call, since it's your reflection.
 
-**Why:** The lesson line is StoryScope's stated-meaning default at essay scale and Humanizer's closer pattern at sentence scale. The fix removes it without inventing a grandmother or a neighbor to replace it, then puts a person back: attitude is voice, not invention. The added lines are jokes and attitude, not events: nobody is invented, nothing new happens. A version that only cuts reads thin.
+**Why:** The lesson line is StoryScope's stated-meaning default at essay scale and Humanizer's closer pattern at sentence scale. In a rewrite it is still the writer's own claim about their life, so it stays, shorter and in their register, and the note offers the cut instead of making it. No attitude, joke, or anecdote is added: the voice comes from saying what the writer said more plainly. (Version 1.3 added lines of attitude here; blind comparisons scored them as invented claims about the writer.)
 
 ---
 
@@ -86,18 +86,20 @@ Eleven cases chosen to show judgment, not rule compliance. They alternate betwee
 > She understood now that grief wasn't something to get over. It was something to carry, like the plane in her hands. She would keep it. She would learn to use it. And in that small act, he would remain with her.
 
 **Output**
-> Mara stood in the doorway of her father's workshop. It smelled of sawdust and machine oil. She ran her fingers along the workbench, over the grooves his tools had worn into it in forty years.
+> Mara stood in the doorway of her father's workshop. Late sun came through the dust, and the room smelled of sawdust and machine oil and something she couldn't name. For a moment she couldn't make herself go in. Then she ran her fingers along the workbench, over the grooves his tools had worn into it in forty years.
 >
 > She picked up his old hand plane. It was heavier than she remembered.
 >
-> The rain that had fallen all week stopped at some point while she was in there. She didn't notice. She was turning the plane over, looking for how the blade came out, because if she was going to keep it she was going to have to learn how it worked.
+> Outside, the rain that had fallen all week stopped, and some sun came through.
+>
+> She wasn't going to get over him, she thought. She was going to carry him, the way she was carrying the plane. She would keep it and learn to use it, and that would be how he stayed.
 >
 > What changed
 > - Every event stays, including the rain stopping and her decision to keep the plane and learn it.
-> - The grief-as-something-to-carry paragraph is gone; her handling of the plane carries it.
-> - Cut the dust motes, the unnamed smell, and the tightening throat. The rain no longer breaks into sunlight on cue.
+> - The realization is now her own thought, shorter, instead of the narrator's lesson. The tightening throat became her stopping in the doorway.
+> - The ending still says what the plane means. If you'd like readers to work that out, the last paragraph could go; that changes the ending, so I left it to you.
 
-**Why:** Four StoryScope defaults in one page: sensory tour with a stock smell, embodied emotion, setting as mirror, and resolution by stated understanding. The decision survives as her own practical thought, not the narrator's moral.
+**Why:** Four StoryScope defaults in one page: sensory tour with a stock smell, embodied emotion, setting as mirror, and resolution by stated understanding. The user asked for the same story, so every beat stays and only its telling changes: the lesson moves from narrator to character, the throat becomes a hesitation, and the weather clears without the "finally" and the "thin line of sun" doing symbolic work. Cutting the realization is a structural change for deep-rewrite mode, so the note offers it.
 
 ---
 

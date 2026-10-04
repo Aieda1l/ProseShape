@@ -1,6 +1,9 @@
-# ProseShape
-
-**Make prose feel chosen, not defaulted.**
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner.svg" alt="ProseShape: Make prose feel chosen, not defaulted." width="100%">
+  </picture>
+</p>
 
 ProseShape is an agent skill for writing and rewriting prose while preserving the writer's facts, voice, and intent. It works at two levels: sentence-level patterns that make text feel generic or model-shaped, and narrative-level defaults such as over-explained themes, tidy single-track plots, embodied-emotion repetition, and overly resolved endings.
 
@@ -13,7 +16,7 @@ It is built for readers, not AI detectors. The goal is better, more deliberate p
 - Handles fiction at both the prose and story-structure level.
 - Supports light edits, ordinary rewrites, deep fiction restructuring, and generation from scratch.
 - Preserves technical meaning in factual and technical writing.
-- Includes preservation-focused evaluation fixtures, trigger tests, and an evaluation log.
+- Ships with a preservation checker, a frozen held-out corpus, and a reproducible blind-evaluation harness.
 
 ## Why ProseShape
 
@@ -69,24 +72,32 @@ Write a 1,200-word story about a hospice night nurse. No stated moral, no years-
 
 ```text
 .
-├── SKILL.md
-├── references/
+├── SKILL.md                      # the skill (runtime entry point)
+├── references/                   # loaded by the skill as needed
 │   ├── humanizer-rules.md
 │   ├── storyscope-rules.md
 │   ├── mode-guidance.md
 │   ├── examples.md
 │   ├── evaluation-rubric.md
-│   └── prompt-engineering-notes.md
+│   └── prompt-engineering-notes.md   # maintainers only
+├── scripts/
+│   ├── preserve_check.py         # did a rewrite keep numbers, quotes, code, links, structure?
+│   └── tests/
 ├── evals/
+│   ├── eval-log.md               # every tested version and its result
 │   ├── trigger-evals.json
-│   ├── eval-log.md
-│   └── files/
+│   ├── files/                    # inputs for the 1.0–1.3 evaluations
+│   ├── heldout/                  # frozen 12-text corpus for validation (SHA256SUMS)
+│   ├── harness/                  # generate, blind-judge, analyze, check
+│   └── v1.4-validation/          # method, results, raw outputs and judgments for 1.4.0
+├── docs/research/                # competitive analysis and the 2026-09 experiment
+├── assets/                       # README banner (light and dark)
 ├── CHANGELOG.md
 ├── THIRD_PARTY_NOTICES.md
 └── LICENSE
 ```
 
-The large raw build workspace and raw grading artifacts are intentionally omitted from the public repository. The included fixtures, trigger tests, references, and evaluation log document the method and the main results without publishing the entire development workspace.
+Only `SKILL.md` and `references/` are needed at runtime. Raw outputs and judgments for the 1.0–1.3 iterations stayed in the private build workspace. For the 2026-09 comparison and the 1.4 validation they are committed, so every table can be reproduced without a model call.
 
 ## Evidence base
 
@@ -103,7 +114,28 @@ StoryScope findings are population-level observations, not rules for what human 
 
 ## Evaluation
 
-Development used 12 cases spanning business prose, personal essays, technical writing, fiction rewrites, dialogue, voice matching, citation preservation, deep story restructuring, minimal editing, and generation. The public repo includes the evaluation fixtures, trigger tests, and summarized results in `evals/eval-log.md`.
+ProseShape is measured against the edit a capable model makes when simply told to edit well. Detector scores are not the benchmark.
+
+**1.4.0 against a strong ordinary-editor prompt.** There were 12 held-out texts, frozen before any 1.4 change: release notes, a cover letter, a support reply, a README, an op-ed, a press release with quotations, a personal essay, fiction dialogue, a grant abstract, and three human-written controls. Every arm got the same request and the same executor model, and a stronger model judged the outputs blind, with the untouched source among the candidates.
+
+| Arm | Overall (1–10) [95% CI] | Fact problems flagged |
+|---|---|---|
+| **ProseShape 1.4.0** | **8.17** [7.79, 8.54] | 16 |
+| Ordinary-editor prompt | 7.33 [6.88, 7.79] | 47 |
+| HumanScope | 7.27 [6.58, 7.90] | 29 |
+| ProseShape 1.3.1 | 5.94 [5.12, 6.75] | 78 |
+| Untouched source | 3.75 [2.81, 4.90] | 0 |
+
+Against the ordinary editor, the paired difference is +0.83 [+0.19, +1.54], better on 7 texts, worse on 3, tied on 2. The executor and the judge are both Claude models, and no human readers were involved. The method, the per-text results, the known issues and the limitations are in [`evals/v1.4-validation/README.md`](evals/v1.4-validation/README.md). The [competitive analysis](docs/research/competitive-analysis-2026-09.md) explains how the ordinary-editor bar was chosen and how 1.3.1 compared with other open-source humanizers.
+
+**Check a rewrite yourself.** `scripts/preserve_check.py` compares a source with its rewrite. It flags changed or missing numbers, quotations, inline and fenced code, links, and frontmatter, and reports heading, table, length and dash changes. It is standard-library Python and is not a quality score.
+
+```bash
+python3 scripts/preserve_check.py draft.md revised.md            # add --mode light, --fiction, --keep "text", --json
+python3 -m unittest discover -s scripts/tests
+```
+
+Versions 1.0–1.3 were developed on 12 cases covering business prose, personal essays, technical writing, fiction rewrites, dialogue, voice matching, citation preservation, deep story restructuring, minimal editing, and generation. See [`evals/eval-log.md`](evals/eval-log.md). Deep rewrite, generation and voice matching have not yet been re-tested under the 1.4 harness.
 
 ## License
 

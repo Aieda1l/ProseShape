@@ -1,0 +1,6 @@
+# Generated when re-running the experiment scripts; the committed record is results/*.jsonl
+outputs/
+judgments/
+arms/
+sandbox/
+STOP

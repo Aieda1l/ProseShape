@@ -1,0 +1,2542 @@
+[
+ {
+  "arm": "AAW",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.466,
+  "len_ratio": 0.45,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 0,
+  "lint_density_src": 53.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.313,
+  "len_ratio": 0.57,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 62.5,
+  "lint_density_out": 11.9,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text",
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.333,
+  "len_ratio": 0.66,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.126,
+  "len_ratio": 0.82,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 34.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.181,
+  "len_ratio": 0.77,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 15.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.104,
+  "len_ratio": 0.92,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 8.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.164,
+  "len_ratio": 0.84,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 18.5,
+  "lint_density_out": 10.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.019,
+  "len_ratio": 0.98,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.09,
+  "len_ratio": 0.83,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 4,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 6.5,
+  "lint_density_out": 6.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 2,
+  "lint_density_src": 2.8,
+  "lint_density_out": 2.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.076,
+  "len_ratio": 0.86,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "AAW",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.269,
+  "len_ratio": 0.7,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.435,
+  "len_ratio": 0.63,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 0,
+  "lint_density_src": 53.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.272,
+  "len_ratio": 0.82,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 62.5,
+  "lint_density_out": 42.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.385,
+  "len_ratio": 0.78,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 8.3,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.146,
+  "len_ratio": 0.86,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 34.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.322,
+  "len_ratio": 0.87,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 15.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.36,
+  "len_ratio": 0.87,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 9.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.291,
+  "len_ratio": 1.0,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 18.5,
+  "lint_density_out": 9.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.217,
+  "len_ratio": 1.06,
+  "protected_total": 8,
+  "protected_missing": [
+   "watch began to tick"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.149,
+  "len_ratio": 0.84,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.303,
+  "len_ratio": 0.95,
+  "protected_total": 4,
+  "protected_missing": [
+   "Python is just the language for you.",
+   "write/compile/test/re-compile cycle"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.5,
+  "lint_density_out": 3.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.335,
+  "len_ratio": 0.97,
+  "protected_total": 9,
+  "protected_missing": [
+   "sixpen'orth",
+   "Tom!—where's Tom?—Tom"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 0,
+  "lint_density_src": 2.8,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.21,
+  "len_ratio": 0.88,
+  "protected_total": 7,
+  "protected_missing": [
+   "dentist"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "B",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.297,
+  "len_ratio": 0.74,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.389,
+  "len_ratio": 0.59,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 0,
+  "lint_density_src": 53.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.253,
+  "len_ratio": 0.84,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 62.5,
+  "lint_density_out": 32.3,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.394,
+  "len_ratio": 0.67,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.192,
+  "len_ratio": 0.71,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 34.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.259,
+  "len_ratio": 0.8,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 15.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.176,
+  "len_ratio": 0.87,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 9.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.508,
+  "len_ratio": 0.75,
+  "protected_total": 7,
+  "protected_missing": [
+   "Three years"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 18.5,
+  "lint_density_out": 12.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.031,
+  "len_ratio": 0.96,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.09,
+  "len_ratio": 0.83,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 4,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 6.5,
+  "lint_density_out": 6.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 2,
+  "lint_density_src": 2.8,
+  "lint_density_out": 2.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.076,
+  "len_ratio": 0.86,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HS",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.346,
+  "len_ratio": 0.65,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "residual-grew"
+   ]
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.439,
+  "len_ratio": 0.54,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 0,
+  "lint_density_src": 53.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.447,
+  "len_ratio": 0.61,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 62.5,
+  "lint_density_out": 11.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.382,
+  "len_ratio": 0.67,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "number-added"
+   ]
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.196,
+  "len_ratio": 0.69,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 34.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": false,
+   "errors": [
+    "heading-count"
+   ],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.348,
+  "len_ratio": 0.59,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 15.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.231,
+  "len_ratio": 0.83,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 9.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.376,
+  "len_ratio": 0.65,
+  "protected_total": 7,
+  "protected_missing": [
+   "curiosity, not credentials",
+   "every single week"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 18.5,
+  "lint_density_out": 13.9,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.107,
+  "len_ratio": 0.92,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.09,
+  "len_ratio": 0.83,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.037,
+  "len_ratio": 1.01,
+  "protected_total": 4,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.5,
+  "lint_density_out": 6.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 2,
+  "lint_density_src": 2.8,
+  "lint_density_out": 2.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.076,
+  "len_ratio": 0.86,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "HZ",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.354,
+  "len_ratio": 0.55,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.556,
+  "len_ratio": 0.46,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 0,
+  "lint_density_src": 53.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.493,
+  "len_ratio": 0.66,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 62.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.462,
+  "len_ratio": 0.68,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.114,
+  "len_ratio": 0.83,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 34.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.474,
+  "len_ratio": 0.78,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 15.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.329,
+  "len_ratio": 0.75,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 10.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.65,
+  "len_ratio": 0.91,
+  "protected_total": 7,
+  "protected_missing": [
+   "curiosity, not credentials",
+   "every single week"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 18.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.251,
+  "len_ratio": 0.94,
+  "protected_total": 8,
+  "protected_missing": [
+   "watch began to tick"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.168,
+  "len_ratio": 0.83,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.306,
+  "len_ratio": 0.86,
+  "protected_total": 4,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.5,
+  "lint_density_out": 7.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 2,
+  "lint_density_src": 2.8,
+  "lint_density_out": 2.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.076,
+  "len_ratio": 0.86,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "KZ",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.399,
+  "len_ratio": 0.59,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.353,
+  "len_ratio": 0.65,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 0,
+  "lint_density_src": 53.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.27,
+  "len_ratio": 0.84,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 62.5,
+  "lint_density_out": 40.3,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.325,
+  "len_ratio": 0.78,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 8.3,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.163,
+  "len_ratio": 0.75,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 34.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.291,
+  "len_ratio": 0.89,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 15.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.188,
+  "len_ratio": 0.88,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 9.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.404,
+  "len_ratio": 0.96,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 18.5,
+  "lint_density_out": 9.4,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.047,
+  "len_ratio": 0.97,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.09,
+  "len_ratio": 0.83,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.082,
+  "len_ratio": 0.99,
+  "protected_total": 4,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.5,
+  "lint_density_out": 6.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 2,
+  "lint_density_src": 2.8,
+  "lint_density_out": 2.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.076,
+  "len_ratio": 0.86,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "O",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.342,
+  "len_ratio": 0.72,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.532,
+  "len_ratio": 0.55,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 0,
+  "lint_density_src": 53.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.4,
+  "len_ratio": 0.57,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 62.5,
+  "lint_density_out": 11.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text",
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.446,
+  "len_ratio": 0.66,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "number-added"
+   ]
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.193,
+  "len_ratio": 0.77,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 34.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.41,
+  "len_ratio": 0.6,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 15.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.195,
+  "len_ratio": 0.85,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 9.3,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.405,
+  "len_ratio": 0.78,
+  "protected_total": 7,
+  "protected_missing": [
+   "every single week"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 18.5,
+  "lint_density_out": 11.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.33,
+  "len_ratio": 0.8,
+  "protected_total": 8,
+  "protected_missing": [
+   "watch began to tick"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.133,
+  "len_ratio": 0.84,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.003,
+  "len_ratio": 1.0,
+  "protected_total": 4,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.5,
+  "lint_density_out": 6.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 2,
+  "lint_density_src": 2.8,
+  "lint_density_out": 2.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.076,
+  "len_ratio": 0.86,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "PS",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.383,
+  "len_ratio": 0.57,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.502,
+  "len_ratio": 0.53,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 0,
+  "lint_density_src": 53.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.421,
+  "len_ratio": 0.59,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 62.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": false,
+   "errors": [
+    "heading-count"
+   ],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.394,
+  "len_ratio": 0.64,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.172,
+  "len_ratio": 0.81,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 34.5,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.28,
+  "len_ratio": 0.7,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 15.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.167,
+  "len_ratio": 0.87,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 9.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.52,
+  "len_ratio": 0.78,
+  "protected_total": 7,
+  "protected_missing": [
+   "Three years",
+   "curiosity, not credentials"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 18.5,
+  "lint_density_out": 11.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.057,
+  "len_ratio": 0.94,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.11,
+  "len_ratio": 0.84,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.151,
+  "len_ratio": 0.93,
+  "protected_total": 4,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.5,
+  "lint_density_out": 7.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 2,
+  "lint_density_src": 2.8,
+  "lint_density_out": 2.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.076,
+  "len_ratio": 0.86,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "SD",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": false,
+  "change_ratio": 0.354,
+  "len_ratio": 0.55,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s01_ai_blog",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 53.6,
+  "lint_density_out": 53.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s02_marketing",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 62.5,
+  "lint_density_out": 62.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s03_email_pro",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s04_tech_docs",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 34.5,
+  "lint_density_out": 34.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s05_explainer",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 15.4,
+  "lint_density_out": 15.4,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s06_academic",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.7,
+  "lint_density_out": 39.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s07_social",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 18.5,
+  "lint_density_out": 18.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s08_fiction",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s09_news_quotes",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 18,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 22.6,
+  "lint_density_out": 22.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s10_human_tech",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 4,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 6.5,
+  "lint_density_out": 6.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s11_human_voice",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 2,
+  "emdash_out": 2,
+  "lint_density_src": 2.8,
+  "lint_density_out": 2.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s12_email_nearclean",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 21.7,
+  "lint_density_out": 21.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ },
+ {
+  "arm": "U",
+  "sample": "s13_spanish",
+  "rep": "r2",
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  }
+ }
+]

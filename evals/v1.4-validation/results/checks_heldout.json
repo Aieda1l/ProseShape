@@ -1,0 +1,2323 @@
+[
+ {
+  "unchanged": false,
+  "change_ratio": 0.259,
+  "len_ratio": 0.83,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 48.4,
+  "lint_density_out": 28.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  },
+  "arm": "O",
+  "sample": "h01_release_notes",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.383,
+  "len_ratio": 0.95,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h02_cover_letter",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.34,
+  "len_ratio": 0.81,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h03_support_reply",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.093,
+  "len_ratio": 0.93,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 10.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h04_readme",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.358,
+  "len_ratio": 0.9,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 17.6,
+  "lint_density_out": 6.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h05_oped",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.094,
+  "len_ratio": 0.98,
+  "protected_total": 13,
+  "protected_missing": [
+   "approximately 300"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "number-added"
+   ]
+  },
+  "arm": "O",
+  "sample": "h06_press_release",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.131,
+  "len_ratio": 0.92,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.0,
+  "lint_density_out": 6.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h07_personal_essay",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.214,
+  "len_ratio": 0.88,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 7.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h08_fiction_dialogue",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.249,
+  "len_ratio": 0.86,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h09_grant_abstract",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.04,
+  "len_ratio": 1.01,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 3.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h10_human_rust",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h11_human_twain",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.102,
+  "len_ratio": 0.8,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h12_nearclean_slack",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.226,
+  "len_ratio": 0.79,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 48.4,
+  "lint_density_out": 29.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  },
+  "arm": "O",
+  "sample": "h01_release_notes",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.376,
+  "len_ratio": 0.96,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h02_cover_letter",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.301,
+  "len_ratio": 0.77,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h03_support_reply",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.087,
+  "len_ratio": 0.93,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 10.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h04_readme",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.444,
+  "len_ratio": 0.96,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 17.6,
+  "lint_density_out": 12.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h05_oped",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.075,
+  "len_ratio": 0.91,
+  "protected_total": 13,
+  "protected_missing": [
+   "approximately 300"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h06_press_release",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.145,
+  "len_ratio": 0.99,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.0,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h07_personal_essay",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.13,
+  "len_ratio": 0.98,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 6.4,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h08_fiction_dialogue",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.342,
+  "len_ratio": 0.88,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h09_grant_abstract",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.023,
+  "len_ratio": 1.01,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 3.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h10_human_rust",
+  "rep": 2
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h11_human_twain",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.102,
+  "len_ratio": 0.8,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "O",
+  "sample": "h12_nearclean_slack",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.396,
+  "len_ratio": 0.71,
+  "protected_total": 8,
+  "protected_missing": [
+   "Offline Mode"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 48.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": false,
+   "errors": [
+    "heading-count"
+   ],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h01_release_notes",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.497,
+  "len_ratio": 0.89,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h02_cover_letter",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.574,
+  "len_ratio": 0.59,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  },
+  "arm": "PS",
+  "sample": "h03_support_reply",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.215,
+  "len_ratio": 0.88,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  },
+  "arm": "PS",
+  "sample": "h04_readme",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.5,
+  "len_ratio": 0.91,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 17.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h05_oped",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.109,
+  "len_ratio": 0.9,
+  "protected_total": 13,
+  "protected_missing": [
+   "approximately 300"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h06_press_release",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.417,
+  "len_ratio": 0.85,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.0,
+  "lint_density_out": 7.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h07_personal_essay",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.273,
+  "len_ratio": 0.73,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h08_fiction_dialogue",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.279,
+  "len_ratio": 0.91,
+  "protected_total": 10,
+  "protected_missing": [
+   "n = 900"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h09_grant_abstract",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.253,
+  "len_ratio": 0.86,
+  "protected_total": 5,
+  "protected_missing": [
+   "Rust challenges that conflict",
+   "gatekeeper role"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 4.3,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  },
+  "arm": "PS",
+  "sample": "h10_human_rust",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h11_human_twain",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.102,
+  "len_ratio": 0.8,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h12_nearclean_slack",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.435,
+  "len_ratio": 0.74,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 48.4,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": false,
+   "errors": [
+    "heading-count"
+   ],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h01_release_notes",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.478,
+  "len_ratio": 0.9,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h02_cover_letter",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.492,
+  "len_ratio": 0.57,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "large-shrink"
+   ]
+  },
+  "arm": "PS",
+  "sample": "h03_support_reply",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.235,
+  "len_ratio": 0.84,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h04_readme",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.415,
+  "len_ratio": 0.87,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 17.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h05_oped",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.147,
+  "len_ratio": 0.9,
+  "protected_total": 13,
+  "protected_missing": [
+   "approximately 300"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h06_press_release",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.371,
+  "len_ratio": 0.8,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.0,
+  "lint_density_out": 7.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h07_personal_essay",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.332,
+  "len_ratio": 0.75,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h08_fiction_dialogue",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.297,
+  "len_ratio": 0.73,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h09_grant_abstract",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.185,
+  "len_ratio": 0.9,
+  "protected_total": 5,
+  "protected_missing": [
+   "gatekeeper role"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 4.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  },
+  "arm": "PS",
+  "sample": "h10_human_rust",
+  "rep": 2
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h11_human_twain",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.102,
+  "len_ratio": 0.8,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS",
+  "sample": "h12_nearclean_slack",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.194,
+  "len_ratio": 0.75,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 48.4,
+  "lint_density_out": 31.9,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  },
+  "arm": "PS14g",
+  "sample": "h01_release_notes",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.366,
+  "len_ratio": 0.94,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h02_cover_letter",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.422,
+  "len_ratio": 0.76,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h03_support_reply",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.14,
+  "len_ratio": 0.89,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h04_readme",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.294,
+  "len_ratio": 0.89,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 17.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h05_oped",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.114,
+  "len_ratio": 0.89,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h06_press_release",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.151,
+  "len_ratio": 0.91,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.0,
+  "lint_density_out": 6.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h07_personal_essay",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.17,
+  "len_ratio": 0.92,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h08_fiction_dialogue",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.19,
+  "len_ratio": 0.95,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 7.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h09_grant_abstract",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.11,
+  "len_ratio": 0.95,
+  "protected_total": 5,
+  "protected_missing": [
+   "gatekeeper role"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 3.9,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h10_human_rust",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.003,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h11_human_twain",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.102,
+  "len_ratio": 0.8,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h12_nearclean_slack",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.168,
+  "len_ratio": 0.82,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 48.4,
+  "lint_density_out": 28.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  },
+  "arm": "PS14g",
+  "sample": "h01_release_notes",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.337,
+  "len_ratio": 0.95,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h02_cover_letter",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.321,
+  "len_ratio": 0.71,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h03_support_reply",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.15,
+  "len_ratio": 0.89,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h04_readme",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.291,
+  "len_ratio": 0.88,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 17.6,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h05_oped",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.084,
+  "len_ratio": 0.9,
+  "protected_total": 13,
+  "protected_missing": [
+   "approximately 300"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h06_press_release",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.158,
+  "len_ratio": 0.89,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.0,
+  "lint_density_out": 6.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h07_personal_essay",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.178,
+  "len_ratio": 0.91,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h08_fiction_dialogue",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.203,
+  "len_ratio": 0.9,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 8.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h09_grant_abstract",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.072,
+  "len_ratio": 0.95,
+  "protected_total": 5,
+  "protected_missing": [
+   "gatekeeper role"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 3.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h10_human_rust",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.003,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [
+   "*homely*!—so scrawny"
+  ],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h11_human_twain",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.102,
+  "len_ratio": 0.8,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "PS14g",
+  "sample": "h12_nearclean_slack",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.194,
+  "len_ratio": 0.77,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 48.4,
+  "lint_density_out": 30.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": [
+    "heading-text"
+   ]
+  },
+  "arm": "HS",
+  "sample": "h01_release_notes",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.421,
+  "len_ratio": 0.92,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h02_cover_letter",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.346,
+  "len_ratio": 0.66,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h03_support_reply",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.123,
+  "len_ratio": 0.91,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 10.9,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h04_readme",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.257,
+  "len_ratio": 0.88,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 17.6,
+  "lint_density_out": 13.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h05_oped",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.072,
+  "len_ratio": 0.9,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h06_press_release",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.066,
+  "len_ratio": 0.93,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.0,
+  "lint_density_out": 6.5,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h07_personal_essay",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.075,
+  "len_ratio": 0.91,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 6.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h08_fiction_dialogue",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.203,
+  "len_ratio": 0.88,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h09_grant_abstract",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 3.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h10_human_rust",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h11_human_twain",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.142,
+  "len_ratio": 1.01,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h12_nearclean_slack",
+  "rep": 1
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.325,
+  "len_ratio": 0.84,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 48.4,
+  "lint_density_out": 28.3,
+  "aaw_validator": {
+   "ok": false,
+   "errors": [
+    "heading-count"
+   ],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h01_release_notes",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.329,
+  "len_ratio": 0.9,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h02_cover_letter",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.386,
+  "len_ratio": 0.68,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h03_support_reply",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.121,
+  "len_ratio": 0.9,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h04_readme",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.382,
+  "len_ratio": 0.89,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 17.6,
+  "lint_density_out": 13.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h05_oped",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.263,
+  "len_ratio": 0.9,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h06_press_release",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.092,
+  "len_ratio": 0.94,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 0,
+  "lint_density_src": 6.0,
+  "lint_density_out": 6.4,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h07_personal_essay",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.094,
+  "len_ratio": 0.88,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 7.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h08_fiction_dialogue",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.214,
+  "len_ratio": 0.88,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h09_grant_abstract",
+  "rep": 2
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 3.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h10_human_rust",
+  "rep": 2
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h11_human_twain",
+  "rep": 2
+ },
+ {
+  "unchanged": false,
+  "change_ratio": 0.134,
+  "len_ratio": 0.99,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "HS",
+  "sample": "h12_nearclean_slack",
+  "rep": 2
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 8,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 48.4,
+  "lint_density_out": 48.4,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h01_release_notes",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 13.2,
+  "lint_density_out": 13.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h02_cover_letter",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h03_support_reply",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 39.2,
+  "lint_density_out": 39.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h04_readme",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 17.6,
+  "lint_density_out": 17.6,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h05_oped",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 13,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 25.2,
+  "lint_density_out": 25.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h06_press_release",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 1,
+  "emdash_out": 1,
+  "lint_density_src": 6.0,
+  "lint_density_out": 6.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h07_personal_essay",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 9,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 6.2,
+  "lint_density_out": 6.2,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h08_fiction_dialogue",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 10,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 36.8,
+  "lint_density_out": 36.8,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h09_grant_abstract",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 5,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 3.7,
+  "lint_density_out": 3.7,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h10_human_rust",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 6,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 3,
+  "emdash_out": 3,
+  "lint_density_src": 6.1,
+  "lint_density_out": 6.1,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h11_human_twain",
+  "rep": 1
+ },
+ {
+  "unchanged": true,
+  "change_ratio": 0.0,
+  "len_ratio": 1.0,
+  "protected_total": 7,
+  "protected_missing": [],
+  "numbers_added": [],
+  "numbers_missing": [],
+  "emdash_src": 0,
+  "emdash_out": 0,
+  "lint_density_src": 0.0,
+  "lint_density_out": 0.0,
+  "aaw_validator": {
+   "ok": true,
+   "errors": [],
+   "warnings": []
+  },
+  "arm": "U",
+  "sample": "h12_nearclean_slack",
+  "rep": 1
+ }
+]

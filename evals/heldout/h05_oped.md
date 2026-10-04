@@ -1,0 +1,5 @@
+In an era of rapid technological change, the question of whether cities should ban gas-powered leaf blowers has become a surprisingly heated debate. But make no mistake: this isn't just about noise — it's about public health, worker safety, and the kind of communities we want to live in.
+
+The evidence is compelling. A typical commercial gas blower emits more smog-forming pollution in one hour than driving a car for roughly 1,100 miles, according to the California Air Resources Board. Workers who operate them for hours a day face serious risks to their hearing. And the high-pitched whine carries for blocks, disrupting remote workers, sleeping infants, and anyone simply trying to enjoy a quiet afternoon.
+
+Of course, some landscapers worry about the cost of switching to battery equipment, and those concerns deserve to be taken seriously. Cities that phase in bans gradually and offer rebates can ease the transition. Ultimately, the path forward is clear: it's time to embrace a quieter, cleaner, and healthier future for everyone.
