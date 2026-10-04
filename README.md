@@ -46,9 +46,22 @@ Either way works:
 - **Add the plugin.** In **Customize > Plugins**, add the marketplace `Aieda1l/ProseShape` and install ProseShape. A plugin added to your account also appears in your Claude Code sessions.
 - **Upload the skill.** Download `proseshape-<version>.zip` from the [latest release](https://github.com/Aieda1l/ProseShape/releases/latest), upload it under **Customize > Skills**, and turn it on.
 
-### Codex, Cursor, Gemini CLI, GitHub Copilot, and other agents
+### Codex
 
-ProseShape follows the open [Agent Skills](https://agentskills.io) format, so the same folder works in any tool that supports it. Copy `plugins/proseshape/skills/proseshape/`, or the `proseshape/` folder from the release zip, into the skills folder your tool reads. Each tool's documentation gives the location: [Codex](https://developers.openai.com/codex/skills/), [Cursor](https://cursor.com/docs/context/skills), [Gemini CLI](https://geminicli.com/docs/cli/skills/), [GitHub Copilot](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills).
+ProseShape is also a Codex plugin. From your shell:
+
+```bash
+codex plugin marketplace add Aieda1l/ProseShape
+codex plugin add proseshape@proseshape
+```
+
+`codex plugin marketplace upgrade proseshape` fetches new versions. In a session, `/skills` lists ProseShape, or ask Codex to "use ProseShape".
+
+To install only the skill instead, copy `plugins/proseshape/skills/proseshape/`, or the `proseshape/` folder from the release zip, into `~/.agents/skills/` for all your projects or into a repository's `.agents/skills/` for one.
+
+### Cursor, Gemini CLI, GitHub Copilot, and other agents
+
+ProseShape follows the open [Agent Skills](https://agentskills.io) format, so the same folder works in any tool that supports it. Copy `plugins/proseshape/skills/proseshape/`, or the `proseshape/` folder from the release zip, into the skills folder your tool reads. Each tool's documentation gives the location: [Cursor](https://cursor.com/docs/context/skills), [Gemini CLI](https://geminicli.com/docs/cli/skills/), [GitHub Copilot](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills).
 
 ### Claude Code without the plugin
 
@@ -91,12 +104,17 @@ If Claude answers without the skill, ask again and name it ("Use ProseShape to h
 .
 ├── .claude-plugin/
 │   └── marketplace.json          # lets Claude Code and claude.ai install the plugin from this repository
+├── .agents/plugins/
+│   └── marketplace.json          # the same for Codex
 ├── plugins/proseshape/           # the plugin: everything a user installs
-│   ├── .claude-plugin/plugin.json
+│   ├── .claude-plugin/plugin.json    # Claude manifest
+│   ├── plugin.json               # portable manifest with Codex display details
+│   ├── assets/icon.svg           # plugin icon
 │   ├── README.md                 # the plugin's listing text
 │   ├── LICENSE, THIRD_PARTY_NOTICES.md   # copies of the root files
 │   └── skills/proseshape/
 │       ├── SKILL.md              # the skill (runtime entry point)
+│       ├── agents/openai.yaml    # how Codex's skill picker shows it
 │       └── references/           # loaded by the skill as needed
 │           ├── humanizer-rules.md
 │           ├── storyscope-rules.md
@@ -119,7 +137,7 @@ If Claude answers without the skill, ask again and name it ("Use ProseShape to h
 │   ├── publishing.md             # how to release and submit to Anthropic's directory
 │   └── research/                 # competitive analysis and the 2026-09 experiment
 ├── .github/workflows/            # CI checks; release builds the skill zip
-├── assets/                       # README banner (light and dark)
+├── assets/                       # banner and icon, light and dark (icon also as 1024 px PNG)
 ├── CHANGELOG.md
 ├── THIRD_PARTY_NOTICES.md
 └── LICENSE

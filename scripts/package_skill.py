@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the ProseShape plugin and skill, then build the skill zip for claude.ai and other Agent Skills tools.
+"""Check the ProseShape plugin (Claude and Codex) and skill, then build the skill zip for claude.ai and other tools.
 
   python3 scripts/package_skill.py            # check, then write dist/proseshape-<version>.zip
   python3 scripts/package_skill.py --check    # checks only (CI)
@@ -9,9 +9,10 @@ The zip holds one top-level folder, proseshape/, with SKILL.md, the reference fi
 THIRD_PARTY_NOTICES.md, which is the layout claude.ai's Customize > Skills upload expects. The archive is
 deterministic: the same files always give the same bytes.
 
-The checks cover what the Agent Skills specification, claude.ai, and the Claude plugin directory require of the
-files (name, description length, referenced files, versions that agree, README and license, file sizes). They do
-not replace `claude plugin validate --strict plugins/proseshape` or the directory portal's own validation.
+The checks cover what the Agent Skills specification, claude.ai, the Claude plugin directory, and Codex require of
+the files: name, description length, referenced files, versions that agree across the Claude and portable (Codex)
+manifests, both marketplace files, Codex interface limits and icons, README and license, and file sizes. They do not
+replace `claude plugin validate --strict plugins/proseshape`, a Codex install, or either directory's own validation.
 Standard library only; Python 3.8+. Exit status: 0 clean, 1 problems found.
 """
 import argparse
@@ -27,6 +28,13 @@ PLUGIN_REL = os.path.join("plugins", "proseshape")
 SKILL_REL = os.path.join(PLUGIN_REL, "skills", "proseshape")
 NAME_RE = re.compile(r"^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$")
 SYSTEM_FILES = {".DS_Store", "Thumbs.db", "desktop.ini"}
+PORTABLE_SCHEMA = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
+PORTABLE_KEYS = {"$schema", "name", "version", "description", "author", "homepage", "repository", "license",
+                 "keywords", "extensions"}
+# Codex interface limits from OpenAI's plugin submission guide.
+CODEX_LIMITS = {"displayName": 30, "shortDescription": 30, "longDescription": 4000, "developerName": 80}
+CODEX_INSTALLATION = {"AVAILABLE", "INSTALLED_BY_DEFAULT", "NOT_AVAILABLE"}
+CODEX_AUTHENTICATION = {"ON_INSTALL", "ON_USE"}
 MAX_FILE = 256 * 1024
 MAX_FILES = 512
 ZIP_DATE = (1980, 1, 1, 0, 0, 0)
@@ -129,6 +137,8 @@ def check(root=REPO):
         elif os.path.normpath(entries[0].get("source", "")) != os.path.normpath(PLUGIN_REL):
             problems.append(f"{market_rel}: the entry's source should be ./{PLUGIN_REL.replace(os.sep, '/')}")
 
+    problems += check_codex(root, name, version, (market or {}).get("name"))
+
     for rel in ("LICENSE", "THIRD_PARTY_NOTICES.md"):
         copy = os.path.join(PLUGIN_REL, rel)
         try:
@@ -153,6 +163,70 @@ def check(root=REPO):
             problems.append(f"{rel}: symbolic link; commit a regular file")
         elif os.path.getsize(path) > MAX_FILE:
             problems.append(f"{rel}: {os.path.getsize(path)} bytes; keep plugin files under 256 KiB")
+    return problems
+
+
+def check_codex(root, name, version, claude_market_name):
+    """Checks for the portable plugin.json (read by Codex) and .agents/plugins/marketplace.json."""
+    problems = []
+    rel = os.path.join(PLUGIN_REL, "plugin.json")
+    m = load_json(root, rel, problems)
+    if m:
+        if m.get("$schema") != PORTABLE_SCHEMA:
+            problems.append(f"{rel}: $schema must be {PORTABLE_SCHEMA}")
+        for key in sorted(set(m) - PORTABLE_KEYS):
+            problems.append(f"{rel}: {key!r} isn't allowed at the top level; put client data under extensions")
+        if m.get("name") != name:
+            problems.append(f"{rel}: name {m.get('name')!r} differs from the skill name {name!r}")
+        if m.get("version") != version:
+            problems.append(f"{rel}: version {m.get('version')!r} differs from SKILL.md metadata.version {version!r}")
+        ui = ((m.get("extensions") or {}).get("com.openai") or {}).get("interface")
+        if not isinstance(ui, dict):
+            problems.append(f"{rel}: add extensions.com.openai.interface for Codex")
+            ui = {}
+        for field, limit in CODEX_LIMITS.items():
+            value = ui.get(field, "")
+            if not value:
+                problems.append(f"{rel}: set interface.{field}")
+            elif len(value) > limit:
+                problems.append(f"{rel}: interface.{field} is {len(value)} characters; the limit is {limit}")
+        if not ui.get("category"):
+            problems.append(f"{rel}: set interface.category")
+        if not isinstance(ui.get("capabilities"), list):
+            problems.append(f"{rel}: set interface.capabilities to a list (it may be empty)")
+        for field in ("composerIcon", "logo"):
+            icon = ui.get(field)
+            path = os.path.join(root, PLUGIN_REL, icon) if icon else None
+            if not icon:
+                problems.append(f"{rel}: set interface.{field}")
+            elif not icon.startswith("./") or not os.path.exists(path):
+                problems.append(f"{rel}: interface.{field} {icon!r} must be a ./ path to a file in the plugin")
+            elif icon.endswith(".svg"):
+                with open(path, encoding="utf-8") as f:
+                    vb = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', f.read())
+                if not vb or vb.group(1) != vb.group(2) or float(vb.group(1)) < 48:
+                    problems.append(f"{rel}: interface.{field} must be square and at least 48 by 48")
+
+    rel = os.path.join(".agents", "plugins", "marketplace.json")
+    market = load_json(root, rel, problems)
+    if market:
+        if claude_market_name and market.get("name") != claude_market_name:
+            problems.append(f"{rel}: name {market.get('name')!r} should match the Claude marketplace name {claude_market_name!r}")
+        entries = [p for p in market.get("plugins", []) if p.get("name") == name]
+        if not entries:
+            problems.append(f"{rel}: no plugin entry named {name!r}")
+        else:
+            e = entries[0]
+            src = e.get("source") or {}
+            if src.get("source") != "local" or os.path.normpath(src.get("path", "")) != os.path.normpath(PLUGIN_REL):
+                problems.append(f"{rel}: the entry's source should be local, path ./{PLUGIN_REL.replace(os.sep, '/')}")
+            policy = e.get("policy") or {}
+            if policy.get("installation") not in CODEX_INSTALLATION:
+                problems.append(f"{rel}: policy.installation must be one of {sorted(CODEX_INSTALLATION)}")
+            if policy.get("authentication") not in CODEX_AUTHENTICATION:
+                problems.append(f"{rel}: policy.authentication must be one of {sorted(CODEX_AUTHENTICATION)}")
+            if not e.get("category"):
+                problems.append(f"{rel}: set the entry's category")
     return problems
 
 

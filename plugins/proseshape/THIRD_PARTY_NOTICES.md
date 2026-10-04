@@ -61,6 +61,6 @@ These files are in the source repository (https://github.com/Aieda1l/ProseShape)
 
 `h05_oped.md` cites a published California Air Resources Board comparison (leaf-blower emissions against car miles). Every other name, organization, figure and quotation in the synthetic samples is fictional.
 
-## Banner lettering
+## Banner and icon lettering
 
-The lettering in the source repository's `assets/banner.svg` and `assets/banner-dark.svg` is set in **Instrument Serif** (Copyright 2022 The Instrument Serif Project Authors, https://github.com/Instrument/instrument-serif) and converted to outlines. The font is licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). The font files themselves are not included in this repository.
+The pilcrow in the icon (`plugins/proseshape/assets/icon.svg`, and the source repository's `assets/icon*`) and the lettering in the source repository's `assets/banner.svg` and `assets/banner-dark.svg` are set in **Instrument Serif** (Copyright 2022 The Instrument Serif Project Authors, https://github.com/Instrument/instrument-serif) and converted to outlines. The font is licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). The font files themselves are not included in this repository.

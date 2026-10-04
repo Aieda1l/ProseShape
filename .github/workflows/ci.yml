@@ -32,3 +32,30 @@ jobs:
           python3 seed.py
           python3 analyze.py _ho PS14g | diff - ../v1.4-validation/results/summary_ho.md
           python3 analyze.py _ho2 PS141b | diff - ../v1.4.1-validation/results/summary_ho2.md
+
+  install:
+    # Install the plugin the way users do, in both Claude Code and Codex, and confirm the skill loads.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install the Claude Code and Codex CLIs
+        run: npm install -g @anthropic-ai/claude-code@2.1.289 @openai/codex@0.160.0
+      - name: Claude Code validates, installs, and loads the plugin
+        run: |
+          claude plugin validate --strict ./plugins/proseshape
+          claude plugin validate .
+          claude plugin marketplace add ./
+          claude plugin install proseshape@proseshape
+          claude plugin details proseshape > "$RUNNER_TEMP/claude-details.txt"
+          grep -E "Skills \(1\) +proseshape" "$RUNNER_TEMP/claude-details.txt"
+      - name: Codex installs the plugin and exposes the skill to the model
+        run: |
+          codex plugin marketplace add ./
+          codex plugin add proseshape@proseshape
+          codex plugin list > "$RUNNER_TEMP/codex-list.txt"
+          grep -E "proseshape@proseshape +installed, enabled" "$RUNNER_TEMP/codex-list.txt"
+          cd "$RUNNER_TEMP" && codex debug prompt-input "humanize this" > codex-prompt.json
+          grep -c "proseshape:proseshape" "$RUNNER_TEMP/codex-prompt.json"

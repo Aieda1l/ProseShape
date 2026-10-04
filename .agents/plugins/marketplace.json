@@ -1,0 +1,20 @@
+{
+  "name": "proseshape",
+  "interface": {
+    "displayName": "ProseShape"
+  },
+  "plugins": [
+    {
+      "name": "proseshape",
+      "source": {
+        "source": "local",
+        "path": "./plugins/proseshape"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
