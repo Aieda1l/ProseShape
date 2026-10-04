@@ -1,7 +1,7 @@
 {
   "name": "proseshape",
   "displayName": "ProseShape",
-  "version": "1.4.1",
+  "version": "1.4.0",
   "description": "Rewrite or write prose so it reads as chosen by a person, not defaulted by a model, while keeping every fact, quotation, plot event, and the writer's voice.",
   "author": {
     "name": "Aieda1l",
