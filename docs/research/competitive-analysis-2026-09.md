@@ -5,7 +5,7 @@
 **Scope:** 14 competitor repositories (7 named in the brief, 7 found by search), static source analysis of each, plus an executed, blinded rewrite comparison of ProseShape against five runnable competitors and two baselines ([`experiment-2026-09/`](experiment-2026-09/README.md)).  
 **No ProseShape code or prompts were changed for this report.**
 
-> **Update, 2026-10-04.** ProseShape 1.4.0 implements several of the recommendations below. On a held-out corpus frozen before any change, it scored 8.17 against the ordinary-editor prompt's 7.33 (paired +0.83 [+0.19, +1.54]). See the [addendum](#addendum-2026-10-04-status-after-proseshape-140). The body of this report is unchanged and describes v1.3.1.
+> **Update, 2026-10-04.** ProseShape 1.4.0 implements several of the recommendations below. On a held-out corpus frozen before any change, it scored 8.17 against the ordinary-editor prompt's 7.33 (paired +0.83 [+0.19, +1.54]). A second fresh set gave +0.27 [−0.78, +1.22], so the pooled lead is +0.52 [−0.15, +1.15]. See the [addendum](#addendum-2026-10-04-status-after-proseshape-140). The body of this report is unchanged and describes v1.3.1.
 
 Evidence labels used throughout:
 
@@ -1043,6 +1043,8 @@ The held-out run surfaced new problems, which are listed in the validation READM
 - period spelling and markup were modernized in a Twain excerpt;
 - a staged not-X-but-Y line was cut instead of restated, in a near-clean update and in fiction dialogue;
 - small words that carry meaning were dropped in a personal essay.
+
+**Replication (2026-10-04, later the same day).** On a second set of 15 fresh texts, 1.4.0's lead over the ordinary editor was +0.27 [−0.78, +1.22]. Pooled over both held-out sets it was +0.52 [−0.15, +1.15]. ProseShape leads on AI-shaped drafts and trails on text a person already wrote well. A 1.4.1 candidate halved fact problems but scored the same overall and was not released. See [`../../evals/v1.4.1-validation/README.md`](../../evals/v1.4.1-validation/README.md).
 
 ## Appendix A. Empirical comparison: summary
 

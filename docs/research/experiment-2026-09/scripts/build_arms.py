@@ -11,6 +11,8 @@ The SHA-256 prefixes it prints should match prompts/arms_meta.json.
   shir-danishyar/humanize               024aa193966341e0706e96f0277f914092bed2c7 -> COMP_DIR/shir-danishyar_humanize
   keez97/humanizer                      2d9a116fa9caee2c3466a7c7d419cbe02b35a470 -> COMP_DIR/keez97_humanizer
 ProseShape itself is read from PS_DIR (default: the repository root, commit 57d58e4f860c95b29a028c157a33dde07de09021).
+The skill has since moved to plugins/proseshape/skills/proseshape/, so point PS_DIR at a checkout of 57d58e4
+(git worktree add /tmp/ps131 57d58e4), or rebuild the PS arm with evals/harness/build_arm.py PS --rev 57d58e4 --blank-lines 2.
 """
 import hashlib, json, os, sys
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

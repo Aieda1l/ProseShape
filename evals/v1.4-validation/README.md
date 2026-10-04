@@ -2,6 +2,8 @@
 
 **Result.** On 12 held-out texts written and frozen before any 1.4 change, ProseShape 1.4.0 scored **8.17** [7.79, 8.54] from a blind judge. The strong ordinary-editor prompt (O) scored **7.33**, HumanScope 7.27, and ProseShape 1.3.1 5.94. The paired difference against O is **+0.83 [+0.19, +1.54]**: 1.4.0 was better on 7 samples, worse on 3, and tied on 2. The judge flagged 16 fact problems in 1.4.0's held-out outputs (1 added, 12 dropped, 3 changed) and 47 in O's (8, 22, 17). A deterministic preservation check found no errors in any output.
 
+> **Replication, 2026-10-04.** On a second set of 15 fresh texts ([`evals/heldout2/`](../heldout2/)), 1.4.0's lead over O was +0.27 [−0.78, +1.22] (8 better, 5 worse, 2 tied). Pooled over both held-out sets (27 texts), it was +0.52 [−0.15, +1.15]. ProseShape led O on AI-shaped texts and trailed it on human-written and near-clean ones. Treat the +0.83 below as one sample's result, not as the size of the effect. Details: [`../v1.4.1-validation/README.md`](../v1.4.1-validation/README.md).
+
 This is the experiment behind the 1.4.0 release. It uses the same setup as the [2026-09 comparison](../../docs/research/experiment-2026-09/README.md), where 1.3.1 trailed O by −1.27 [−2.00, −0.62]. Read the limitations before quoting a number: one model family, an LLM judge, and a margin whose lower bound is close to zero.
 
 ## Method

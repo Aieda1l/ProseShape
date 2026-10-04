@@ -1,0 +1,14 @@
+{
+  "name": "proseshape",
+  "displayName": "ProseShape",
+  "version": "1.4.0",
+  "description": "Rewrite or write prose so it reads as chosen by a person, not defaulted by a model, while keeping every fact, quotation, plot event, and the writer's voice.",
+  "author": {
+    "name": "Aieda1l",
+    "url": "https://github.com/Aieda1l"
+  },
+  "homepage": "https://github.com/Aieda1l/ProseShape",
+  "repository": "https://github.com/Aieda1l/ProseShape",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "rewriting", "humanize", "fiction", "voice", "prose"]
+}

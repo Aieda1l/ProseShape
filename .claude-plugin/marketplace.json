@@ -1,0 +1,15 @@
+{
+  "name": "proseshape",
+  "description": "ProseShape: a writing skill that makes prose feel chosen, not defaulted.",
+  "owner": {
+    "name": "Aieda1l",
+    "url": "https://github.com/Aieda1l"
+  },
+  "plugins": [
+    {
+      "name": "proseshape",
+      "source": "./plugins/proseshape",
+      "description": "Rewrite or write prose so it reads as chosen by a person, not defaulted by a model, while keeping every fact and the writer's voice."
+    }
+  ]
+}
