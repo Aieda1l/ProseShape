@@ -51,12 +51,9 @@ Any of these is a failure even if the tells are gone:
 
 - Every number, date, proper noun, and citation string in the input appears in the output (unless the note says it was cut and why).
 - Quoted passages appear verbatim.
-- Count em and en dashes against the sample's rate. Without a sample, the count should not rise, and dashes that recurred as the default connector should be gone; a single purposeful dash may stay (excluding code, ranges, and interrupted dialogue).
+- Count em and en dashes against the sample's rate, or against zero for nonfiction without a sample (excluding code, ranges, and interrupted dialogue).
 - Search for the A1–A5 and E patterns and the G1–G8 fiction patterns.
 - For light edits, a word-level diff should be small.
-- In period or literary text, spelling, punctuation, quotation marks, and italics match the source.
-
-`scripts/preserve_check.py` runs most of these: `python3 scripts/preserve_check.py SOURCE OUTPUT` (add `--mode light`, `--fiction`, or `--keep "text"`).
 
 ## 4. How to compare two versions
 

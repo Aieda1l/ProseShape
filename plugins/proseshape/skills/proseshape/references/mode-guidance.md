@@ -62,7 +62,7 @@ Run the eight passes in SKILL.md. Keep every claim, every event, their order, an
 5. Report the structural changes in the note so the user can reject them.
 
 ### Light edit
-Fix the A1–A5 and E23–E26 tells, clear errors, and the clumsy or stiff sentences a careful copyeditor would fix. A staged line in otherwise clean text is restated in plain words, not cut. Keep structure, paragraphing, claims, and the writer's small words ("finally", "almost"). In period or literary text, spelling, punctuation, quotation marks, and italics stay as written. Add nothing new: no jokes, no details, no events. If the text is good, return it nearly unchanged and say so. Resist the urge to justify the call with changes.
+Fix the A1–A5 and E23–E26 tells, clear errors, and the clumsy or stiff sentences a careful copyeditor would fix. Keep structure, paragraphing, and claims. Add nothing new: no jokes, no details, no events. If the text is good, return it nearly unchanged and say so. Resist the urge to justify the call with changes.
 
 ### Voice match
 Read the sample first (section 5). The sample overrides Level 1 and Level 2 rules where they conflict. Keep the draft's content; change how it is said.
@@ -82,7 +82,7 @@ Correctness and directness come first. Keep every term, number, version, command
 | Press release | Newsroom plain; quotations verbatim with their attribution; dateline, figures, and eligibility terms intact | C14, C17, C18 | Quotes, figures, or partners not given |
 | Social post (LinkedIn and similar) | The writer's own stance and the platform's conventions; keep hashtags, numbered takeaways, and the closing line in plainer words | A1, A2, A4, stacked hype, emoji decoration | Reactions or experiences the writer did not state |
 | Cover letter, application | Confident and specific, first person; keep every achievement, figure, and stated motivation | Inflated self-description, A1, C13 | Skills, results, or motives not given |
-| Personal essay, blog | The writer's opinions, doubts, humor, asides, and small qualifiers stay, said better; in rewrites add none of your own, and no new hedges | G1, G3, A2; tighten a lesson ending rather than cutting it | Experiences, feelings, people, or places the writer did not mention |
+| Personal essay, blog | The writer's opinions, doubts, humor, and asides stay, said better; in rewrites add none of your own | G1, G3, A2; tighten a lesson ending rather than cutting it | Experiences, feelings, people, or places the writer did not mention |
 | Technical explanation | Neutral, exact, ordered | A3, A4, C13, D20 | Quirks, jokes, analogies that change the meaning |
 | Academic, literature review | Formal, hedged as the evidence requires, citations verbatim | C18 (unsourced "research shows"), B9, A3 | Sources, numbers, or stronger claims |
 | Literary fiction | Voice of the POV character and narrative distance | All of Level 2; G1–G8 | Morals, codas, sensory tours |

@@ -24,13 +24,21 @@ WRAP = ("The following agent skill is installed and has been invoked for this re
         "wherever it says to run a script or command, skip that step (you may say it was not run).\n")
 RUNTIME_FILES = ["SKILL.md", "references/humanizer-rules.md", "references/storyscope-rules.md",
                  "references/mode-guidance.md", "references/examples.md", "references/evaluation-rubric.md"]
+# Where the skill folder lives: the plugin layout first, then the repository root (commits before the move).
+SKILL_DIRS = ["plugins/proseshape/skills/proseshape", ""]
 
 
 def read(rel, rev):
-    if rev:
-        return subprocess.run(["git", "-C", REPO, "show", f"{rev}:{rel}"], capture_output=True, text=True, check=True).stdout
-    with open(os.path.join(REPO, rel), encoding="utf-8") as f:
-        return f.read()
+    for d in SKILL_DIRS:
+        rel_path = f"{d}/{rel}" if d else rel
+        if rev:
+            p = subprocess.run(["git", "-C", REPO, "show", f"{rev}:{rel_path}"], capture_output=True, text=True)
+            if p.returncode == 0:
+                return p.stdout
+        elif os.path.exists(os.path.join(REPO, rel_path)):
+            with open(os.path.join(REPO, rel_path), encoding="utf-8") as f:
+                return f.read()
+    sys.exit(f"{rel} not found{' at ' + rev if rev else ''} under {SKILL_DIRS}")
 
 
 def build(rev=None, blank_lines=1, files=RUNTIME_FILES):

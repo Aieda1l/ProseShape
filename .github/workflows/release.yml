@@ -1,0 +1,48 @@
+name: Release
+
+# Push a tag that matches the plugin version (for example v1.4.0) to publish a GitHub release
+# with the skill zip attached. The zip is what claude.ai's Customize > Skills upload expects.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check that the tag matches the plugin version
+        run: |
+          version=$(python3 -c "import json; print(json.load(open('plugins/proseshape/.claude-plugin/plugin.json'))['version'])")
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match plugin.json version $version"
+            exit 1
+          fi
+      - name: Check and build the skill zip
+        run: python3 scripts/package_skill.py
+      - name: Release notes from the changelog
+        run: |
+          python3 - <<'PY'
+          import os, re
+          version = os.environ["GITHUB_REF_NAME"].lstrip("v")
+          text = open("CHANGELOG.md", encoding="utf-8").read()
+          m = re.search(rf"^## {re.escape(version)}\b.*?$(.*?)(?=^## |\Z)", text, re.M | re.S)
+          body = m.group(1).strip() if m else "See CHANGELOG.md."
+          body += "\n\nInstall in Claude Code: `/plugin marketplace add Aieda1l/ProseShape`, then `/plugin install proseshape@proseshape`.\nOn claude.ai: download `proseshape-" + version + ".zip` below and upload it under Customize > Skills."
+          open("release-notes.md", "w", encoding="utf-8").write(body + "\n")
+          PY
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/*.zip --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" dist/*.zip --title "ProseShape $GITHUB_REF_NAME" --notes-file release-notes.md
+          fi

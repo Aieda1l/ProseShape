@@ -28,23 +28,38 @@ The core principle is simple: a language model tends toward choices that work fo
 
 ### Claude Code
 
-Clone the repository into your skills directory:
-
-```bash
-git clone https://github.com/Aieda1l/ProseShape.git ~/.claude/skills/proseshape
-```
-
-Then invoke it with:
+ProseShape is a Claude Code plugin. Inside a session, run:
 
 ```text
-/proseshape
+/plugin marketplace add Aieda1l/ProseShape
+/plugin install proseshape@proseshape
 ```
 
-You can also place the repository under `.claude/skills/proseshape` for a project-local installation.
+From your shell, run `claude plugin marketplace add Aieda1l/ProseShape`, then `claude plugin install proseshape@proseshape`. Later, `claude plugin update proseshape@proseshape` fetches new versions.
 
-### Other Agent Skills-compatible tools
+Claude uses the skill when a request matches its description. To call it by name, run `/proseshape:proseshape`, or say "use ProseShape".
 
-The runtime entry point is `SKILL.md`, with supporting guidance in `references/`. Copy the repository into the skill directory expected by your agent.
+### claude.ai and the Claude desktop app
+
+Either way works:
+
+- **Add the plugin.** In **Customize > Plugins**, add the marketplace `Aieda1l/ProseShape` and install ProseShape. A plugin added to your account also appears in your Claude Code sessions.
+- **Upload the skill.** Download `proseshape-<version>.zip` from the [latest release](https://github.com/Aieda1l/ProseShape/releases/latest), upload it under **Customize > Skills**, and turn it on.
+
+### Codex, Cursor, Gemini CLI, GitHub Copilot, and other agents
+
+ProseShape follows the open [Agent Skills](https://agentskills.io) format, so the same folder works in any tool that supports it. Copy `plugins/proseshape/skills/proseshape/`, or the `proseshape/` folder from the release zip, into the skills folder your tool reads. Each tool's documentation gives the location: [Codex](https://developers.openai.com/codex/skills/), [Cursor](https://cursor.com/docs/context/skills), [Gemini CLI](https://geminicli.com/docs/cli/skills/), [GitHub Copilot](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills).
+
+### Claude Code without the plugin
+
+```bash
+git clone https://github.com/Aieda1l/ProseShape.git
+cp -r ProseShape/plugins/proseshape/skills/proseshape ~/.claude/skills/proseshape
+```
+
+This installs it as a personal skill that you run with `/proseshape`. To install it for one project only, copy the folder into that project's `.claude/skills/proseshape` instead.
+
+**Upgrading from an earlier install:** the skill used to sit at the root of this repository. If you cloned the whole repository into `~/.claude/skills/proseshape`, remove that folder and reinstall with one of the methods above.
 
 ## Example prompts
 
@@ -68,36 +83,49 @@ Light polish only. Keep every fact and citation exactly as-is. [paste]
 Write a 1,200-word story about a hospice night nurse. No stated moral, no years-later ending.
 ```
 
+If Claude answers without the skill, ask again and name it ("Use ProseShape to humanize this…").
+
 ## Repository layout
 
 ```text
 .
-├── SKILL.md                      # the skill (runtime entry point)
-├── references/                   # loaded by the skill as needed
-│   ├── humanizer-rules.md
-│   ├── storyscope-rules.md
-│   ├── mode-guidance.md
-│   ├── examples.md
-│   ├── evaluation-rubric.md
-│   └── prompt-engineering-notes.md   # maintainers only
+├── .claude-plugin/
+│   └── marketplace.json          # lets Claude Code and claude.ai install the plugin from this repository
+├── plugins/proseshape/           # the plugin: everything a user installs
+│   ├── .claude-plugin/plugin.json
+│   ├── README.md                 # the plugin's listing text
+│   ├── LICENSE, THIRD_PARTY_NOTICES.md   # copies of the root files
+│   └── skills/proseshape/
+│       ├── SKILL.md              # the skill (runtime entry point)
+│       └── references/           # loaded by the skill as needed
+│           ├── humanizer-rules.md
+│           ├── storyscope-rules.md
+│           ├── mode-guidance.md
+│           ├── examples.md
+│           ├── evaluation-rubric.md
+│           └── prompt-engineering-notes.md   # maintainers only
 ├── scripts/
 │   ├── preserve_check.py         # did a rewrite keep numbers, quotes, code, links, structure?
+│   ├── package_skill.py          # checks the plugin and builds the release zip
 │   └── tests/
 ├── evals/
 │   ├── eval-log.md               # every tested version and its result
 │   ├── trigger-evals.json
 │   ├── files/                    # inputs for the 1.0–1.3 evaluations
-│   ├── heldout/                  # frozen 12-text corpus for validation (SHA256SUMS)
+│   ├── heldout/, heldout2/       # frozen held-out corpora (SHA256SUMS)
 │   ├── harness/                  # generate, blind-judge, analyze, check
-│   └── v1.4-validation/          # method, results, raw outputs and judgments for 1.4.0
-├── docs/research/                # competitive analysis and the 2026-09 experiment
+│   └── v1.4-validation/, v1.4.1-validation/   # method, results, raw outputs and judgments
+├── docs/
+│   ├── publishing.md             # how to release and submit to Anthropic's directory
+│   └── research/                 # competitive analysis and the 2026-09 experiment
+├── .github/workflows/            # CI checks; release builds the skill zip
 ├── assets/                       # README banner (light and dark)
 ├── CHANGELOG.md
 ├── THIRD_PARTY_NOTICES.md
 └── LICENSE
 ```
 
-Only `SKILL.md` and `references/` are needed at runtime. Raw outputs and judgments for the 1.0–1.3 iterations stayed in the private build workspace. For the 2026-09 comparison and the 1.4 validation they are committed, so every table can be reproduced without a model call.
+Only `plugins/proseshape/` is needed at runtime. Raw outputs and judgments for the 1.0–1.3 iterations stayed in the private build workspace. For the 2026-09 comparison and the 1.4 and 1.4.1 validations they are committed, so every table can be reproduced without a model call.
 
 ## Evidence base
 

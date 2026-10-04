@@ -15,3 +15,6 @@ workspace/
 # Editor files
 .vscode/
 .idea/
+
+# Built skill zips (scripts/package_skill.py)
+dist/

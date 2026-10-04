@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python3 -m unittest discover -s scripts/tests -v
+      - name: Plugin and skill checks
+        run: python3 scripts/package_skill.py --check
+      - name: Held-out corpora unchanged
+        run: |
+          (cd evals/heldout && sha256sum -c --quiet SHA256SUMS)
+          (cd evals/heldout2 && sha256sum -c --quiet SHA256SUMS)
+      - name: Committed evaluation tables reproduce
+        working-directory: evals/harness
+        env:
+          PROSESHAPE_WORK: ${{ runner.temp }}/work
+        run: |
+          python3 seed.py
+          python3 analyze.py _ho PS14g | diff - ../v1.4-validation/results/summary_ho.md
+          python3 analyze.py _ho2 PS141b | diff - ../v1.4.1-validation/results/summary_ho2.md

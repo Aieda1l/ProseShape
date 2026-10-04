@@ -1,6 +1,6 @@
 # ProseShape 1.4.1 candidate: validation (2026-10-04)
 
-**Result: not an overall improvement.** I tested the 1.4.1 candidate once on 15 new held-out texts. It scored **7.70**, the same as 1.4.0 (7.70). The paired difference is **+0.00 [−0.48, +0.48]**: 6 texts better, 7 worse, 2 tied. Judge-flagged fact problems fell by half, from 29 for 1.4.0 to 16 (the ordinary editor had 62). The candidate also fixed most of 1.4.0's known issues on the development texts. It read less naturally, though, at 4.45 against 4.67. Development showed the same trade. The candidate stays on the development branch and is not released.
+**Result: not an overall improvement.** I tested the 1.4.1 candidate once on 15 new held-out texts. It scored **7.70**, the same as 1.4.0 (7.70). The paired difference is **+0.00 [−0.48, +0.48]**: 6 texts better, 7 worse, 2 tied. Judge-flagged fact problems fell by half, from 29 for 1.4.0 to 16 (the ordinary editor had 62). The candidate also fixed most of 1.4.0's known issues on the development texts. It read less naturally, though, at 4.45 against 4.67. Development showed the same trade. The candidate is not released. It is preserved at commit `5ada957`.
 
 **A correction to 1.4.0's headline.** This run is also an independent replication of 1.4.0 against the ordinary-editor prompt (O). The result was **+0.27 [−0.78, +1.22]** (8/5/2), much smaller than the +0.83 [+0.19, +1.54] from the first held-out set. Pooled over both sets (27 texts), it is **+0.52 [−0.15, +1.15]**, and that interval includes zero. The split is consistent. On the 10 AI-shaped texts here, ProseShape led O by about +0.6 (both versions). On the 5 human-written and near-clean texts, it trailed O by about −0.4, because the editor prompt leaves good writing alone more often.
 
@@ -93,7 +93,7 @@ Both rounds' overall differences sit inside the ±0.3 that re-judging alone prod
 
 ## Decision and next step
 
-The 1.4.1 candidate is a trade, not an improvement: roughly half the fact problems on both corpora, slightly less natural prose, and the same overall score. It stays on the development branch with version `1.4.1` in its metadata and is not merged as a release. 1.4.0 remains the released version.
+The 1.4.1 candidate is a trade, not an improvement: roughly half the fact problems on both corpora, slightly less natural prose, and the same overall score. It is not released, and 1.4.0 remains the version the plugin ships. The candidate's files are preserved at commit `5ada957`. `python3 evals/harness/build_arm.py PS141b --rev 5ada957` rebuilds its exact prompt (`a573b93257d1122b`).
 
 The held-out notes point to a 1.4.2 that keeps the fidelity gains and removes their cost:
 
