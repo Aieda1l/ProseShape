@@ -52,7 +52,7 @@ For nonfiction generation, use only facts the user supplied or that are common k
 Avoiding clichés by saying almost nothing is its own failure. Give the writer a stance: what the facts mean to them or to the reader, one honest reaction, a sentence with some warmth or edge. Opinions and feelings in the writer's voice are allowed; invented events, people, and anecdotes are not.
 
 ### Rewrite
-Run the eight passes in SKILL.md. Keep events, their order, and the ending. After cutting, check that a person is still audible (SKILL.md, "Cut, then give it a person"). In fiction you may cut a lesson line, change how emotions are rendered, trim a sensory survey, give dialogue subtext, and move a description block inside a scene. Flag any structural default (epilogue, epiphany ending, single-track plot) in the note instead of changing it.
+Run the eight passes in SKILL.md. Keep every claim, every event, their order, and the ending. After cutting, check that a person is still audible and that nothing the writer said went missing (SKILL.md, "Keep the claims, then give it a person"). In fiction you may change how a beat is told: tighten a lesson line and give it to the character, reword a stock sensation lightly or merge sensations that repeat (inventing no replacement action), cut adjectives from a sensory survey while keeping its details, give dialogue subtext, and move a description block inside a scene. The beat itself stays, and so do the author's details. Flag any structural default (epilogue, epiphany ending, single-track plot) in the note instead of changing it.
 
 ### Fiction deep rewrite
 1. Inventory plot facts the user wants kept (characters, premise, anything they named). If unclear, keep characters and core premise; everything else is open.
@@ -62,7 +62,7 @@ Run the eight passes in SKILL.md. Keep events, their order, and the ending. Afte
 5. Report the structural changes in the note so the user can reject them.
 
 ### Light edit
-Fix only A1–A5 and E23–E26 tells, plus clear errors. Keep structure, paragraphing, and claims. Add nothing new: no jokes, no details, no events. If the text is good, return it nearly unchanged and say so. Resist the urge to justify the call with changes.
+Fix the A1–A5 and E23–E26 tells, clear errors, and the clumsy or stiff sentences a careful copyeditor would fix. Keep structure, paragraphing, and claims. Add nothing new: no jokes, no details, no events. If the text is good, return it nearly unchanged and say so. Resist the urge to justify the call with changes.
 
 ### Voice match
 Read the sample first (section 5). The sample overrides Level 1 and Level 2 rules where they conflict. Keep the draft's content; change how it is said.
@@ -74,9 +74,15 @@ Correctness and directness come first. Keep every term, number, version, command
 
 | Genre | Voice | Watch especially for | Do not add |
 |---|---|---|---|
-| Business memo, announcement | Plain, specific, what changes for whom and when | A1, A2, C14, C17, D20 | Metrics, tools, or dates not given |
-| Email or chat reply | Lead with the answer or decision; match the thread's register | F27, E23, A4 | Background the reader wrote |
-| Personal essay, blog | The writer's opinions, doubts, humor, asides stay; reactions allowed where the writer would have one | G1, G3, lesson endings, A2 | Experiences, people, or places the writer did not mention |
+| Business memo, announcement | Plain, specific, what changes for whom and when; keep stated aims and expected benefits in plain words | A1, A2, C14, C17, D20 | Metrics, tools, or dates not given |
+| Email or chat reply | The thread's register; when rewriting, keep the writer's order unless it buries the point | F27, E23, A4 | Background the reader wrote |
+| Customer support or service reply | Direct, warm, accountable; keep an owed apology, every commitment (what, when, cost), and every offer | E23, stacked apologies and gratitude, A4 | Promises, dates, or policies not given |
+| Marketing, landing page, product copy | Plain and concrete but still persuasive; keep the headline, feature labels, scope claims ("all-in-one", "worldwide"), social proof, and the call to action with its link | C16, C17, A1, A4, emoji decoration | Features, figures, or customers not given |
+| Release notes, README, reference docs | Neutral, exact, scannable; keep headings (including the H1), lists, bold labels, commands, code, file names, and notices such as dropped support | A4, C13, C17, E26 | Steps, flags, or defaults not given |
+| Press release | Newsroom plain; quotations verbatim with their attribution; dateline, figures, and eligibility terms intact | C14, C17, C18 | Quotes, figures, or partners not given |
+| Social post (LinkedIn and similar) | The writer's own stance and the platform's conventions; keep hashtags, numbered takeaways, and the closing line in plainer words | A1, A2, A4, stacked hype, emoji decoration | Reactions or experiences the writer did not state |
+| Cover letter, application | Confident and specific, first person; keep every achievement, figure, and stated motivation | Inflated self-description, A1, C13 | Skills, results, or motives not given |
+| Personal essay, blog | The writer's opinions, doubts, humor, and asides stay, said better; in rewrites add none of your own | G1, G3, A2; tighten a lesson ending rather than cutting it | Experiences, feelings, people, or places the writer did not mention |
 | Technical explanation | Neutral, exact, ordered | A3, A4, C13, D20 | Quirks, jokes, analogies that change the meaning |
 | Academic, literature review | Formal, hedged as the evidence requires, citations verbatim | C18 (unsourced "research shows"), B9, A3 | Sources, numbers, or stronger claims |
 | Literary fiction | Voice of the POV character and narrative distance | All of Level 2; G1–G8 | Morals, codas, sensory tours |
