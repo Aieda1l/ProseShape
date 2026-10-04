@@ -1,0 +1,7 @@
+Here is how platforms die: first, they are good to their users; then they abuse their users to make things better for their business customers; finally, they abuse those business customers to claw back all the value for themselves. Then, they die.
+
+I call this enshittification, and it is a seemingly inevitable consequence arising from the combination of the ease of changing how a platform allocates value, combined with the nature of a "two sided market," where a platform sits between buyers and sellers, holding each hostage to the other, raking off an ever-larger share of the value that passes between them.
+
+When a platform starts, it needs users, so it makes itself valuable to users. Think of Amazon: for many years, it operated at a loss, using its access to the capital markets to subsidize everything you bought. It sold goods below cost and shipped them below cost. It operated a clean and useful search. If you searched for a product, Amazon tried its damndest to put it at the top of the search results.
+
+This was a hell of a good deal for Amazon's customers. Lots of us piled in, and lots of brick-and-mortar retailers withered and died, making it hard to go elsewhere. Amazon sold us ebooks and audiobooks that were permanently locked to its platform with DRM, so that every dollar we spent on media was a dollar we'd have to give up if we deleted Amazon and its apps. And Amazon sold us Prime, getting us to pre-pay for a year's worth of shipping. Prime customers start their shopping on Amazon, and 90% of the time, they don't search anywhere else.

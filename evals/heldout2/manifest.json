@@ -1,0 +1,243 @@
+{
+ "note": "Held-out corpus for ProseShape 1.4.1, written and frozen on 2026-10-04 before any 1.4.1 change and never used for iteration. The 1.4.0 held-out corpus (evals/heldout/) becomes development data for 1.4.1. k01-k12 are synthetic; every name, organization, study, figure and quotation in them is fictional. k13-k15 are human-written excerpts (sources and licenses below and in THIRD_PARTY_NOTICES.md). None of the texts overlap ProseShape's fixtures, examples, or earlier corpora.",
+ "user_request": "Please humanize this so it reads like a person wrote it. Keep the facts and meaning the same.",
+ "sources": {
+  "k13_human_austen": "Jane Austen, Pride and Prejudice (1813), chapter 13. Public domain. Text from Project Gutenberg #1342 (https://www.gutenberg.org/ebooks/1342). Line breaks unwrapped; Gutenberg's _underscore_ italics converted to *asterisks* and its -- to an em dash, as printed.",
+  "k14_human_go_blog": "Rob Pike, 'Errors are values', The Go Blog, 12 January 2015 (https://go.dev/blog/errors-are-values). Text licensed CC BY 4.0, code BSD. Opening paragraphs; HTML converted to Markdown, code blocks fenced, the split inline code `if` `err` `!=` `nil` joined into one span.",
+  "k15_human_doctorow": "Cory Doctorow, 'Tiktok's enshittification', Pluralistic, 21 January 2023 (https://pluralistic.net/2023/01/21/potemkin-ai/). Licensed CC BY 4.0. First four paragraphs, HTML converted to plain text."
+ },
+ "samples": {
+  "k01_incident_postmortem": {
+   "category": "incident postmortem (Markdown headings, bold-label timeline, numbered action items with owners)",
+   "expected": "cut significance and the closing slogan; keep every time, figure, cause, owner and action item, and the document structure",
+   "protected": [
+    "47 minutes",
+    "14:02",
+    "14:49",
+    "18%",
+    "2,300",
+    "from 200 to 20",
+    "Dana Whitfield",
+    "Marcus Lee",
+    "Priya Nair",
+    "below 100",
+    "5%",
+    "2 minutes"
+   ]
+  },
+  "k02_fundraising_appeal": {
+   "category": "nonprofit fundraising email (subject line, beneficiary story, call to action)",
+   "expected": "plainer and still persuasive; keep every figure, the deadline, Maria's story, the asks and the link",
+   "protected": [
+    "500 families",
+    "84,000",
+    "312",
+    "Clay County",
+    "27%",
+    "Maria",
+    "cannery",
+    "December 21",
+    "$50",
+    "$150",
+    "riverbendpantry.org/winter",
+    "Elena Ruiz"
+   ]
+  },
+  "k03_recipe": {
+   "category": "recipe blog post (intro, ingredient list, numbered steps)",
+   "expected": "trim the intro hype; ingredient list, quantities and steps intact",
+   "protected": [
+    "25 minutes",
+    "8 oz (225 g)",
+    "1 can (15 oz)",
+    "3 tablespoons",
+    "4 cloves",
+    "1/4 teaspoon",
+    "1/2 cup grated parmesan",
+    "Reserve 1 cup",
+    "6–8 minutes",
+    "1 minute"
+   ]
+  },
+  "k04_job_posting": {
+   "category": "job posting (three labeled lists, salary, closing slogan)",
+   "expected": "cut hype; keep every responsibility, requirement, figure and benefit and the list structure",
+   "protected": [
+    "Senior Data Engineer",
+    "Lumen Freight",
+    "40 million",
+    "Airflow to Dagster",
+    "5+ years",
+    "Python and SQL",
+    "Snowflake or BigQuery",
+    "$165,000–$190,000",
+    "Denver",
+    "4% match",
+    "20 days"
+   ]
+  },
+  "k05_science_news": {
+   "category": "science news (hedged findings, two attributed quotations, outside expert)",
+   "expected": "keep every hedge, number, caveat and attribution; quotations verbatim; cut the inflated opener and closer",
+   "protected": [
+    "University of Halden",
+    "Journal of Sleep and Cognition",
+    "1,240",
+    "three years",
+    "20 to 40 minutes",
+    "8%",
+    "90 minutes",
+    "Dr. Elin Varga",
+    "Dr. Kwame Asante",
+    "Westbrook Medical Center",
+    "\"We were surprised by how consistent the pattern was across different groups,\"",
+    "\"But this is an observational study, so we can't say that napping causes the improvement.\""
+   ]
+  },
+  "k06_book_review": {
+   "category": "first-person book review with a mixed verdict (italic title, quoted line, rating)",
+   "expected": "keep the reviewer's praise and criticisms at their strength, the quoted line verbatim, the italics and the rating",
+   "protected": [
+    "*The Salt Archive*",
+    "Imogen Hale",
+    "Maine",
+    "Ada Calder",
+    "\"The tide took what it wanted and returned only what it could not use.\"",
+    "480 pages",
+    "skimming the middle chapters",
+    "3.5 out of 5"
+   ]
+  },
+  "k07_toast": {
+   "category": "wedding toast (personal speech, anecdotes, one staged line)",
+   "expected": "warm and spoken; keep every person, number and anecdote, the chess and houseplant jokes, and 'finally'; no new anecdotes",
+   "protected": [
+    "Sam",
+    "Theo",
+    "Nadia",
+    "eleven",
+    "chess",
+    "four years",
+    "houseplants",
+    "cross-country move",
+    "two job changes",
+    "camping trip in the rain",
+    "finally"
+   ]
+  },
+  "k08_childrens_story": {
+   "category": "children's read-aloud fiction (repetition, sound words, stated moral)",
+   "expected": "keep the read-aloud repetition, the sound words, every event and the stated moral in plainer words",
+   "protected": [
+    "Bo",
+    "Toot, toot, toot",
+    "Old Captain Mae",
+    "\"You don't need to be big to be brave.\"",
+    "all three ships",
+    "propeller",
+    "The End."
+   ]
+  },
+  "k09_fiction_interior": {
+   "category": "literary fiction scene (interior voice, stock sensations, staged contrast in dialogue, realization ending)",
+   "expected": "rewrite mode: keep every beat, every line of dialogue in substance, the realization and the ending; tighten stock sensations without inventing actions",
+   "protected": [
+    "Iris",
+    "Cal",
+    "four hours every other weekend for two years",
+    "Friday",
+    "\"Come Friday,\"",
+    "\"I'll wait.\"",
+    "finally"
+   ]
+  },
+  "k10_help_article": {
+   "category": "help-center article (Markdown headings, numbered steps, bold UI labels, keyboard shortcuts in code)",
+   "expected": "cut chatbot residue; steps, UI labels, shortcuts and limits byte-exact",
+   "protected": [
+    "**Export**",
+    "**Markdown** or **PDF**",
+    "`Ctrl+Shift+E`",
+    "`Cmd+Shift+E`",
+    "**Settings** > **Account** > **Data**",
+    "**Export all notes**",
+    "24 hours",
+    "7 days",
+    "50 MB"
+   ]
+  },
+  "k11_nearclean_garden": {
+   "category": "near-clean human-style neighborhood email with one not-X-but-Y line",
+   "expected": "minimal edit; the contrast line's claim (the garden is where neighbors talk) survives, restated or kept; 'honestly' and 'actually' stay",
+   "protected": [
+    "east beds",
+    "Monday the 9th",
+    "Wednesday the 11th",
+    "west beds",
+    "$35",
+    "$15",
+    "65 or older",
+    "lockbox",
+    "Hannah",
+    "neighbors actually talk to each other",
+    "four years",
+    "Joe"
+   ]
+  },
+  "k12_nearclean_piano": {
+   "category": "near-clean personal essay with meaning-bearing small words and a contrast ending",
+   "expected": "few or no changes; every small word (almost, mostly, quietly, finally, maybe, a little) stays; no added hedges or feelings",
+   "protected": [
+    "almost ten years",
+    "mostly holding up mail and a lamp",
+    "two men",
+    "quietly promised",
+    "finally practice",
+    "maybe seven",
+    "almost recognized",
+    "a little embarrassed",
+    "It meant admitting I'd stopped."
+   ]
+  },
+  "k13_human_austen": {
+   "category": "already-good human literary fiction (1813): period spelling, italics, dialogue dashes",
+   "expected": "few or no changes; period spelling (to-day, favour), italics and dashes untouched",
+   "protected": [
+    "to-day",
+    "*my* dinners",
+    "It is *not* Mr. Bingley",
+    "Why, Jane—you never dropped a word of this—you sly thing!",
+    "fortnight",
+    "Mr. Collins",
+    "entailed",
+    "Charlotte Lucas"
+   ]
+  },
+  "k14_human_go_blog": {
+   "category": "already-good human technical prose with code blocks and a deliberate triad",
+   "expected": "few or no changes; code blocks and inline code byte-exact; the triad and the short emphatic lines are the author's",
+   "protected": [
+    "if err != nil {\n    return err\n}",
+    "`if err != nil`",
+    "once per page or two",
+    "This is unfortunate, misleading, and easily corrected.",
+    "Errors are values.",
+    "Values can be programmed, and since errors are values, errors can be programmed."
+   ]
+  },
+  "k15_human_doctorow": {
+   "category": "already-good human polemic with a strong personal voice (coinage, profanity, first-then-finally list)",
+   "expected": "few or no changes; the voice, the coinage and the profanity stay",
+   "protected": [
+    "Here is how platforms die",
+    "enshittification",
+    "\"two sided market,\"",
+    "damndest",
+    "hell of a good deal",
+    "brick-and-mortar",
+    "DRM",
+    "90%"
+   ]
+  }
+ }
+}

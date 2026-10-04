@@ -41,8 +41,9 @@ def stop(reason):
 
 
 def corpus_dir(name):
-    """Accept a path, or the short names 'heldout' and 'dev'."""
-    short = {"heldout": os.path.join(REPO, "evals", "heldout"), "dev": os.path.join(EXPERIMENT, "corpus")}
+    """Accept a path, or the short names 'dev', 'heldout' (1.4.0) and 'heldout2' (1.4.1)."""
+    short = {"heldout": os.path.join(REPO, "evals", "heldout"), "heldout2": os.path.join(REPO, "evals", "heldout2"),
+             "dev": os.path.join(EXPERIMENT, "corpus")}
     return os.path.abspath(short.get(name, name))
 
 

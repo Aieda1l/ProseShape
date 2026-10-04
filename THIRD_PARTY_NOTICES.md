@@ -53,6 +53,9 @@ The evaluation corpora are synthetic apart from the following excerpts, which ar
 
 - `evals/heldout/h10_human_rust.md`: from *The Rust Programming Language*, Introduction, by Steve Klabnik, Carol Nichols, and contributors (https://github.com/rust-lang/book). Copyright (c) 2010 The Rust Project Developers. Licensed under the MIT License or the Apache License 2.0, at your option.
 - `evals/heldout/h11_human_twain.md`: from Mark Twain, *Roughing It* (1872). Public domain (Project Gutenberg #3177).
+- `evals/heldout2/k13_human_austen.md`: from Jane Austen, *Pride and Prejudice* (1813), chapter 13. Public domain (Project Gutenberg #1342).
+- `evals/heldout2/k14_human_go_blog.md`: from Rob Pike, "Errors are values", The Go Blog, 12 January 2015 (https://go.dev/blog/errors-are-values). Text licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), code under the Go BSD license. Converted from HTML to Markdown.
+- `evals/heldout2/k15_human_doctorow.md`: from Cory Doctorow, "Tiktok's enshittification", *Pluralistic*, 21 January 2023 (https://pluralistic.net/2023/01/21/potemkin-ai/). Licensed under CC BY 4.0. First four paragraphs, converted to plain text.
 - `docs/research/experiment-2026-09/corpus/s10_human_tech.md`: from the Python Tutorial, "Whetting Your Appetite". © Python Software Foundation, used under the PSF License Agreement.
 - `docs/research/experiment-2026-09/corpus/s11_human_voice.md`: from Jerome K. Jerome, *Three Men in a Boat* (1889). Public domain (Project Gutenberg #308).
 
