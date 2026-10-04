@@ -145,6 +145,28 @@ On held-out, 1.4.0 scored 8.17 [7.79, 8.54], O 7.33, HumanScope 7.27, 1.3.1 5.94
 
 They are listed in the validation README as the 1.4.1 starting point.
 
+## Version 1.4.1 candidate (2026-10-04): fidelity up, naturalness down, overall unchanged
+
+This round froze a new held-out corpus first: 15 texts in `heldout2/`, committed in `80617c2`. It then iterated on 25 development texts (the 2026-09 corpus plus the retired 1.4.0 held-out set) and validated once. The full record is in [`v1.4.1-validation/README.md`](v1.4.1-validation/README.md).
+
+| Round | Corpus | Candidate − 1.4.0 [95% CI] | Candidate − O | Fact flags, candidate vs 1.4.0 |
+|---|---|---|---|---|
+| a | dev (25) | +0.11 [−0.24, +0.50] | +0.73 [+0.21, +1.28] | 12 vs 41 |
+| b | dev | +0.06 [−0.30, +0.42] | +0.70 [+0.17, +1.25] | 15 vs 41 |
+| **b** | **held-out 2 (15)** | **+0.00 [−0.48, +0.48]** | **+0.27 [−0.63, +1.08]** | **16 vs 29** |
+
+**What worked:**
+- period text left alone (Twain, Austen);
+- staged lines kept instead of deleted;
+- small words and dialogue kept;
+- fact problems roughly halved on both corpora.
+
+**What it cost:** naturalness fell about 0.2. Restatements of staged lines read clunky, and a lone "not just X, it's Y" in text a person wrote was flattened when it should have been left alone.
+
+**Replication of 1.4.0:** against O, +0.27 [−0.78, +1.22] on the new set, and +0.52 [−0.15, +1.15] pooled over both held-out sets. 1.4.0 leads on AI-shaped drafts and trails on human-written ones.
+
+The candidate is not released. `heldout2/` is now development data, and 1.4.2 needs a third frozen corpus.
+
 ## Description optimization
 
 - `trigger-evals.json` holds 20 realistic queries: 10 that should trigger (status email, AI-assisted workshop story, voice-sample blog post, cover letter, generated literary story, stiff novel dialogue, LinkedIn post with fixed numbers, dissertation intro with citations, wedding toast, Substack essay) and 10 near-misses that should not (AI-detection request, proofread-only, translation, paper summary, a dash-counting script, changelog conversion, critique-only notes, formality change, SEO product copy, a craft explanation).

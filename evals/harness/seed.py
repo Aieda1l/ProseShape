@@ -2,7 +2,7 @@
 """Unpack committed outputs and judgments into work/, so baselines need not be regenerated and the committed
 tables can be reproduced without any model call.
 
-  python3 seed.py                    # both the 2026-09 experiment and the v1.4 validation
+  python3 seed.py                    # the 2026-09 experiment and the 1.4 and 1.4.1 validations
   python3 seed.py path/to/outputs.jsonl path/to/judgments.jsonl
 
 Existing files in work/ are left alone. The 2026-09 judgments land under their own round names (r1, r2, ...),
@@ -16,7 +16,9 @@ from common import EXPERIMENT, REPO, path
 
 DEFAULT = [os.path.join(EXPERIMENT, "results", "outputs.jsonl"), os.path.join(EXPERIMENT, "results", "judgments.jsonl"),
            os.path.join(REPO, "evals", "v1.4-validation", "results", "outputs.jsonl"),
-           os.path.join(REPO, "evals", "v1.4-validation", "results", "judgments.jsonl")]
+           os.path.join(REPO, "evals", "v1.4-validation", "results", "judgments.jsonl"),
+           os.path.join(REPO, "evals", "v1.4.1-validation", "results", "outputs.jsonl"),
+           os.path.join(REPO, "evals", "v1.4.1-validation", "results", "judgments.jsonl")]
 
 
 def write(p, d):

@@ -57,7 +57,7 @@ def main(tag, cand, details=False):
     if not J:
         sys.exit(f"no judgments found under {path('judgments')} for tag {tag!r}")
     samples = sorted({s for (s, a, r) in J})
-    arms = sorted({a for (s, a, r) in J}, key=lambda a: BASE_ORDER.index(a) if a in BASE_ORDER else 9)
+    arms = sorted({a for (s, a, r) in J}, key=lambda a: (BASE_ORDER.index(a) if a in BASE_ORDER else 9, a))
     print(f"# {tag}: {len(samples)} samples, arms {arms}\n")
     print("| arm | overall [95% CI] | facts | meaning | voice | natural | proportion | format | mean rank |\n|---|---|---|---|---|---|---|---|---|")
     for a in arms:

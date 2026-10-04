@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.4.1 (candidate, not released)
+
+I validated this candidate once on 15 new held-out texts (`evals/heldout2/`, frozen in `80617c2`). It scored the same as 1.4.0, at 7.70 each (paired +0.00 [−0.48, +0.48]). Judge-flagged fact problems fell from 29 to 16, but the text read slightly less naturally (4.45 against 4.67). The candidate is kept on the development branch, and 1.4.0 remains the release. See `evals/v1.4.1-validation/README.md`.
+
+- Period and literary text keeps its spelling, punctuation, quotation marks, hyphenation and italics. Modern plain prose still gets a full copyedit.
+- "Not just X but Y" asserts both X and Y. In otherwise clean text, a staged line is restated rather than cut, and tightened instead if the restatement reads stiffer. In dialogue, it is tightened at most.
+- Small words that carry meaning ("finally", "quietly", "softly") stay. No new hedges and no softened certainty.
+- No invented images or little scenes in rewrites.
+- `references/evaluation-rubric.md` §3 matches the *weak alone* dash rule and points to `scripts/preserve_check.py`.
+
+The held-out run also re-tested 1.4.0 against the ordinary-editor prompt: +0.27 [−0.78, +1.22], and +0.52 [−0.15, +1.15] pooled over both held-out sets. Planned for 1.4.2:
+- leave a lone staged contrast in human-written text alone;
+- carry contrasts in AI-shaped text in lighter wording;
+- keep plain news takeaways;
+- keep read-aloud repetition.
+
 ## 1.4.0
 
 Validated on a frozen held-out corpus against a strong ordinary-editor prompt. It scored 8.17 against 7.33, a paired difference of +0.83 [+0.19, +1.54] (see `evals/v1.4-validation/README.md`). Each change targets a failure that the [2026-09 comparison](docs/research/competitive-analysis-2026-09.md) found in 1.3.1.

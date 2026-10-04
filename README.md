@@ -126,7 +126,11 @@ ProseShape is measured against the edit a capable model makes when simply told t
 | ProseShape 1.3.1 | 5.94 [5.12, 6.75] | 78 |
 | Untouched source | 3.75 [2.81, 4.90] | 0 |
 
-Against the ordinary editor, the paired difference is +0.83 [+0.19, +1.54], better on 7 texts, worse on 3, tied on 2. The executor and the judge are both Claude models, and no human readers were involved. The method, the per-text results, the known issues and the limitations are in [`evals/v1.4-validation/README.md`](evals/v1.4-validation/README.md). The [competitive analysis](docs/research/competitive-analysis-2026-09.md) explains how the ordinary-editor bar was chosen and how 1.3.1 compared with other open-source humanizers.
+Against the ordinary editor, the paired difference is +0.83 [+0.19, +1.54], better on 7 texts, worse on 3, tied on 2.
+
+**That margin did not fully replicate.** On a second set of 15 fresh texts, 1.4.0 led the ordinary editor by only +0.27 [−0.78, +1.22]. Pooled over all 27 held-out texts, the lead is **+0.52 [−0.15, +1.15]**, an interval that includes zero. The pattern was the same in both sets. ProseShape is clearly ahead on AI-shaped drafts (about +0.6 on the second set). It falls behind on text a person already wrote well (about −0.4), because the editor prompt leaves good writing alone more often. See [`evals/v1.4.1-validation/README.md`](evals/v1.4.1-validation/README.md).
+
+The executor and the judge are both Claude models, and no human readers were involved. The method, the per-text results, the known issues and the limitations are in [`evals/v1.4-validation/README.md`](evals/v1.4-validation/README.md). The [competitive analysis](docs/research/competitive-analysis-2026-09.md) explains how the ordinary-editor bar was chosen and how 1.3.1 compared with other open-source humanizers.
 
 **Check a rewrite yourself.** `scripts/preserve_check.py` compares a source with its rewrite. It flags changed or missing numbers, quotations, inline and fenced code, links, and frontmatter, and reports heading, table, length and dash changes. It is standard-library Python and is not a quality score.
 
@@ -135,7 +139,7 @@ python3 scripts/preserve_check.py draft.md revised.md            # add --mode li
 python3 -m unittest discover -s scripts/tests
 ```
 
-Versions 1.0–1.3 were developed on 12 cases covering business prose, personal essays, technical writing, fiction rewrites, dialogue, voice matching, citation preservation, deep story restructuring, minimal editing, and generation. See [`evals/eval-log.md`](evals/eval-log.md). Deep rewrite, generation and voice matching have not yet been re-tested under the 1.4 harness.
+Versions 1.0–1.3 were developed on 12 cases covering business prose, personal essays, technical writing, fiction rewrites, dialogue, voice matching, citation preservation, deep story restructuring, minimal editing, and generation. See [`evals/eval-log.md`](evals/eval-log.md). Deep rewrite, generation and voice matching have not yet been re-tested under the 1.4 harness. A 1.4.1 candidate that halves fact problems but reads slightly less naturally is documented in `evals/v1.4.1-validation/`. It scored the same as 1.4.0 overall and is not released.
 
 ## License
 
