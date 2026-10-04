@@ -57,3 +57,7 @@ The evaluation corpora are synthetic apart from the following excerpts, which ar
 - `docs/research/experiment-2026-09/corpus/s11_human_voice.md`: from Jerome K. Jerome, *Three Men in a Boat* (1889). Public domain (Project Gutenberg #308).
 
 `h05_oped.md` cites a published California Air Resources Board comparison (leaf-blower emissions against car miles). Every other name, organization, figure and quotation in the synthetic samples is fictional.
+
+## Banner lettering
+
+The lettering in `assets/banner.svg` and `assets/banner-dark.svg` is set in **Instrument Serif** (Copyright 2022 The Instrument Serif Project Authors, https://github.com/Instrument/instrument-serif) and converted to outlines. The font is licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). The font files themselves are not included in this repository.

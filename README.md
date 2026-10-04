@@ -1,6 +1,9 @@
-# ProseShape
-
-**Make prose feel chosen, not defaulted.**
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner.svg" alt="ProseShape: Make prose feel chosen, not defaulted." width="100%">
+  </picture>
+</p>
 
 ProseShape is an agent skill for writing and rewriting prose while preserving the writer's facts, voice, and intent. It works at two levels: sentence-level patterns that make text feel generic or model-shaped, and narrative-level defaults such as over-explained themes, tidy single-track plots, embodied-emotion repetition, and overly resolved endings.
 
@@ -88,6 +91,7 @@ Write a 1,200-word story about a hospice night nurse. No stated moral, no years-
 │   ├── harness/                  # generate, blind-judge, analyze, check
 │   └── v1.4-validation/          # method, results, raw outputs and judgments for 1.4.0
 ├── docs/research/                # competitive analysis and the 2026-09 experiment
+├── assets/                       # README banner (light and dark)
 ├── CHANGELOG.md
 ├── THIRD_PARTY_NOTICES.md
 └── LICENSE
