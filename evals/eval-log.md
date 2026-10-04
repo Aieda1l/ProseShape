@@ -2,9 +2,11 @@
 
 The record of every tested version, kept in the format Boonstra recommends ("document the various prompt attempts"). Raw outputs, blind gradings, benchmarks, and review viewers were retained in the private build workspace and are not included in this public-ready repository. The summarized results and evaluation fixtures are included here.
 
+Iterations 1–4 (versions 1.0–1.3) used the subagent method below. Version 1.4 used a reproducible harness with a frozen held-out corpus; its raw outputs and judgments are committed (see [Version 1.4](#version-14-2026-10-04-blind-comparison-against-an-ordinary-editor)).
+
 ## Method
 
-- **Test set:** 12 cases in `evals.json` covering the requested categories: generic business prose, a personal essay, technical prose, literary fiction, dialogue-heavy fiction, an intentionally linear story, a writer who uses dashes and fragments, text with citations that must not change, a polished but AI-shaped story (deep rewrite), a text that needs almost no edit, plus fiction and nonfiction generation. The test inputs are different from the skill's own examples to avoid testing on training material.
+- **Test set:** 12 cases in `evals.json` (kept in the private build workspace and not included here; the input texts it used are in `evals/files/`) covering the requested categories: generic business prose, a personal essay, technical prose, literary fiction, dialogue-heavy fiction, an intentionally linear story, a writer who uses dashes and fragments, text with citations that must not change, a polished but AI-shaped story (deep rewrite), a text that needs almost no edit, plus fiction and nonfiction generation. The test inputs are different from the skill's own examples to avoid testing on training material.
 - **Configurations:** `with_skill` (this skill), `without_skill` (same model, no skill, told not to load any skill), `humanizer` (blader/humanizer v3.1.0 SKILL.md only). Later iterations add earlier versions of this skill.
 - **Execution:** each run was an independent subagent (claude-opus-5-5) that saved the exact reply it would send.
 - **Grading:** one independent grader subagent per eval saw all outputs under shuffled labels (X/Y/Z or W/X/Y/Z), checked the eval's assertions with quoted evidence, scored 15 dimensions from `references/evaluation-rubric.md`, gave an overall 1 to 10, and ranked the outputs. No detector scores were used.
@@ -97,6 +99,8 @@ v1.1 scored slightly higher on the six-eval subset in iterations 3 and 4 (8.00 v
 
 ## Limitations of this evaluation
 
+These apply to iterations 1–4. The 1.4 validation has its own limitations section in [`v1.4-validation/README.md`](v1.4-validation/README.md).
+
 - One run per configuration per eval; run-to-run variance is large for creative tasks.
 - Graders are the same model family as the executors, so they may share its priors (for example, a preference for "show, don't tell," which StoryScope finds is itself AI-leaning).
 - Blinding was partial: output format can hint at the configuration (Humanizer shows a draft, a critique, and a final version).
@@ -107,6 +111,39 @@ v1.1 scored slightly higher on the six-eval subset in iterations 3 and 4 (8.00 v
 ## Cost
 
 With the skill, runs averaged about 65,000 to 74,000 subagent tokens and 1.5 to 2.5 minutes, versus about 41,000 tokens and 70 seconds without it. Most of the difference comes from reading the reference files. The deep rewrite is the slowest case (9 to 12 minutes).
+
+## Version 1.4 (2026-10-04): blind comparison against an ordinary editor
+
+The [2026-09 comparison](../docs/research/competitive-analysis-2026-09.md) used a different method from the iterations above: isolated `claude -p` sessions, a Sonnet executor, a blind Opus judge that also saw the untouched source, and a strong ordinary-editor prompt (O) as the bar. Under that method 1.3.1 trailed O by −1.27 [−2.00, −0.62]. Version 1.4 was built to close that gap. It used the same method, with one corpus for iteration and a second, frozen one for validation. The full record is in [`v1.4-validation/README.md`](v1.4-validation/README.md).
+
+| Round | Corpus | Candidate − O (overall, 1–10) [95% CI] | Better/worse/tie |
+|---|---|---|---|
+| PS14a | dev (13) | −0.46 [−1.12, +0.10] | 4/7/2 |
+| PS14b | dev | +0.10 [−0.29, +0.54] | 4/6/3 |
+| PS14c | dev | −0.08 [−0.62, +0.42] | 5/5/3 |
+| PS14d | dev | +0.19 [−0.21, +0.62] | 6/4/3 |
+| PS14e | dev | −0.06 [−0.62, +0.48] | 5/5/3 (reverted) |
+| PS14f | dev | −0.15 [−0.63, +0.37] | 4/6/3 |
+| PS14g | dev | +0.27 [−0.19, +0.73] | 8/3/2 |
+| **PS14g = 1.4.0** | **held-out (12)** | **+0.83 [+0.19, +1.54]** | **7/3/2** |
+
+On held-out, 1.4.0 scored 8.17 [7.79, 8.54], O 7.33, HumanScope 7.27, 1.3.1 5.94 and the untouched source 3.75. The judge flagged 16 fact problems for 1.4.0 and 47 for O. Under `scripts/preserve_check.py`, no output from any arm had an error.
+
+**What moved the score:**
+
+- Keeping the claim inside inflated phrasing, with its owner and strength (PS14b). This turned a −0.46 start into parity.
+- Keeping fiction beats and the author's details in rewrite mode (PS14d).
+- Rewriting whole paragraphs around their point, then checking every claim across (PS14g). This closed the naturalness gap; word-level patching (PS14e) had made it worse.
+
+**What did not move it:** proportional, phrase-level edits (PS14e, reverted). More examples in the closing-line rule helped fidelity but not the overall score (PS14f).
+
+**Failures still open:**
+
+- period spelling and markup modernized in a Twain excerpt;
+- a staged line in a near-clean Slack update deleted instead of restated;
+- small meaning-bearing words dropped in a personal essay.
+
+They are listed in the validation README as the 1.4.1 starting point.
 
 ## Description optimization
 

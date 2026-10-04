@@ -5,6 +5,8 @@
 **Scope:** 14 competitor repositories (7 named in the brief, 7 found by search), static source analysis of each, plus an executed, blinded rewrite comparison of ProseShape against five runnable competitors and two baselines ([`experiment-2026-09/`](experiment-2026-09/README.md)).  
 **No ProseShape code or prompts were changed for this report.**
 
+> **Update, 2026-10-04.** ProseShape 1.4.0 implements several of the recommendations below. On a held-out corpus frozen before any change, it scored 8.17 against the ordinary-editor prompt's 7.33 (paired +0.83 [+0.19, +1.54]). See the [addendum](#addendum-2026-10-04-status-after-proseshape-140). The body of this report is unchanged and describes v1.3.1.
+
 Evidence labels used throughout:
 
 - **OBSERVED**: directly supported by a cited file, test, document or experimental result.
@@ -1018,6 +1020,29 @@ Split cases into development and held-out by document or author (avoid-ai-writin
     - Acceptance: cost per run documented; any removal justified by the harness.
 
 ---
+
+## Addendum (2026-10-04): status after ProseShape 1.4.0
+
+The body of this report is unchanged. This addendum records what happened to the §9 next steps. The validation is documented in [`../../evals/v1.4-validation/README.md`](../../evals/v1.4-validation/README.md).
+
+| §9 step | Status | Evidence |
+|---|---|---|
+| 1. Restore `evals/evals.json` | Open | The file is not in the public repository. `evals/eval-log.md` now says so. |
+| 2. Preservation checker | Done | [`scripts/preserve_check.py`](../../scripts/preserve_check.py) with 28 unit tests, covering paraphrase cases that should pass ("14-day" vs "14 days", spelled-out numbers, quote punctuation) and deletion cases that should fail. [`evals/harness/checks.py`](../../evals/harness/checks.py) runs it over this experiment's outputs. The rubric does not reference it yet (see step 7). |
+| 3. Eval harness, re-baseline 1.3.1 | Done | [`evals/harness/`](../../evals/harness/README.md) reproduces the committed 1.4 summaries byte for byte from committed data. On the held-out corpus, 1.3.1 scored 5.94 against O's 7.33. |
+| 4. Nonfiction voice permissions, derived claims | Done | On held-out, judge-flagged added facts were 1 for 1.4.0 and 12 for 1.3.1, and voice scored 4.65 against 3.90. |
+| 5. Realizations: tighten, don't delete | Done for rewrite mode | Fiction dialogue scored 8.25 against O's 6.25 on held-out. The paired-brief deep-rewrite cases were not run. |
+| 6. Genre rows, protected Markdown | Done | 1.4.0's held-out format score was 4.96, and avoid-ai-writing's validator found no `heading-count` errors in its outputs (1.3.1 had two). |
+| 7. Dash rule *weak alone* | Partly | Changed in `SKILL.md` and B8. Every arm kept the press release's dash and Twain's three. `references/evaluation-rubric.md` §3 still counts against zero. It was left alone because it is part of the validated prompt; the fix is planned for 1.4.1. |
+| 8. Wikipedia notice, StoryScope venue | Done | `THIRD_PARTY_NOTICES.md` now credits *Signs of AI writing* (CC BY-SA 4.0). StoryScope is cited as arXiv:2604.03136v6, with no venue claim. |
+| 9. Diagnose (flag-only) mode | Open | |
+| 10. Reference load path | Open | |
+
+The held-out run surfaced new problems, which are listed in the validation README:
+
+- period spelling and markup were modernized in a Twain excerpt;
+- a staged not-X-but-Y line was cut instead of restated, in a near-clean update and in fiction dialogue;
+- small words that carry meaning were dropped in a personal essay.
 
 ## Appendix A. Empirical comparison: summary
 
