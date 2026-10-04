@@ -29,7 +29,7 @@ class Repository(unittest.TestCase):
                 names = z.namelist()
             self.assertTrue(all(n.startswith("proseshape/") for n in names))
             for required in ("proseshape/SKILL.md", "proseshape/LICENSE", "proseshape/THIRD_PARTY_NOTICES.md",
-                             "proseshape/references/humanizer-rules.md"):
+                             "proseshape/references/humanizer-rules.md", "proseshape/agents/openai.yaml"):
                 self.assertIn(required, names)
 
 
@@ -50,7 +50,7 @@ class BrokenCopies(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = self.tmp.name
-        for rel in (".claude-plugin", ps.PLUGIN_REL, "LICENSE", "THIRD_PARTY_NOTICES.md"):
+        for rel in (".claude-plugin", ".agents", ps.PLUGIN_REL, "LICENSE", "THIRD_PARTY_NOTICES.md"):
             src = os.path.join(ps.REPO, rel)
             dst = os.path.join(self.root, rel)
             if os.path.isdir(src):
@@ -97,6 +97,26 @@ class BrokenCopies(unittest.TestCase):
         found = self.problems()
         self.assertIn("keep plugin files under 256 KiB", found)
         self.assertIn("system file", found)
+
+    def test_codex_manifest_version_mismatch(self):
+        self.edit(os.path.join(ps.PLUGIN_REL, "plugin.json"), '"version": "', '"version": "9.')
+        self.assertIn("plugin.json: version", self.problems())
+
+    def test_codex_short_description_limit(self):
+        self.edit(os.path.join(ps.PLUGIN_REL, "plugin.json"), '"shortDescription": "', '"shortDescription": "' + "y" * 40)
+        self.assertIn("interface.shortDescription is", self.problems())
+
+    def test_codex_unknown_top_level_key(self):
+        self.edit(os.path.join(ps.PLUGIN_REL, "plugin.json"), '"license": "MIT",', '"license": "MIT", "skills": "./skills/",')
+        self.assertIn("'skills' isn't allowed at the top level", self.problems())
+
+    def test_codex_missing_icon(self):
+        os.remove(os.path.join(self.root, ps.PLUGIN_REL, "assets", "icon.svg"))
+        self.assertIn("interface.composerIcon", self.problems())
+
+    def test_codex_marketplace_policy(self):
+        self.edit(os.path.join(".agents", "plugins", "marketplace.json"), '"AVAILABLE"', '"SOMETIMES"')
+        self.assertIn("policy.installation must be one of", self.problems())
 
     def test_short_readme(self):
         with open(os.path.join(self.root, ps.PLUGIN_REL, "README.md"), "w", encoding="utf-8") as f:

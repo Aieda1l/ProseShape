@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "proseshape",
+  "version": "1.4.0",
+  "description": "Rewrite or write prose so it reads as chosen by a person, not defaulted by a model, while keeping every fact, quotation, plot event, and the writer's voice.",
+  "author": {
+    "name": "Aieda1l",
+    "url": "https://github.com/Aieda1l"
+  },
+  "homepage": "https://github.com/Aieda1l/ProseShape",
+  "repository": "https://github.com/Aieda1l/ProseShape",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "rewriting", "humanize", "fiction", "voice", "prose"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ProseShape",
+        "shortDescription": "Make prose feel chosen",
+        "longDescription": "ProseShape rewrites or writes prose so each choice reads as made by a person for this reader, not inherited from a model's defaults. It keeps every fact, number, quotation, citation, plot event, and the writer's voice. It removes sentence-level habits (staged contrasts, one-line closers, inflated significance, chatbot residue) and story-level defaults (stated morals, tidy single-track plots, emotions told through the body, epiphany and epilogue endings). It does light edits, ordinary rewrites, fiction restructuring when you allow it, voice matching from a sample, and writing from scratch. It is built for readers, not AI detectors. It is instructions only: it runs no code and sends nothing anywhere.",
+        "developerName": "Aieda1l",
+        "category": "Productivity",
+        "capabilities": [],
+        "websiteURL": "https://github.com/Aieda1l/ProseShape",
+        "defaultPrompt": [
+          "Use ProseShape to humanize this draft. Keep every fact and the ending.",
+          "Use ProseShape for a light polish only; keep every citation exactly as is.",
+          "Use ProseShape to rewrite this so it sounds like the two samples I wrote."
+        ],
+        "brandColor": "#B4472E",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      }
+    }
+  }
+}

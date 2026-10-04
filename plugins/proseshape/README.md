@@ -2,7 +2,7 @@
 
 **Make prose feel chosen, not defaulted.**
 
-ProseShape is a writing skill for Claude. It rewrites or writes prose so that each choice reads as made by a person for this reader, not inherited from a model's defaults, while keeping every fact, number, quotation, citation, plot event, and the writer's voice.
+ProseShape is a writing skill for Claude and Codex. It rewrites or writes prose so that each choice reads as made by a person for this reader, not inherited from a model's defaults, while keeping every fact, number, quotation, citation, plot event, and the writer's voice.
 
 It works at two levels:
 - **Sentences.** It removes the habits that make text read as generated: staged contrasts, one-line closers, inflated significance and chatbot residue. Then it puts the life back in through the writer's own material.
@@ -29,11 +29,11 @@ Ask for what you want and paste the text, for example:
 - "The prose is fine but this story feels AI-shaped. Free rein to restructure; keep the characters and premise."
 - "Write a 1,200-word story about a hospice night nurse. No stated moral, no years-later ending."
 
-Claude uses the skill when a request matches. To be sure it does, name it ("use ProseShape"), or in Claude Code run `/proseshape:proseshape`.
+Claude and Codex use the skill when a request matches. To be sure they do, name it ("use ProseShape"). In Claude Code you can also run `/proseshape:proseshape`; in Codex, pick it from `/skills`.
 
 ## What is inside
 
-ProseShape is instructions only: a `SKILL.md` and six reference files. It runs no code, starts no servers, fetches nothing, and sends nothing anywhere.
+ProseShape is instructions only: a `SKILL.md`, six reference files, and the manifests and icon that Claude and Codex read. It runs no code, starts no servers, fetches nothing, and sends nothing anywhere.
 
 ## Evidence
 

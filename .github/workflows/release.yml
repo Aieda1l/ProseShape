@@ -34,7 +34,7 @@ jobs:
           text = open("CHANGELOG.md", encoding="utf-8").read()
           m = re.search(rf"^## {re.escape(version)}\b.*?$(.*?)(?=^## |\Z)", text, re.M | re.S)
           body = m.group(1).strip() if m else "See CHANGELOG.md."
-          body += "\n\nInstall in Claude Code: `/plugin marketplace add Aieda1l/ProseShape`, then `/plugin install proseshape@proseshape`.\nOn claude.ai: download `proseshape-" + version + ".zip` below and upload it under Customize > Skills."
+          body += "\n\nInstall in Claude Code: `/plugin marketplace add Aieda1l/ProseShape`, then `/plugin install proseshape@proseshape`.\nInstall in Codex: `codex plugin marketplace add Aieda1l/ProseShape`, then `codex plugin add proseshape@proseshape`.\nOn claude.ai: download `proseshape-" + version + ".zip` below and upload it under Customize > Skills."
           open("release-notes.md", "w", encoding="utf-8").write(body + "\n")
           PY
       - name: Publish the release

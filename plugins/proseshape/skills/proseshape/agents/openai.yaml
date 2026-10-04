@@ -1,0 +1,5 @@
+# Codex reads this optional file for how the skill appears in its skill picker.
+interface:
+  display_name: "ProseShape"
+  short_description: "Make prose feel chosen, not defaulted"
+  brand_color: "#B4472E"

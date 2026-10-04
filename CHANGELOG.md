@@ -1,5 +1,16 @@
 # Changelog
 
+## Codex support (2026-10-04)
+
+ProseShape now installs as a Codex plugin too: `codex plugin marketplace add Aieda1l/ProseShape`, then `codex plugin add proseshape@proseshape`. The skill is unchanged 1.4.0.
+
+- `plugins/proseshape/plugin.json` is a portable [Agent Plugins](https://agent-plugins.org) manifest. Its `extensions` → `com.openai` → `interface` block carries Codex's display name, descriptions, category, example prompts, brand color and icon (`assets/icon.svg`).
+- `.agents/plugins/marketplace.json` lists the plugin for Codex under the same name, `proseshape@proseshape`.
+- `skills/proseshape/agents/openai.yaml` sets how Codex's skill picker shows the skill.
+- `package_skill.py` checks the Codex files, including OpenAI's field limits and a square icon. Five new tests bring the total to 43.
+- A new CI job installs the plugin in both Claude Code and Codex from the checkout. It checks that Claude loads the skill and that Codex exposes it to the model.
+- The README and `docs/publishing.md` cover installing in Codex and submitting to OpenAI's plugin directory.
+
 ## Packaging (2026-10-04)
 
 ProseShape now installs as a plugin. The skill itself is unchanged 1.4.0, byte for byte the validated prompt.
