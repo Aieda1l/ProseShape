@@ -48,6 +48,7 @@ You need a paid claude.ai plan. On Pro or Max you submit from your own account. 
 2. Open the developer portal at [claude.ai/directory/manage](https://claude.ai/directory/manage), select **Submit new**, then **Plugin bundle**.
 3. On the **Source** step, enter the repository `Aieda1l/ProseShape` and the plugin folder `plugins/proseshape`, spelled exactly like that.
 4. Select **Validate**. Fix anything marked **Blocking**, push, and select **Re-validate**.
+   - **Icon.** The portal can't show `assets/icon.svg`, the path in `plugin.json`, so it falls back to the letter "P". Upload `assets/icon-square.png` instead. It is a 1024×1024 opaque PNG with square corners, and the directory applies its own corner shape. The portal takes square PNG or JPEG files from 512 to 2,048 pixels on each side, up to 10 MB, and reviews each icon.
 5. Submit. Every version goes through an automated scan and Anthropic's review against the [Software Directory Policy](https://support.claude.com/en/articles/13145358-anthropic-software-directory-policy). The portal shows the status.
 
 What to expect for ProseShape:

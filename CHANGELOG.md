@@ -1,5 +1,9 @@
 # Changelog
 
+## Listing icon (2026-10-05)
+
+- `assets/icon-square.png` is a 1024×1024 opaque PNG of the icon with square corners, for directory listings that take an uploaded PNG or JPEG and round the corners themselves. Anthropic's developer portal can't display the SVG path in `plugin.json`. `docs/publishing.md` says to upload this file there.
+
 ## 1.4.2
 
 I validated this version once on 16 new held-out texts (`evals/heldout3/`, frozen in `458f0e3`), with a second judge as a check:
