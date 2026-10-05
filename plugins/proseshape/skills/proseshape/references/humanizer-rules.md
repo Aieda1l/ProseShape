@@ -22,17 +22,17 @@ Word habits change with every model release; structural habits persist. That is 
 ## 2. How to weigh evidence
 
 - Every sentence you keep must add something the reader did not already have, from earlier in the text or from the conversation around it. [Humanizer]
-- A tell counts in proportion to how rarely a careful writer would make that choice on purpose. Patterns A1–A5 justify an edit on one sighting. Patterns marked *weak alone* need company from other tells in the same passage. [Humanizer]
+- A tell counts in proportion to how rarely a careful writer would make that choice on purpose. In text that already shows model defaults, patterns A1–A5 justify an edit on one sighting, and patterns marked *weak alone* need company from other tells in the same passage. [Humanizer] **Adapted:** in text that reads as a person's, every pattern is weak alone; change a sentence only for a fault you can name for the reader.
 - Rewrite the sentence or paragraph around its point. Word-by-word patching leaves the shape. [Humanizer]
 - Look at paragraph shape as well as sentences: a contrast split across two sentences, three parallel examples, or the same closer after every section is the same tell at a larger scale. [Humanizer]
 
 ## 3. The patterns
 
-### A. Staging instead of stating (act on one sighting)
+### A. Staging instead of stating (act on one sighting in text that shows model defaults)
 
 | # | Pattern | Watch for | Fix | Keep when |
 |---|---|---|---|---|
-| A1 [§1] | Not X but Y | not just/only/merely X but Y; it's not X, it's Y; X rather than Y; "This does not mean X. It means Y."; clipped tail ", no guessing" | State the point directly | The negative half corrects a belief the reader actually holds, or both halves carry information |
+| A1 [§1] | Not X but Y | not just/only/merely X but Y; it's not X, it's Y; X rather than Y; "This does not mean X. It means Y."; clipped tail ", no guessing" | State the point directly. "Not just X but Y" asserts both, so a plain version keeps both, usually by dropping only the staging words; in text a person wrote, a lone instance is their emphasis, so leave it; in dialogue, tighten at most | The negative half corrects a belief the reader actually holds, or both halves carry information |
 | A2 [§2] | One-line closers and dramatic fragments | a one-sentence paragraph restating the one before; "That distinction matters."; "Let that sink in."; a sentence after an example or scene naming what it showed ("It was a lesson in patience."); rows of fragments; every. single. day. | Cut the closer; merge fragments into one specific claim. If the closer asserts something the paragraph does not (a stake, a scope, "this is only the start"), keep that claim in a plainer sentence | The short sentence adds a new fact or consequence |
 | A3 [§3] | Sayings that sound deep | the real question is; at its core; fundamentally; the heart of the matter; X is the language/currency/architecture of Y; X becomes a trap | Replace with the specific claim | It is a quotation or a title |
 | A4 [§4] | Staged run-up | Let's dive in; here's what you need to know; Here's the thing; Honestly?; Look,; Real talk | Remove the run-up; start with the point | "honestly" inside a casual sentence is ordinary speech; a signpost that introduces an explanation or a set of steps ("Here's how it works.") is ordinary in explainers and tutorials |
@@ -69,7 +69,7 @@ Word habits change with every model release; structural habits persist. That is 
 |---|---|---|---|
 | D20 [§19] | Bold as decoration; bold-label lists | Remove bold scattered through sentences; turn label lists into prose when labels add nothing | **Adapted:** keep structure the reader navigates by: bold labels in feature lists, release notes, docs, and product pages stay (plainer label text is fine), and so do headings and calls to action |
 | D21 [§20] | Emoji and arrow decoration, rules between every section, headings written for effect | Remove the decoration; name what the section holds | **Adapted:** Humanizer also converts Title Case to sentence case, which is Wikipedia's house style, not a tell. Keep the draft's heading case unless the user's style guide says otherwise. Fiction and essays usually take no headings at all |
-| D22 [§21] | Curly quotes where the target uses straight ones (*weak alone*) | Follow the target format | **Adapted:** manuscripts and published prose often use curly quotes correctly |
+| D22 [§21] | Curly quotes where the target uses straight ones (*weak alone*) | Follow the target format | **Adapted:** manuscripts and published prose often use curly quotes correctly. In supplied text, keep the quotation marks as they are |
 
 ### E. Leftovers from the chat and the draft (remove outright)
 
