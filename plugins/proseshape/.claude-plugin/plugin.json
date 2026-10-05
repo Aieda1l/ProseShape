@@ -10,5 +10,6 @@
   "homepage": "https://github.com/Aieda1l/ProseShape",
   "repository": "https://github.com/Aieda1l/ProseShape",
   "license": "MIT",
-  "keywords": ["writing", "editing", "rewriting", "humanize", "fiction", "voice", "prose"]
+  "keywords": ["writing", "editing", "rewriting", "humanize", "fiction", "voice", "prose"],
+  "icon": "./assets/icon.svg"
 }
