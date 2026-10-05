@@ -1,5 +1,11 @@
 # Changelog
 
+## Release tooling (2026-10-05)
+
+- The release workflow can now be started three ways: by pushing a tag, from **Actions > Release > Run workflow**, or by publishing a release on GitHub's Releases page. Each route checks that the tag matches `plugin.json` and attaches both zips. A concurrency guard keeps two runs for the same tag from racing.
+- `package_skill.py` checks that the `icon` path in the Claude manifest points to a real file. One new test brings the total to 46.
+- `assets/social-preview.png` (1280×640) is the image for link previews. It has to be uploaded under **Settings > General > Social preview**.
+
 ## OpenAI upload package (2026-10-05)
 
 - `scripts/package_skill.py` also builds `proseshape-openai-<version>.zip`, the package OpenAI's plugin directory takes as an upload. It contains the plugin folder's contents with `plugin.json` at the root, and leaves out the Claude-only `.claude-plugin/`.

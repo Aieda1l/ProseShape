@@ -137,7 +137,7 @@ If Claude answers without the skill, ask again and name it ("Use ProseShape to h
 │   ├── publishing.md             # how to release and submit to Anthropic's directory
 │   └── research/                 # competitive analysis and the 2026-09 experiment
 ├── .github/workflows/            # CI checks; release builds the skill zip
-├── assets/                       # banner and icon, light and dark (icon also as 1024 px PNG)
+├── assets/                       # banner and icon, light and dark (icon also as 1024 px PNG), social preview
 ├── CHANGELOG.md
 ├── THIRD_PARTY_NOTICES.md
 └── LICENSE

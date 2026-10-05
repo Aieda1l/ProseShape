@@ -122,6 +122,11 @@ class BrokenCopies(unittest.TestCase):
         self.assertIn("keep plugin files under 256 KiB", found)
         self.assertIn("system file", found)
 
+    def test_claude_icon_must_exist(self):
+        self.edit(os.path.join(ps.PLUGIN_REL, ".claude-plugin", "plugin.json"), '"icon": "./assets/icon.svg"',
+                  '"icon": "./assets/missing.svg"')
+        self.assertIn("icon './assets/missing.svg' must be a ./ path", self.problems())
+
     def test_codex_manifest_version_mismatch(self):
         self.edit(os.path.join(ps.PLUGIN_REL, "plugin.json"), '"version": "', '"version": "9.')
         self.assertIn("plugin.json: version", self.problems())

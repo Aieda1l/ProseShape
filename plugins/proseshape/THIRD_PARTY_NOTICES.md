@@ -63,4 +63,4 @@ These files are in the source repository (https://github.com/Aieda1l/ProseShape)
 
 ## Banner and icon lettering
 
-The pilcrow in the icon (`plugins/proseshape/assets/icon.svg`, and the source repository's `assets/icon*`) and the lettering in the source repository's `assets/banner.svg` and `assets/banner-dark.svg` are set in **Instrument Serif** (Copyright 2022 The Instrument Serif Project Authors, https://github.com/Instrument/instrument-serif) and converted to outlines. The font is licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). The font files themselves are not included in this repository.
+The pilcrow in the icon (`plugins/proseshape/assets/icon.svg`, and the source repository's `assets/icon*`) and the lettering in the source repository's `assets/banner.svg`, `assets/banner-dark.svg` and `assets/social-preview.png` are set in **Instrument Serif** (Copyright 2022 The Instrument Serif Project Authors, https://github.com/Instrument/instrument-serif) and converted to outlines. The font is licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). The font files themselves are not included in this repository.

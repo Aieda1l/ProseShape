@@ -1,14 +1,32 @@
 name: Release
 
-# Push a tag that matches the plugin version (for example v1.4.0) to publish a GitHub release with two zips:
-# proseshape-X.Y.Z.zip for claude.ai's Customize > Skills upload and other agents, and
-# proseshape-openai-X.Y.Z.zip for upload to OpenAI's plugin directory.
+# Publishes a GitHub release with two zips:
+#   proseshape-X.Y.Z.zip         for claude.ai's Customize > Skills upload and other agents
+#   proseshape-openai-X.Y.Z.zip  for upload to OpenAI's plugin directory
+# Three ways to start it, all with a tag that matches the plugin version (for example v1.4.0):
+#   - push the tag:                      git tag -a v1.4.0 -m "ProseShape 1.4.0" && git push origin v1.4.0
+#   - run it from the Actions tab:       Release > Run workflow, choose the branch, enter the tag
+#                                        (the release and tag are created at that branch's head)
+#   - publish a release in the web UI:   the zips are added to that release
 on:
   push:
     tags: ["v*"]
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to release, for example v1.4.0. It must match the version in plugin.json."
+        required: true
 
 permissions:
   contents: write
+
+concurrency:
+  group: release-${{ github.event.inputs.tag || github.event.release.tag_name || github.ref_name }}
+
+env:
+  TAG: ${{ github.event.inputs.tag || github.event.release.tag_name || github.ref_name }}
 
 jobs:
   release:
@@ -21,8 +39,8 @@ jobs:
       - name: Check that the tag matches the plugin version
         run: |
           version=$(python3 -c "import json; print(json.load(open('plugins/proseshape/.claude-plugin/plugin.json'))['version'])")
-          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
-            echo "Tag $GITHUB_REF_NAME does not match plugin.json version $version"
+          if [ "v$version" != "$TAG" ]; then
+            echo "Tag $TAG does not match plugin.json version $version"
             exit 1
           fi
       - name: Check and build the release zips
@@ -31,7 +49,7 @@ jobs:
         run: |
           python3 - <<'PY'
           import os, re
-          version = os.environ["GITHUB_REF_NAME"].lstrip("v")
+          version = os.environ["TAG"].lstrip("v")
           text = open("CHANGELOG.md", encoding="utf-8").read()
           m = re.search(rf"^## {re.escape(version)}\b.*?$(.*?)(?=^## |\Z)", text, re.M | re.S)
           body = m.group(1).strip() if m else "See CHANGELOG.md."
@@ -42,8 +60,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
-            gh release upload "$GITHUB_REF_NAME" dist/*.zip --clobber
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/*.zip --clobber
           else
-            gh release create "$GITHUB_REF_NAME" dist/*.zip --title "ProseShape $GITHUB_REF_NAME" --notes-file release-notes.md
+            gh release create "$TAG" dist/*.zip --target "$GITHUB_SHA" --title "ProseShape $TAG" --notes-file release-notes.md
           fi
