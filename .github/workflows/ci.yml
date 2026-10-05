@@ -24,6 +24,7 @@ jobs:
         run: |
           (cd evals/heldout && sha256sum -c --quiet SHA256SUMS)
           (cd evals/heldout2 && sha256sum -c --quiet SHA256SUMS)
+          (cd evals/heldout3 && sha256sum -c --quiet SHA256SUMS)
       - name: Committed evaluation tables reproduce
         working-directory: evals/harness
         env:

@@ -14,7 +14,7 @@ Everything the scripts write goes to `work/` (gitignored; set `PROSESHAPE_WORK` 
 | `seed.py` | Unpacks the committed outputs and judgments into `work/` so baselines need not be regenerated. |
 | `iterate.sh ARM TAG CORPUS` | One full iteration: build, generate 2 runs, judge 2 passes per run, analyze, check. |
 
-Corpora: `dev` is the 13-sample 2026-09 corpus (`docs/research/experiment-2026-09/corpus/`). `heldout` is the 12-sample corpus frozen for 1.4.0 (`evals/heldout/`), and `heldout2` is the 15-sample corpus frozen for 1.4.1 (`evals/heldout2/`). Each has its own `SHA256SUMS`. Both have now been used for validation, so treat them as development data, and freeze a new corpus before the next round. You can also pass any directory of `<sample>.md` files.
+Corpora: `dev` is the 13-sample 2026-09 corpus (`docs/research/experiment-2026-09/corpus/`). `heldout` is the 12-sample corpus frozen for 1.4.0 (`evals/heldout/`), and `heldout2` is the 15-sample corpus frozen for 1.4.1 (`evals/heldout2/`). Both have been used for validation, so treat them as development data. `heldout3` is the 16-sample corpus frozen for 1.4.2 (`evals/heldout3/`), weighted toward human and near-clean writing. Each has its own `SHA256SUMS`. Freeze a new corpus before each round. You can also pass any directory of `<sample>.md` files.
 
 ## Reproduce the committed tables without model calls
 
