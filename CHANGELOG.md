@@ -1,5 +1,13 @@
 # Changelog
 
+## OpenAI upload package (2026-10-05)
+
+- `scripts/package_skill.py` also builds `proseshape-openai-<version>.zip`, the package OpenAI's plugin directory takes as an upload. It contains the plugin folder's contents with `plugin.json` at the root, and leaves out the Claude-only `.claude-plugin/`.
+- ZIP member names are checked and always use forward slashes. A ZIP made by hand on Windows writes backslashes, such as `.claude-plugin\plugin.json`, which OpenAI rejects as an unsafe path.
+- The release workflow attaches both zips to every GitHub release.
+- OpenAI takes ZIP uploads only and doesn't follow GitHub, so each new version is uploaded again. `docs/publishing.md` covers this.
+- Two new tests bring the total to 45.
+
 ## Icon (2026-10-04)
 
 ProseShape has an icon: a pilcrow (¶), the mark for a paragraph, set in Instrument Serif. Its bowl is filled in the banner's terracotta, standing for prose with one deliberate choice in it. It replaces the earlier "Ps" monogram, which could be mistaken for another product's icon.

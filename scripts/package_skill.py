@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-"""Check the ProseShape plugin (Claude and Codex) and skill, then build the skill zip for claude.ai and other tools.
+"""Check the ProseShape plugin (Claude and Codex) and skill, then build the release zips.
 
-  python3 scripts/package_skill.py            # check, then write dist/proseshape-<version>.zip
+  python3 scripts/package_skill.py            # check, then write both zips to dist/
   python3 scripts/package_skill.py --check    # checks only (CI)
-  python3 scripts/package_skill.py --out DIR  # write the zip somewhere else
+  python3 scripts/package_skill.py --out DIR  # write the zips somewhere else
 
-The zip holds one top-level folder, proseshape/, with SKILL.md, the reference files, LICENSE, and
-THIRD_PARTY_NOTICES.md, which is the layout claude.ai's Customize > Skills upload expects. The archive is
-deterministic: the same files always give the same bytes.
+Two zips:
+- proseshape-<version>.zip: one top-level folder, proseshape/, with SKILL.md, the reference files, LICENSE, and
+  THIRD_PARTY_NOTICES.md. This is the layout claude.ai's Customize > Skills upload and other Agent Skills tools expect.
+- proseshape-openai-<version>.zip: the plugin folder's contents with plugin.json at the zip root, for upload at
+  platform.openai.com/plugins. The Claude-only .claude-plugin/ folder is left out; Codex reads the portable manifest.
+
+Member names always use forward slashes, even on Windows. Zips made with Windows' built-in "Compressed folder" or
+older Compress-Archive use backslashes, which OpenAI rejects as unsafe paths. Both archives are deterministic: the
+same files always give the same bytes.
 
 The checks cover what the Agent Skills specification, claude.ai, the Claude plugin directory, and Codex require of
 the files: name, description length, referenced files, versions that agree across the Claude and portable (Codex)
@@ -230,22 +236,28 @@ def check_codex(root, name, version, claude_market_name):
     return problems
 
 
-def build(root=REPO, out_dir=None):
-    """Write the skill zip and return its path."""
-    manifest = json.loads(read(root, os.path.join(PLUGIN_REL, ".claude-plugin", "plugin.json")))
-    name, version = manifest["name"], manifest["version"]
-    out_dir = out_dir or os.path.join(root, "dist")
-    os.makedirs(out_dir, exist_ok=True)
-    out = os.path.join(out_dir, f"{name}-{version}.zip")
-    entries = []
-    skill_dir = os.path.join(root, SKILL_REL)
-    for dirpath, dirnames, filenames in os.walk(skill_dir):
+def safe_member(name):
+    """True for a relative, forward-slash zip member name with no empty, '.' or '..' parts."""
+    parts = name.split("/")
+    return ("\\" not in name and not name.startswith("/") and ":" not in parts[0]
+            and all(p not in ("", ".", "..") for p in parts))
+
+
+def files_under(base):
+    """(path relative to base with forward slashes, full path) for every file, in a stable order."""
+    out = []
+    for dirpath, dirnames, filenames in os.walk(base):
         dirnames.sort()
         for fn in sorted(filenames):
             full = os.path.join(dirpath, fn)
-            entries.append((f"{name}/" + os.path.relpath(full, skill_dir).replace(os.sep, "/"), full))
-    for rel in ("LICENSE", "THIRD_PARTY_NOTICES.md"):
-        entries.append((f"{name}/{rel}", os.path.join(root, PLUGIN_REL, rel)))
+            out.append((os.path.relpath(full, base).replace(os.sep, "/"), full))
+    return out
+
+
+def write_zip(out, entries):
+    bad = [arc for arc, _ in entries if not safe_member(arc)]
+    if bad:
+        raise ValueError(f"unsafe zip member names: {bad}")
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         for arcname, full in sorted(entries):
             info = zipfile.ZipInfo(arcname, date_time=ZIP_DATE)
@@ -256,10 +268,36 @@ def build(root=REPO, out_dir=None):
     return out
 
 
+def _name_version(root):
+    manifest = json.loads(read(root, os.path.join(PLUGIN_REL, ".claude-plugin", "plugin.json")))
+    return manifest["name"], manifest["version"]
+
+
+def build(root=REPO, out_dir=None):
+    """Write the skill zip (one top-level folder named after the skill) and return its path."""
+    name, version = _name_version(root)
+    out_dir = out_dir or os.path.join(root, "dist")
+    os.makedirs(out_dir, exist_ok=True)
+    entries = [(f"{name}/{rel}", full) for rel, full in files_under(os.path.join(root, SKILL_REL))]
+    for rel in ("LICENSE", "THIRD_PARTY_NOTICES.md"):
+        entries.append((f"{name}/{rel}", os.path.join(root, PLUGIN_REL, rel)))
+    return write_zip(os.path.join(out_dir, f"{name}-{version}.zip"), entries)
+
+
+def build_openai(root=REPO, out_dir=None):
+    """Write the OpenAI plugin zip (plugin.json at the zip root, no .claude-plugin/) and return its path."""
+    name, version = _name_version(root)
+    out_dir = out_dir or os.path.join(root, "dist")
+    os.makedirs(out_dir, exist_ok=True)
+    entries = [(rel, full) for rel, full in files_under(os.path.join(root, PLUGIN_REL))
+               if not rel.startswith(".claude-plugin/")]
+    return write_zip(os.path.join(out_dir, f"{name}-openai-{version}.zip"), entries)
+
+
 def main(argv=None):
-    p = argparse.ArgumentParser(description="Check the ProseShape plugin and build the skill zip.")
+    p = argparse.ArgumentParser(description="Check the ProseShape plugin and build the release zips.")
     p.add_argument("--check", action="store_true", help="run the checks only")
-    p.add_argument("--out", help="directory for the zip (default: dist/)")
+    p.add_argument("--out", help="directory for the zips (default: dist/)")
     a = p.parse_args(argv)
     problems = check()
     for pr in problems:
@@ -269,13 +307,13 @@ def main(argv=None):
     print("checks passed")
     if a.check:
         return 0
-    out = build(out_dir=a.out)
-    with open(out, "rb") as f:
-        digest = hashlib.sha256(f.read()).hexdigest()
-    with zipfile.ZipFile(out) as z:
-        count = len(z.namelist())
-    shown = os.path.relpath(out)
-    print(f"wrote {out if shown.startswith('..') else shown} ({count} files, sha256 {digest[:16]})")
+    for out in (build(out_dir=a.out), build_openai(out_dir=a.out)):
+        with open(out, "rb") as f:
+            digest = hashlib.sha256(f.read()).hexdigest()
+        with zipfile.ZipFile(out) as z:
+            count = len(z.namelist())
+        shown = os.path.relpath(out)
+        print(f"wrote {out if shown.startswith('..') else shown} ({count} files, sha256 {digest[:16]})")
     return 0
 
 

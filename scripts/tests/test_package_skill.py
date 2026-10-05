@@ -33,6 +33,30 @@ class Repository(unittest.TestCase):
                 self.assertIn(required, names)
 
 
+class OpenAIZip(unittest.TestCase):
+    def test_layout_and_determinism(self):
+        with tempfile.TemporaryDirectory() as d:
+            first = ps.build_openai(out_dir=os.path.join(d, "a"))
+            second = ps.build_openai(out_dir=os.path.join(d, "b"))
+            self.assertEqual(sha(first), sha(second))
+            self.assertTrue(os.path.basename(first).startswith("proseshape-openai-"))
+            with zipfile.ZipFile(first) as z:
+                names = z.namelist()
+        for required in ("plugin.json", "skills/proseshape/SKILL.md", "assets/icon.svg", "README.md", "LICENSE"):
+            self.assertIn(required, names)
+        self.assertFalse([n for n in names if n.startswith(".claude-plugin")])
+        self.assertTrue(all(ps.safe_member(n) for n in names))
+
+    def test_unsafe_member_names_are_refused(self):
+        for bad in (".claude-plugin\\plugin.json", "../escape.md", "/abs.md", "a//b.md", "C:/x.md", "./x.md"):
+            self.assertFalse(ps.safe_member(bad), bad)
+        with tempfile.TemporaryDirectory() as d:
+            src = os.path.join(d, "f.txt")
+            open(src, "w").close()
+            with self.assertRaises(ValueError):
+                ps.write_zip(os.path.join(d, "out.zip"), [("dir\\f.txt", src)])
+
+
 class Frontmatter(unittest.TestCase):
     def test_nested_metadata_and_quotes(self):
         fm = ps.frontmatter('---\nname: x\ndescription: "Does a thing."\nmetadata:\n  version: "1.2.3"\n---\nBody\n')
