@@ -56,6 +56,12 @@ These files are in the source repository (https://github.com/Aieda1l/ProseShape)
 - `evals/heldout2/k13_human_austen.md`: from Jane Austen, *Pride and Prejudice* (1813), chapter 13. Public domain (Project Gutenberg #1342).
 - `evals/heldout2/k14_human_go_blog.md`: from Rob Pike, "Errors are values", The Go Blog, 12 January 2015 (https://go.dev/blog/errors-are-values). Text licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), code under the Go BSD license. Converted from HTML to Markdown.
 - `evals/heldout2/k15_human_doctorow.md`: from Cory Doctorow, "Tiktok's enshittification", *Pluralistic*, 21 January 2023 (https://pluralistic.net/2023/01/21/potemkin-ai/). Licensed under CC BY 4.0. First four paragraphs, converted to plain text.
+- `evals/heldout3/m11_human_thoreau.md`: from Henry David Thoreau, *Walden* (1854), "The Pond in Winter". Public domain (Project Gutenberg #205).
+- `evals/heldout3/m12_human_chesterton.md`: from G. K. Chesterton, "On Running After One's Hat", *All Things Considered* (1908). Public domain (Project Gutenberg #11505).
+- `evals/heldout3/m13_human_lincoln.md`: Abraham Lincoln, letter to Horace Greeley, 22 August 1862. Public domain (Project Gutenberg #14721).
+- `evals/heldout3/m14_human_eisenhower.md`: from Dwight D. Eisenhower's Farewell Address, 17 January 1961. A work of the US government, public domain (transcript from the National Archives).
+- `evals/heldout3/m15_human_kubernetes.md`: from the Kubernetes documentation, "Overview" (https://kubernetes.io/docs/concepts/overview/). © The Kubernetes Authors, licensed under CC BY 4.0. Converted from HTML to Markdown.
+- `evals/heldout3/m16_human_go_errors.md`: from Damien Neil and Jonathan Amsterdam, "Working with Errors in Go 1.13", The Go Blog, 17 October 2019 (https://go.dev/blog/go1.13-errors). Text licensed under CC BY 4.0, code under the Go BSD license. Converted from HTML to Markdown.
 - `docs/research/experiment-2026-09/corpus/s10_human_tech.md`: from the Python Tutorial, "Whetting Your Appetite". © Python Software Foundation, used under the PSF License Agreement.
 - `docs/research/experiment-2026-09/corpus/s11_human_voice.md`: from Jerome K. Jerome, *Three Men in a Boat* (1889). Public domain (Project Gutenberg #308).
 
