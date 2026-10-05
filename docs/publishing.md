@@ -7,9 +7,9 @@ How a ProseShape release reaches people, and how to list it in Anthropic's direc
 | Channel | How people get it | What you do |
 |---|---|---|
 | This repository's marketplace | Claude Code: `/plugin marketplace add Aieda1l/ProseShape`, then `/plugin install proseshape@proseshape`. claude.ai: add the same marketplace under **Customize > Plugins**. Codex: `codex plugin marketplace add Aieda1l/ProseShape`, then `codex plugin add proseshape@proseshape`. | Merge to `main`. |
-| GitHub release zip | Upload under **Customize > Skills** on claude.ai, or unzip into another tool's skills folder. | Push a `vX.Y.Z` tag. The release workflow builds and attaches `proseshape-X.Y.Z.zip`. |
+| GitHub release zips | `proseshape-X.Y.Z.zip`: upload under **Customize > Skills** on claude.ai, or unzip into another tool's skills folder. `proseshape-openai-X.Y.Z.zip`: the package you upload to OpenAI. | Push a `vX.Y.Z` tag. The release workflow builds both and attaches them to the release. |
 | Anthropic's directory | Browse and add on claude.ai and in Cowork. It then loads in Claude Code too. | Submit once from the developer portal (below), then publish each new version there. |
-| OpenAI's plugin directory | Browse and add in Codex and ChatGPT. | Submit from the OpenAI Platform (below). |
+| OpenAI's plugin directory | Browse and add in Codex and ChatGPT. | Upload `proseshape-openai-X.Y.Z.zip` on the OpenAI Platform (below), once for the first submission and again for every new version. |
 
 Anthropic's preinstalled `claude-plugins-official` marketplace doesn't take submissions; it lists plugins from Anthropic and its partners. The directory is the route open to independent authors.
 
@@ -36,7 +36,9 @@ Anthropic's preinstalled `claude-plugins-official` marketplace doesn't take subm
    - every file is under 256 KiB, with no system files.
 5. **Merge to `main`.** Marketplace users can now run `claude plugin update proseshape@proseshape`.
 6. **Tag.** Push `git tag vX.Y.Z && git push origin vX.Y.Z`. The workflow refuses a tag that doesn't match `plugin.json`.
-7. **Directory.** Publish the new version from the developer portal ([Update a published plugin](https://claude.com/docs/plugins/submit#update-a-published-plugin)).
+7. **Directories.**
+   - **Anthropic:** publish the new version from the developer portal ([Update a published plugin](https://claude.com/docs/plugins/submit#update-a-published-plugin)).
+   - **OpenAI:** upload that release's `proseshape-openai-X.Y.Z.zip` to the existing plugin on the OpenAI Platform.
 
 ## Submit to Anthropic's directory
 
@@ -58,6 +60,16 @@ What to expect for ProseShape:
 ## Submit to OpenAI's plugin directory
 
 Submit at [platform.openai.com/plugins](https://platform.openai.com/plugins) with **Upload new or existing plugin**. Organization owners can submit; other members need **Apps Management Write**. To publish under your own name or a company's, finish individual or business verification in the organization settings first. The full process is in [Submit plugins](https://developers.openai.com/plugins/deploy/submission).
+
+**The package.** OpenAI takes a ZIP upload only; it can't read a GitHub repository. Upload `proseshape-openai-X.Y.Z.zip`, which you get in either of two ways:
+- download it from the GitHub release;
+- build it with `python3 scripts/package_skill.py`, which writes it to `dist/`. This works on Windows too (`python scripts\package_skill.py`).
+
+The ZIP holds the contents of `plugins/proseshape/`, with `plugin.json` at its root. It leaves out the Claude-only `.claude-plugin/` folder.
+
+Don't zip the folder by hand on Windows. Explorer's "Compressed (zipped) folder" and older versions of `Compress-Archive` write paths with backslashes, such as `.claude-plugin\plugin.json`. OpenAI rejects those with "Plugin zip member contains an unsafe path". `package_skill.py` always writes forward slashes and refuses unsafe names.
+
+**Updates.** OpenAI doesn't follow GitHub. To publish a new version, upload that version's ZIP to the existing plugin. Each upload becomes a new package version, with its own checks and review. People who installed from this repository's marketplace instead (`codex plugin marketplace add Aieda1l/ProseShape`) get new versions with `codex plugin marketplace upgrade`, with no review step.
 
 For a plugin that has only skills, like ProseShape:
 

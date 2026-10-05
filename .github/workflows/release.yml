@@ -1,7 +1,8 @@
 name: Release
 
-# Push a tag that matches the plugin version (for example v1.4.0) to publish a GitHub release
-# with the skill zip attached. The zip is what claude.ai's Customize > Skills upload expects.
+# Push a tag that matches the plugin version (for example v1.4.0) to publish a GitHub release with two zips:
+# proseshape-X.Y.Z.zip for claude.ai's Customize > Skills upload and other agents, and
+# proseshape-openai-X.Y.Z.zip for upload to OpenAI's plugin directory.
 on:
   push:
     tags: ["v*"]
@@ -24,7 +25,7 @@ jobs:
             echo "Tag $GITHUB_REF_NAME does not match plugin.json version $version"
             exit 1
           fi
-      - name: Check and build the skill zip
+      - name: Check and build the release zips
         run: python3 scripts/package_skill.py
       - name: Release notes from the changelog
         run: |
@@ -34,7 +35,7 @@ jobs:
           text = open("CHANGELOG.md", encoding="utf-8").read()
           m = re.search(rf"^## {re.escape(version)}\b.*?$(.*?)(?=^## |\Z)", text, re.M | re.S)
           body = m.group(1).strip() if m else "See CHANGELOG.md."
-          body += "\n\nInstall in Claude Code: `/plugin marketplace add Aieda1l/ProseShape`, then `/plugin install proseshape@proseshape`.\nInstall in Codex: `codex plugin marketplace add Aieda1l/ProseShape`, then `codex plugin add proseshape@proseshape`.\nOn claude.ai: download `proseshape-" + version + ".zip` below and upload it under Customize > Skills."
+          body += "\n\nInstall in Claude Code: `/plugin marketplace add Aieda1l/ProseShape`, then `/plugin install proseshape@proseshape`.\nInstall in Codex: `codex plugin marketplace add Aieda1l/ProseShape`, then `codex plugin add proseshape@proseshape`.\nOn claude.ai: download `proseshape-" + version + ".zip` below and upload it under Customize > Skills.\nFor OpenAI's plugin directory: upload `proseshape-openai-" + version + ".zip` at platform.openai.com/plugins."
           open("release-notes.md", "w", encoding="utf-8").write(body + "\n")
           PY
       - name: Publish the release
