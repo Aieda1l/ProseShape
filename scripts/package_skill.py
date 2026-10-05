@@ -133,6 +133,9 @@ def check(root=REPO):
         for field in ("description", "author", "license"):
             if not manifest.get(field):
                 problems.append(f"{manifest_rel}: set {field}")
+        icon = manifest.get("icon")
+        if icon and (not icon.startswith("./") or not os.path.isfile(os.path.join(root, PLUGIN_REL, icon))):
+            problems.append(f"{manifest_rel}: icon {icon!r} must be a ./ path to a file in the plugin")
 
     market_rel = os.path.join(".claude-plugin", "marketplace.json")
     market = load_json(root, market_rel, problems)

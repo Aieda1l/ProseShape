@@ -1,0 +1,17 @@
+{
+ "PS142a": {
+  "sha256": "136fcfe20f80fb9e",
+  "bytes": 98762,
+  "rev": "2e94e3b"
+ },
+ "PS142b": {
+  "sha256": "d5b72474e68e41e5",
+  "bytes": 99446,
+  "rev": "a3e40aa"
+ },
+ "PS142c": {
+  "sha256": "1e9eac4c105993ff",
+  "bytes": 99717,
+  "rev": "a1d5cee"
+ }
+}

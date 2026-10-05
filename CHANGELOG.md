@@ -1,5 +1,36 @@
 # Changelog
 
+## 1.4.2
+
+I validated this version once on 16 new held-out texts (`evals/heldout3/`, frozen in `458f0e3`), with a second judge as a check:
+- **Against 1.4.0.** It scored 8.02 against 1.4.0's 7.86, a paired difference of +0.16 [−0.12, +0.48]. The gain is small, and its interval includes zero.
+- **Fact problems.** The judge flagged 2, against 19 for 1.4.0 and 37 for the ordinary-editor prompt.
+- **Against the ordinary editor.** The lead grew to +0.58 [+0.19, +1.02].
+- **Second judge (Haiku 4.5).** It favored 1.4.2 over 1.4.0 by +0.78 [+0.27, +1.33].
+
+The gain came from AI-shaped drafts. On human-written text this set didn't separate the two versions, because every arm left the human excerpts nearly untouched. See `evals/v1.4.2-validation/README.md`.
+
+- **Patterns count as evidence only in clusters.** In text that reads as a person's, a lone contrast, triad, rhetorical question, aphorism or closer is the writer's choice. The skill gives such text a copyedit, fixing only faults it can name for the reader. This adapts HumanScope's evidence-before-edit idea (MIT).
+- **Contrast fixes are lighter.** A two-sided contrast keeps both claims, usually by dropping only the staging words.
+- **Claims inside hype stay.** That covers evaluations and predictions ("fast, lightweight", "likely to become a family favorite"), supported closing judgments and existing hedges. Pure dressing still goes.
+- **Fiction.** Rewrite mode keeps every body sensation, rewording a stock one lightly at most. Fables keep their moral and their read-aloud repetition.
+- **Carried over from the 1.4.1 candidate:**
+  - period text keeps its spelling and punctuation;
+  - "not just X but Y" asserts both;
+  - small words that carry meaning stay;
+  - no invented images.
+- **The evidence for 1.4.0 got stronger.** The new set re-tested 1.4.0 against the ordinary editor: +0.42 [+0.09, +0.81]. Pooled over all three held-out sets (43 texts), the lead is +0.48 [+0.05, +0.91], and the interval no longer includes zero.
+- **Known issue.** A stock sensation in fiction ("a chill ran down her spine") can now survive a rewrite unchanged.
+- **Tooling:**
+  - CI checks `evals/heldout3/` checksums and reproduces both judges' held-out tables;
+  - `seed.py` loads the 1.4.2 records.
+
+## Release tooling (2026-10-05)
+
+- The release workflow can now be started three ways: by pushing a tag, from **Actions > Release > Run workflow**, or by publishing a release on GitHub's Releases page. Each route checks that the tag matches `plugin.json` and attaches both zips. A concurrency guard keeps two runs for the same tag from racing.
+- `package_skill.py` checks that the `icon` path in the Claude manifest points to a real file. One new test brings the total to 46.
+- `assets/social-preview.png` (1280×640) is the image for link previews. It has to be uploaded under **Settings > General > Social preview**.
+
 ## OpenAI upload package (2026-10-05)
 
 - `scripts/package_skill.py` also builds `proseshape-openai-<version>.zip`, the package OpenAI's plugin directory takes as an upload. It contains the plugin folder's contents with `plugin.json` at the root, and leaves out the Claude-only `.claude-plugin/`.

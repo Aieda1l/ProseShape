@@ -35,7 +35,7 @@ Anthropic's preinstalled `claude-plugins-official` marketplace doesn't take subm
    - the license copies match the root files;
    - every file is under 256 KiB, with no system files.
 5. **Merge to `main`.** Marketplace users can now run `claude plugin update proseshape@proseshape`.
-6. **Tag.** Push `git tag vX.Y.Z && git push origin vX.Y.Z`. The workflow refuses a tag that doesn't match `plugin.json`.
+6. **Tag.** Push `git tag -a vX.Y.Z -m "ProseShape X.Y.Z" && git push origin vX.Y.Z`. If you'd rather not use the command line, there are two other ways: open **Actions > Release > Run workflow**, enter the tag and pick the branch; or publish a release with a new tag on GitHub's Releases page. Every route refuses a tag that doesn't match `plugin.json`, and builds and attaches both zips.
 7. **Directories.**
    - **Anthropic:** publish the new version from the developer portal ([Update a published plugin](https://claude.com/docs/plugins/submit#update-a-published-plugin)).
    - **OpenAI:** upload that release's `proseshape-openai-X.Y.Z.zip` to the existing plugin on the OpenAI Platform.
@@ -85,6 +85,10 @@ For a plugin that has only skills, like ProseShape:
 - **Icons.** `composerIcon` and `logo` both point to `assets/icon.svg`, a square SVG. OpenAI accepts PNG, JPEG, WebP or SVG, square and at least 48 by 48.
 
 Codex reads this portable `plugin.json`. Claude reads `.claude-plugin/plugin.json`. Each ignores the other's file, so keep them in agreement. `package_skill.py` fails when their names or versions differ.
+
+## Repository social preview
+
+`assets/social-preview.png` (1280×640) is the image GitHub shows when someone shares a link to the repository. GitHub doesn't let it be set from the repository's files or the API. Upload it once under **Settings > General > Social preview**.
 
 ## Rules that keep installs working
 

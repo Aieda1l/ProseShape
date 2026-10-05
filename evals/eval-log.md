@@ -167,6 +167,30 @@ This round froze a new held-out corpus first: 15 texts in `heldout2/`, committed
 
 The candidate is not released. `heldout2/` is now development data, and 1.4.2 needs a third frozen corpus.
 
+## Version 1.4.2 (2026-10-05): released, a small gain with far fewer fact problems
+
+This round froze `heldout3/` first: 16 texts committed in `458f0e3`, weighted toward human and near-clean writing. It then iterated on 24 development texts drawn from the three earlier corpora, and validated once with two judges. The full record is in [`v1.4.2-validation/README.md`](v1.4.2-validation/README.md).
+
+| Round | Corpus | Candidate − 1.4.0 [95% CI] | Candidate − O | Fact flags, candidate vs 1.4.0 |
+|---|---|---|---|---|
+| a | dev (24) | +0.27 [−0.22, +0.79] | +0.54 [+0.04, +1.11] | 24 vs 46 |
+| b | dev | +0.52 [+0.17, +0.93] | +0.76 [+0.26, +1.29] | 15 vs 52 |
+| c | dev | +0.55 [+0.10, +1.01] | +0.79 [+0.30, +1.34] | 12 vs 47 |
+| **c** | **held-out 3 (16), Opus 5.5 judge** | **+0.16 [−0.12, +0.48]** | **+0.58 [+0.19, +1.02]** | **2 vs 19** |
+| c | held-out 3, Haiku 4.5 judge | +0.78 [+0.27, +1.33] | +0.48 [−0.44, +1.38] | 10 vs 27 |
+
+**What changed:**
+- patterns count as evidence only in clusters, so a lone device in a person's writing is left alone;
+- contrast fixes are lighter;
+- evaluations, predictions, closing judgments and hedges inside hype are kept;
+- fiction keeps every body sensation and a fable's moral.
+
+**What the held-out set showed:** the gain is on AI-shaped drafts (+0.62 against 1.4.0). On the human texts the versions were level: every arm returned the famous public-domain excerpts nearly untouched, so this set could not test the over-editing fix.
+
+**Replication of 1.4.0:** against O, +0.42 [+0.09, +0.81] on this set. Pooled over all three held-out sets (43 texts), +0.48 [+0.05, +0.91].
+
+1.4.2 is released. `heldout3/` is now development data.
+
 ## Description optimization
 
 - `trigger-evals.json` holds 20 realistic queries: 10 that should trigger (status email, AI-assisted workshop story, voice-sample blog post, cover letter, generated literary story, stiff novel dialogue, LinkedIn post with fixed numbers, dissertation intro with citations, wedding toast, Substack essay) and 10 near-misses that should not (AI-detection request, proofread-only, translation, paper summary, a dash-counting script, changelog conversion, critique-only notes, formality change, SEO product copy, a craft explanation).

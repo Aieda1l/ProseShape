@@ -1,0 +1,251 @@
+{
+ "note": "Held-out corpus for ProseShape 1.4.2, written and frozen on 2026-10-05 before any 1.4.2 change and never used for iteration. It is weighted toward the gap the 1.4.1 validation found, over-editing writing a person already wrote well: six real human excerpts and four near-clean human-style texts, against six AI-shaped texts that check for regressions. m01-m10 are synthetic; every name, organization, address, phone number and figure in them is fictional. m11-m16 are human-written excerpts (sources and licenses below and in THIRD_PARTY_NOTICES.md). None of the texts overlap ProseShape's fixtures, examples, or earlier corpora.",
+ "user_request": "Please humanize this so it reads like a person wrote it. Keep the facts and meaning the same.",
+ "sources": {
+  "m11_human_thoreau": "Henry David Thoreau, Walden (1854), 'The Pond in Winter', second paragraph. Public domain. Project Gutenberg #205. Line breaks unwrapped.",
+  "m12_human_chesterton": "G. K. Chesterton, 'On Running After One's Hat', All Things Considered (1908). Public domain. Project Gutenberg #11505. Two paragraphs, line breaks unwrapped.",
+  "m13_human_lincoln": "Abraham Lincoln, letter to Horace Greeley, 22 August 1862, as printed in Speeches & Letters of Abraham Lincoln, 1832-1865 (Everyman edition). Public domain. Project Gutenberg #14721. Line breaks unwrapped; Gutenberg's _italics_ converted to *asterisks* and -- to an em dash.",
+  "m14_human_eisenhower": "Dwight D. Eisenhower, Farewell Address, 17 January 1961. A work of the US government, public domain. Transcript from the National Archives (archives.gov, Milestone Documents). Two transcription errors corrected against the delivered text: hyphens around 'economic, political, even spiritual' restored as dashes, and 'United State corporations' as 'United States corporations'.",
+  "m15_human_kubernetes": "Kubernetes documentation, 'Overview' (kubernetes.io/docs/concepts/overview/), section 'Why you need Kubernetes and what it can do'. The Kubernetes Authors, CC BY 4.0. HTML converted to Markdown; the first four list items.",
+  "m16_human_go_errors": "Damien Neil and Jonathan Amsterdam, 'Working with Errors in Go 1.13', The Go Blog, 17 October 2019 (go.dev/blog/go1.13-errors). Text CC BY 4.0, code BSD. Opening paragraphs; HTML converted to Markdown."
+ },
+ "samples": {
+  "m01_talk_abstract": {
+   "category": "conference talk abstract (title, bullet list, speaker line)",
+   "expected": "cut the inflated opener and closer; keep every figure, tool, service count, bullet and the speaker details",
+   "protected": [
+    "Corvid Pay",
+    "Kafka",
+    "18 months",
+    "27 minutes",
+    "under 4",
+    "60%",
+    "14 services",
+    "OpenTelemetry",
+    "Leah Okonkwo-Brandt",
+    "40 minutes"
+   ]
+  },
+  "m02_real_estate_listing": {
+   "category": "real estate listing (address, specs, price, open house, agent)",
+   "expected": "plain and still selling; keep every spec, figure, date, and the agent's details",
+   "protected": [
+    "418 Larkspur Crest Lane",
+    "4-bedroom",
+    "2.5-bath",
+    "1926",
+    "2021",
+    "2,340",
+    "9-foot",
+    "0.28-acre",
+    "two-car garage",
+    "0.6 miles",
+    "Fernhill Elementary",
+    "$689,000",
+    "May 17",
+    "1 to 4 p.m.",
+    "Inés Vidal",
+    "(503) 555-0143"
+   ]
+  },
+  "m03_museum_label": {
+   "category": "museum wall text (tombstone lines, italic title, significance closer)",
+   "expected": "keep the tombstone lines exactly, every fact and the technique; cut the significance commentary or keep its claim plainly",
+   "protected": [
+    "*Harbor at Dusk*",
+    "1958",
+    "Oil on canvas",
+    "Agnes Thorvaldsen",
+    "1911–1987",
+    "Gift of the Wendell Family, 1994",
+    "Gloucester, Massachusetts",
+    "Bergen",
+    "palette knife",
+    "Rockport Art Association",
+    "1959",
+    "Gold Medal"
+   ]
+  },
+  "m04_hr_policy_email": {
+   "category": "HR policy email (bold-label lists, dates, figures)",
+   "expected": "cut chatbot courtesies and commitment boilerplate; keep every rule, date, figure and the list structure",
+   "protected": [
+    "July 1",
+    "10 a.m. and 3 p.m.",
+    "Monday through Thursday",
+    "50 miles",
+    "two days per week",
+    "June 13",
+    "$400 to $650",
+    "Expensify",
+    "Fridays remain meeting-free",
+    "January 1",
+    "June 5 at 2 p.m. ET",
+    "Danielle Fortier"
+   ]
+  },
+  "m05_travel_itinerary": {
+   "category": "travel blog itinerary (headings, prices, times)",
+   "expected": "cut the hype; keep the headings, every price, time, distance and tip",
+   "protected": [
+    "# Three Perfect Days in Ljubljana",
+    "Prešeren Square",
+    "Triple Bridge",
+    "€16",
+    "8:00 a.m.",
+    "1 hour 20 minutes",
+    "6-kilometer",
+    "pletna",
+    "Central Market (closed Sundays)",
+    "Metelkova"
+   ]
+  },
+  "m06_scifi_scene": {
+   "category": "science fiction scene (stock sensations, thesis dialogue, realization)",
+   "expected": "rewrite mode: keep every beat, both positions, the decision and the ending; tighten stock sensations and the stated realization without inventing actions",
+   "protected": [
+    "*Halcyon*",
+    "Commander Rhee",
+    "Ito-Marsh",
+    "two hundred years",
+    "three tones",
+    "eleven seconds",
+    "set a course for home"
+   ]
+  },
+  "m07_nearclean_review": {
+   "category": "near-clean human-style product review (specific, casual)",
+   "expected": "few or no changes; every figure, quirk, and the verdict stay in the writer's words",
+   "protected": [
+    "March",
+    "six months",
+    "a little under four minutes",
+    "80, 90 and 100",
+    "30 minutes",
+    "6 a.m.",
+    "hold the minus button for five seconds",
+    "Would I buy it again? Yes."
+   ]
+  },
+  "m08_nearclean_school_email": {
+   "category": "near-clean human-style teacher email with one stock triad",
+   "expected": "minimal edit; logistics exact; the triad may be lightly plainer but the warm close and the octopus line stay",
+   "protected": [
+    "Room 14",
+    "Tidewater Science Center",
+    "October 17",
+    "8:45",
+    "2:30",
+    "No glass containers",
+    "this Wednesday",
+    "six students",
+    "four parent chaperones",
+    "octopus tank",
+    "Ms. Arroyo"
+   ]
+  },
+  "m09_nearclean_standup": {
+   "category": "near-clean human-style weekly update with one staged run-up",
+   "expected": "minimal edit; 'Here's the thing:' may be cut or kept, but every number, date and dependency stays",
+   "protected": [
+    "100% of traffic",
+    "9.1%",
+    "6.4%",
+    "Mei",
+    "next Thursday",
+    "three of the fields",
+    "twice",
+    "the 20th",
+    "the 24th",
+    "Ravi"
+   ]
+  },
+  "m10_nearclean_memoir": {
+   "category": "near-clean personal essay (memoir) with small meaning-bearing words and a lesson ending",
+   "expected": "few or no changes; no added feelings; small words (more than once, often, badly, still) stay; the closing line may be tightened, not deleted",
+   "protected": [
+    "closed the year before",
+    "more than once",
+    "Again,",
+    "August",
+    "two miles",
+    "badly",
+    "thirty years",
+    "left, rearview, right"
+   ]
+  },
+  "m11_human_thoreau": {
+   "category": "already-good human literary essay (1854) ending on a one-line aphorism",
+   "expected": "few or no changes; the period diction and the closing aphorism are the author's",
+   "protected": [
+    "if that be not a dream",
+    "divining rod",
+    "a foot or a foot and a half",
+    "Like the marmots",
+    "quiet parlor of the fishes",
+    "Heaven is under our feet as well as over our heads."
+   ]
+  },
+  "m12_human_chesterton": {
+   "category": "already-good human comic essay (1908) built on paradox and 'not merely' contrasts",
+   "expected": "few or no changes; the paradoxes, contrasts and British spelling are the voice",
+   "protected": [
+    "Not merely because it is running",
+    "uninteresting little leather ball",
+    "man is a very comic creature",
+    "not half so ridiculous as a man running after a wife",
+    "manliest ardour",
+    "Hyde Park"
+   ]
+  },
+  "m13_human_lincoln": {
+   "category": "already-good human letter (1862) built on parallel and antithetical sentences",
+   "expected": "few or no changes; the parallelism is the argument",
+   "protected": [
+    "New York Tribune",
+    "seem to be pursuing",
+    "*My paramount object in this struggle is to save the Union, and not either to save or to destroy slavery.*",
+    "If I could save the Union without freeing any slave, I would do it",
+    "oft-expressed personal wish that all men everywhere could be free"
+   ]
+  },
+  "m14_human_eisenhower": {
+   "category": "already-good human speech (1961) with a triad and 'yet we must not' turns",
+   "expected": "few or no changes; the rhetoric is the speech",
+   "protected": [
+    "plowshares",
+    "three and a half million men and women",
+    "economic, political, even spiritual",
+    "military-industrial complex",
+    "The potential for the disastrous rise of misplaced power exists and will persist.",
+    "alert and knowledgeable citizenry"
+   ]
+  },
+  "m15_human_kubernetes": {
+   "category": "human-written docs with some marketing tone (bold-label list)",
+   "expected": "light copyedit at most; list labels and every capability stay; the exclamation may be toned down",
+   "protected": [
+    "no downtime",
+    "canary deployment",
+    "**Service discovery and load balancing**",
+    "DNS name or its own IP address",
+    "**Storage orchestration**",
+    "**Automated rollouts and rollbacks**",
+    "**Automatic bin packing**",
+    "CPU and memory (RAM)"
+   ]
+  },
+  "m16_human_go_errors": {
+   "category": "already-good human technical prose with a code block",
+   "expected": "few or no changes; code byte-exact",
+   "protected": [
+    "`errors.New`",
+    "`fmt.Errorf`",
+    "type QueryError struct {",
+    "from timestamps to filenames to server addresses",
+    "Go 1.13 added explicit support for it",
+    "three new functions in the `errors` package"
+   ]
+  }
+ }
+}
