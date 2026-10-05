@@ -40,6 +40,12 @@ Code: https://github.com/jenna-russell/storyscope
 
 The StoryScope authors are not presented as authors, maintainers, or endorsers of ProseShape. References to StoryScope in this repository describe the research source for narrative-level observations.
 
+## HumanScope
+
+ProseShape 1.4.2's rule that writing patterns count as evidence only in clusters, and that a change to text a person wrote needs a fault that can be named for the reader, adapts the evidence-before-edit idea of **HumanScope** (`Anson-Saju-George/HumanScope`), released under the MIT License. No text from HumanScope is included.
+
+Source: https://github.com/Anson-Saju-George/HumanScope
+
 ## Wikipedia: Signs of AI writing
 
 Many of the sentence-level patterns in the skill's `references/humanizer-rules.md` come, through Humanizer, from the Wikipedia project page **"Wikipedia:Signs of AI writing"**, written by WikiProject AI Cleanup and other Wikipedia contributors. Wikipedia text is available under the Creative Commons Attribution-ShareAlike 4.0 License. ProseShape credits the page as a source of its pattern categories. It does not reproduce the page.

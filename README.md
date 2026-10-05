@@ -130,9 +130,9 @@ If Claude answers without the skill, ask again and name it ("Use ProseShape to h
 │   ├── eval-log.md               # every tested version and its result
 │   ├── trigger-evals.json
 │   ├── files/                    # inputs for the 1.0–1.3 evaluations
-│   ├── heldout/, heldout2/       # frozen held-out corpora (SHA256SUMS)
+│   ├── heldout/ … heldout3/      # frozen held-out corpora (SHA256SUMS)
 │   ├── harness/                  # generate, blind-judge, analyze, check
-│   └── v1.4-validation/, v1.4.1-validation/   # method, results, raw outputs and judgments
+│   └── v1.4-validation/ … v1.4.2-validation/  # method, results, raw outputs and judgments
 ├── docs/
 │   ├── publishing.md             # how to release and submit to Anthropic's directory
 │   └── research/                 # competitive analysis and the 2026-09 experiment
@@ -143,7 +143,7 @@ If Claude answers without the skill, ask again and name it ("Use ProseShape to h
 └── LICENSE
 ```
 
-Only `plugins/proseshape/` is needed at runtime. Raw outputs and judgments for the 1.0–1.3 iterations stayed in the private build workspace. For the 2026-09 comparison and the 1.4 and 1.4.1 validations they are committed, so every table can be reproduced without a model call.
+Only `plugins/proseshape/` is needed at runtime. Raw outputs and judgments for the 1.0–1.3 iterations stayed in the private build workspace. For the 2026-09 comparison and the 1.4, 1.4.1 and 1.4.2 validations they are committed, so every table can be reproduced without a model call.
 
 ## Evidence base
 
@@ -156,27 +156,32 @@ StoryScope paper: https://arxiv.org/abs/2604.03136
 StoryScope code: https://github.com/jenna-russell/storyscope  
 Humanizer: https://github.com/blader/humanizer
 
+Since 1.4.2, the rule that a writing pattern counts as evidence only in a cluster adapts the evidence-before-edit idea of [HumanScope](https://github.com/Anson-Saju-George/HumanScope) (MIT).
+
 StoryScope findings are population-level observations, not rules for what human writing must look like. ProseShape uses them to question defaults, not to enforce quotas or manufacture randomness.
 
 ## Evaluation
 
 ProseShape is measured against the edit a capable model makes when simply told to edit well. Detector scores are not the benchmark.
 
-**1.4.0 against a strong ordinary-editor prompt.** There were 12 held-out texts, frozen before any 1.4 change: release notes, a cover letter, a support reply, a README, an op-ed, a press release with quotations, a personal essay, fiction dialogue, a grant abstract, and three human-written controls. Every arm got the same request and the same executor model, and a stronger model judged the outputs blind, with the untouched source among the candidates.
+**1.4.2, the current version.** It was tested once on 16 held-out texts frozen before any 1.4.2 change: six AI-shaped drafts, four near-clean human-style texts, and six human excerpts. Every arm got the same request and the same executor model. A stronger model judged the outputs blind, with the untouched source among the candidates, and a second, smaller judge re-scored them as a check.
 
 | Arm | Overall (1–10) [95% CI] | Fact problems flagged |
 |---|---|---|
-| **ProseShape 1.4.0** | **8.17** [7.79, 8.54] | 16 |
-| Ordinary-editor prompt | 7.33 [6.88, 7.79] | 47 |
-| HumanScope | 7.27 [6.58, 7.90] | 29 |
-| ProseShape 1.3.1 | 5.94 [5.12, 6.75] | 78 |
-| Untouched source | 3.75 [2.81, 4.90] | 0 |
+| **ProseShape 1.4.2** | **8.02** [7.70, 8.31] | 2 |
+| ProseShape 1.4.0 | 7.86 [7.53, 8.20] | 19 |
+| Ordinary-editor prompt | 7.44 [7.02, 7.89] | 37 |
+| HumanScope | 7.41 [6.97, 7.86] | 30 |
+| Untouched source | 5.48 [4.12, 6.80] | 0 |
 
-Against the ordinary editor, the paired difference is +0.83 [+0.19, +1.54], better on 7 texts, worse on 3, tied on 2.
+- **Against 1.4.0:** +0.16 [−0.12, +0.48]. The gain is small, and the second judge found it too (+0.78 [+0.27, +1.33]).
+- **Against the ordinary editor:** +0.58 [+0.19, +1.02].
 
-**That margin did not fully replicate.** On a second set of 15 fresh texts, 1.4.0 led the ordinary editor by only +0.27 [−0.78, +1.22]. Pooled over all 27 held-out texts, the lead is **+0.52 [−0.15, +1.15]**, an interval that includes zero. The pattern was the same in both sets. ProseShape is clearly ahead on AI-shaped drafts (about +0.6 on the second set). It falls behind on text a person already wrote well (about −0.4), because the editor prompt leaves good writing alone more often. See [`evals/v1.4.1-validation/README.md`](evals/v1.4.1-validation/README.md).
+The gain came from AI-shaped drafts. The human excerpts didn't separate the versions, because every arm returned them nearly untouched. See [`evals/v1.4.2-validation/README.md`](evals/v1.4.2-validation/README.md).
 
-The executor and the judge are both Claude models, and no human readers were involved. The method, the per-text results, the known issues and the limitations are in [`evals/v1.4-validation/README.md`](evals/v1.4-validation/README.md). The [competitive analysis](docs/research/competitive-analysis-2026-09.md) explains how the ordinary-editor bar was chosen and how 1.3.1 compared with other open-source humanizers.
+**1.4.0 against the ordinary editor, over three held-out sets.** The first set of 12 texts gave +0.83 [+0.19, +1.54]. A second set of 15 gave only +0.27 [−0.78, +1.22], and the third set of 16 gave +0.42 [+0.09, +0.81]. Pooled over all 43 texts, the lead is **+0.48 [+0.05, +0.91]**. It is clearest on AI-shaped drafts (+0.76 over 25 texts), and close to even on text a person already wrote well (+0.10 over 18).
+
+The executor and both judges are Claude models, and no human readers were involved. The method, the per-text results, the known issues and the limitations are in the validation READMEs: [1.4](evals/v1.4-validation/README.md), [1.4.1](evals/v1.4.1-validation/README.md) and [1.4.2](evals/v1.4.2-validation/README.md). The [competitive analysis](docs/research/competitive-analysis-2026-09.md) explains how the ordinary-editor bar was chosen and how 1.3.1 compared with other open-source humanizers.
 
 **Check a rewrite yourself.** `scripts/preserve_check.py` compares a source with its rewrite. It flags changed or missing numbers, quotations, inline and fenced code, links, and frontmatter, and reports heading, table, length and dash changes. It is standard-library Python and is not a quality score.
 
@@ -185,7 +190,7 @@ python3 scripts/preserve_check.py draft.md revised.md            # add --mode li
 python3 -m unittest discover -s scripts/tests
 ```
 
-Versions 1.0–1.3 were developed on 12 cases covering business prose, personal essays, technical writing, fiction rewrites, dialogue, voice matching, citation preservation, deep story restructuring, minimal editing, and generation. See [`evals/eval-log.md`](evals/eval-log.md). Deep rewrite, generation and voice matching have not yet been re-tested under the 1.4 harness. A 1.4.1 candidate that halves fact problems but reads slightly less naturally is documented in `evals/v1.4.1-validation/`. It scored the same as 1.4.0 overall and is not released.
+Versions 1.0–1.3 were developed on 12 cases covering business prose, personal essays, technical writing, fiction rewrites, dialogue, voice matching, citation preservation, deep story restructuring, minimal editing, and generation. See [`evals/eval-log.md`](evals/eval-log.md). Deep rewrite, generation and voice matching have not yet been re-tested under the 1.4 harness. A 1.4.1 candidate that halved fact problems but read slightly less naturally is documented in `evals/v1.4.1-validation/`. It scored the same as 1.4.0 and was not released. 1.4.2 builds on it.
 
 ## License
 

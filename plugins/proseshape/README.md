@@ -37,8 +37,13 @@ ProseShape is instructions only: a `SKILL.md`, six reference files, and the mani
 
 ## Evidence
 
-The skill was developed and tested against a strong ordinary-editor prompt, using held-out texts and a blind judge. Version 1.4.0 led that baseline on AI-shaped drafts and trailed it slightly on text a person had already written well. Pooled over 27 held-out texts, its lead was +0.52 points on a 10-point scale, with a 95% interval of −0.15 to +1.15. The judge found fewer than half as many fact problems in its output (45 against 109). The method, raw outputs and limitations are in the [source repository](https://github.com/Aieda1l/ProseShape).
+The skill was developed and tested against a strong ordinary-editor prompt, using held-out texts and a blind judge. On 16 texts it had never been tuned on, version 1.4.2 scored 8.02 out of 10:
+- **The editor prompt** scored 7.44, a lead of +0.58 (95% interval +0.19 to +1.02).
+- **Version 1.4.0** scored 7.86. The gain over it is small (+0.16).
+- **Fact problems.** The judge found 2 in its output, against 19 for 1.4.0 and 37 for the editor prompt.
+
+The method, raw outputs and limitations are in the [source repository](https://github.com/Aieda1l/ProseShape).
 
 ## License and credits
 
-MIT. ProseShape adapts material from [Humanizer](https://github.com/blader/humanizer) by Siqi Chen (MIT). It draws on Wikipedia's *Signs of AI writing* (CC BY-SA 4.0) and on *StoryScope: Investigating idiosyncrasies in AI fiction* by Russell et al. (arXiv:2604.03136). See `THIRD_PARTY_NOTICES.md`.
+MIT. ProseShape adapts material from [Humanizer](https://github.com/blader/humanizer) by Siqi Chen (MIT), and an idea from [HumanScope](https://github.com/Anson-Saju-George/HumanScope) (MIT). It draws on Wikipedia's *Signs of AI writing* (CC BY-SA 4.0) and on *StoryScope: Investigating idiosyncrasies in AI fiction* by Russell et al. (arXiv:2604.03136). See `THIRD_PARTY_NOTICES.md`.

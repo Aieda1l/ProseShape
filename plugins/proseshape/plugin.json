@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "proseshape",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "Rewrite or write prose so it reads as chosen by a person, not defaulted by a model, while keeping every fact, quotation, plot event, and the writer's voice.",
   "author": {
     "name": "Aieda1l",

@@ -33,6 +33,8 @@ jobs:
           python3 seed.py
           python3 analyze.py _ho PS14g | diff - ../v1.4-validation/results/summary_ho.md
           python3 analyze.py _ho2 PS141b | diff - ../v1.4.1-validation/results/summary_ho2.md
+          python3 analyze.py _ho3 PS142c | diff - ../v1.4.2-validation/results/summary_ho3.md
+          python3 analyze.py _ho3h PS142c | diff - ../v1.4.2-validation/results/summary_ho3h.md
 
   install:
     # Install the plugin the way users do, in both Claude Code and Codex, and confirm the skill loads.
